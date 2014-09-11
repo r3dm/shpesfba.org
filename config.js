@@ -32,7 +32,7 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment
     production: {
-      url: 'http://my-ghost-blog.com',//TODO: Figure out what needs to go here
+      //url: 'http://my-ghost-blog.com',//TODO: Figure out what needs to go here
       mail: {},
       database: {
         client: 'postgres',
