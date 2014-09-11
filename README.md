@@ -1,3 +1,4 @@
+[ ![Codeship Status for bigr3dm/shpeSFBA](https://codeship.io/projects/1f64acd0-1bad-0132-b497-4a19bf040eb5/status)](https://codeship.io/projects/34983)
 # [Ghost](https://github.com/TryGhost/Ghost) [![Build Status](https://travis-ci.org/TryGhost/Ghost.svg?branch=master)](https://travis-ci.org/TryGhost/Ghost)
 
 Ghost is a free, open, simple blogging platform that's available to anyone who wants to use it. Lovingly created and maintained by [John O'Nolan](http://twitter.com/JohnONolan) + [Hannah Wolfe](http://twitter.com/ErisDS) + an amazing group of [contributors](https://github.com/TryGhost/Ghost/contributors).
