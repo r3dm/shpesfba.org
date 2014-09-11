@@ -37,7 +37,11 @@ config = {
       database: {
         client: 'postgres',
         connection: {
-            filename: path.join(__dirname, '/content/data/ghost.db')
+          Host: 'ec2-54-204-42-135.compute-1.amazonaws.com',
+          User: 'zbgsjpsefdupqc',
+          Port: 5432,
+          Password: 'kMrFTE7_Re77L_9IcWW4EARnsp',
+          Database: 'based9ekp9lr3mq9pb',
         },
         debug: false
       },
