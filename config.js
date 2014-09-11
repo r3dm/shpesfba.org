@@ -8,65 +8,44 @@ var path = require('path'),
 config = {
     // ### Development **(default)**
     development: {
-        // The url to use when providing links to the site, E.g. in RSS and email.
-        url: 'http://my-ghost-blog.com',
-
-        // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
-
-        database: {
-            client: 'postgres',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
-            debug: true
+      url: 'http://localhost:9000',
+      database: {
+        client: 'postgres',
+        connection: {
+          Host: 'localhost',
+          Port: 5432,
+          User: 'r3dm',
+          Password: '',
+          Database: 'shpe'
         },
-        server: {
-            // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '9000'
-        },
-        paths: {
-            contentPath: path.join(__dirname, '/content/')
-        }
+        debug: true
+      },
+      server: {
+        host: '127.0.0.1',
+        port: '9000'
+      },
+      paths: {
+        contentPath: path.join(__dirname, '/content/')
+      }
     },
 
     // ### Production
     // When running Ghost in the wild, use the production environment
-    // Configure your URL and mail settings here
     production: {
-        url: 'http://shpedev.herokuapp.com',
-        mail: {},
-        database: {
-            client: 'postgres',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
+      url: 'http://my-ghost-blog.com',//TODO: Figure out what needs to go here
+      mail: {},
+      database: {
+        client: 'postgres',
+        connection: {
+            filename: path.join(__dirname, '/content/data/ghost.db')
         },
-        server: {
-            // Host to be passed to node's `net.Server#listen()`
-            host: '0.0.0.0',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: process.env.PORT || 9000
-        }
+        debug: false
+      },
+      server: {
+        host: '0.0.0.0',
+        port: process.env.PORT || 9000
+      }
     },
-
-    // **Developers only need to edit below here**
-
     // ### Testing
     // Used when developing Ghost to run tests and check the health of Ghost
     // Uses a different port number
