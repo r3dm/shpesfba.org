@@ -10,13 +10,13 @@ config = {
     development: {
       url: 'http://localhost:9000',
       database: {
-        client: 'postgres',
+        client: 'pg',
         connection: {
-          Host: 'localhost',
-          Port: 5432,
-          User: 'r3dm',
-          Password: '',
-          Database: 'shpe'
+          host: '127.0.0.1',
+          user: 'r3dm',
+          password: '',
+          database: 'shpe',
+          charset: 'utf8'
         },
         debug: true
       },
