@@ -36,14 +36,9 @@ config = {
       mail: {},
       database: {
         client: 'pg',
-        connection: {
-          host: 'ec2-54-204-42-135.compute-1.amazonaws.com',
-          user: 'zbgsjpsefdupqc',
-          password: 'kMrFTE7_Re77L_9IcWW4EARnsp',
-          database: 'd9ekp9lr3mq9pb',
-          port: 5432
-        },
-        debug: false
+        connection: { connection: process.env.DATABASE_URL },
+        debug: false,
+        filestorage: false
       },
       server: {
         host: '0.0.0.0',
