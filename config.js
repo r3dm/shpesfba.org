@@ -32,10 +32,10 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment
     production: {
-      url: 'http://shpedev.herokuapp.com/',//TODO: Figure out what needs to go here
+      url: 'http://shpedev.herokuapp.com',
       mail: {},
       database: {
-        client: 'pg',
+        client: 'postgres',
         connection: {
           host: 'ec2-54-204-42-135.compute-1.amazonaws.com',
           user: 'zbgsjpsefdupqc',
@@ -47,7 +47,7 @@ config = {
       },
       server: {
         host: '0.0.0.0',
-        port: process.env.PORT || 9000
+        port: process.env.PORT
       }
     },
     // ### Testing
