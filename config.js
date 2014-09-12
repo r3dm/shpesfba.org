@@ -35,7 +35,7 @@ config = {
       url: 'http://shpedev.herokuapp.com',
       mail: {},
       database: {
-        client: 'postgres',
+        client: 'pg',
         connection: {
           host: 'ec2-54-204-42-135.compute-1.amazonaws.com',
           user: 'zbgsjpsefdupqc',
