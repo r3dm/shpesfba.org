@@ -1,5 +1,5 @@
 node_modules
 bower_components
 .tmp
-npm-debug.log
-content/data/r3dm.sqlite
+.env.json
+npm_debug.log
