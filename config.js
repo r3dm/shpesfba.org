@@ -24,14 +24,14 @@ if (process.env.DB_TYPE === 'sqlite3') {
 config = {
     // ### Development **(default)**
     development: {
-      url: 'http://localhost:9000',
+      url: process.env.URL,
       database: {
         client: process.env.DB_TYPE,
         connection: connection,
         debug: true
       },
       server: {
-        host: '127.0.0.1',
+        host: process.env.HOST,
         port: '9000'
       },
       paths: {
