@@ -2,3 +2,4 @@ node_modules
 bower_components
 .tmp
 npm-debug.log
+content/data/r3dm.sqlite
