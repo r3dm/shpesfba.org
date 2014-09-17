@@ -2,6 +2,7 @@
 // Orchestrates the loading of Ghost
 // When run from command line.
 
+require('dot-env');
 var ghost = require('./core'),
     errors = require('./core/server/errors');
 

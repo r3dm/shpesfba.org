@@ -10,7 +10,7 @@ config = {
     development: {
       url: 'http://localhost:9000',
       database: {
-        client: 'pg',
+        client: process.env.DB_TYPE,
         connection: {
           host: '127.0.0.1',
           user: 'r3dm',
