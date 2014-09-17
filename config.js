@@ -5,19 +5,29 @@
 var path = require('path'),
     config;
 
+var connection;
+
+if (process.env.DB_TYPE === 'sqlite3') {
+  connection = {
+    filename: 'content/data/r3dm.sqlite'
+  };
+} else {
+  connection = {
+    host: '127.0.0.1',
+    user: 'r3dm',
+    password: '',
+    database: 'shpe',
+    charset: 'utf8'
+  };
+}
+
 config = {
     // ### Development **(default)**
     development: {
       url: 'http://localhost:9000',
       database: {
         client: process.env.DB_TYPE,
-        connection: {
-          host: '127.0.0.1',
-          user: 'r3dm',
-          password: '',
-          database: 'shpe',
-          charset: 'utf8'
-        },
+        connection: connection,
         debug: true
       },
       server: {
