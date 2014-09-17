@@ -3,3 +3,4 @@ bower_components
 .tmp
 .env.json
 npm_debug.log
+content/data/r3dm.sqlite
