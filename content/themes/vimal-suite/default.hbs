@@ -22,6 +22,8 @@
 </head>
 <body class="{{body_class}}">
 
+    {{> header}}
+
     {{! Everything else gets inserted here }}
     {{{body}}}
 
@@ -33,7 +35,7 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! The main JavaScript file for Casper }}
+    {{! The main JavaScript file for vimalSuite }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
 </body>
