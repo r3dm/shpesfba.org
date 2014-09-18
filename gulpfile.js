@@ -30,11 +30,15 @@ gulp.task('serve', function(cb) {
 });
 
 gulp.task('style', function() {
-  watch(paths.style)
+  return gulp.src(paths.stylus + '**/*.styl')
     .pipe(style({
       use: nib()
     }))
     .pipe(gulp.dest(paths.css));
+});
+
+gulp.task('watch', function() {
+  gulp.watch(paths.stylus + '**/*.styl', [style]);
 });
 
 gulp.task('default', ['serve', 'style']);
