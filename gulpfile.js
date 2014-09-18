@@ -32,7 +32,8 @@ gulp.task('serve', function(cb) {
 gulp.task('style', function() {
   return gulp.src(paths.stylus + '**/*.styl')
     .pipe(style({
-      use: nib()
+      use: nib(),
+      'include css': true
     }))
     .pipe(gulp.dest(paths.css));
 });
