@@ -1,7 +1,7 @@
 @import "pure/base.css"
 @import "pure/buttons.css"
 @import "pure/menus.css"
-//@import "pure/grids.css"
+@import "pure/grids-core.css"
 @import "pure/grids-responsive.css"
 
 h1, h2 {
@@ -39,3 +39,15 @@ $footer_bg_color = #636363
 
 .membership_section
     background-color: $membership_section_bg
+
+footer
+  background-color: $footer_bg_color
+
+.container
+  @media (max-width: 960px)
+    display none
+
+.menu_hide
+  @media (max-width: 960px)
+    display none
+

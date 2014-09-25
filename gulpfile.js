@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     nib = require('nib'),
     watch = require('gulp-watch');
 
+var started = false;
 var paths = {
   stylus: './content/themes/vimal-suite/assets/stylus/',
   css: './content/themes/vimal-suite/assets/css/',
@@ -23,10 +24,15 @@ gulp.task('serve', function(cb) {
   ignore: ['./core/**']
   //nodeArgs: ['--debug']
   })
-   .on('start', cb)
-   .on('restart', function() {
-     console.log('Restart, yo');
-   });
+    .on('start', function() {
+      if (!started) {
+        started = true;
+        cb();
+      }
+    })
+    .on('restart', function() {
+      console.log('Restart, yo');
+    });
 });
 
 gulp.task('style', function() {
