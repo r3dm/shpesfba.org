@@ -1,7 +1,41 @@
 @import "pure/base.css"
 @import "pure/buttons.css"
 @import "pure/menus.css"
+//@import "pure/grids.css"
+@import "pure/grids-responsive.css"
 
 h1, h2 {
     text-align: center;
 }
+
+empty
+  min-width 0px
+  min-height 0px
+
+html,
+button,
+input,
+select,
+textarea
+  font-family: serif
+
+$shpe-blue = #33648c
+$shpe-blue-font = #1a3851
+$white = #FFF
+$membership_section_bg = #d3d2d2
+$footer_bg_color = #636363
+
+.headline
+    background-color: $shpe-blue
+    color: $white
+    min-height: 300px
+
+.headline_text
+    font-weight: 100
+    padding-top: 100px
+
+.section_title
+    color: $shpe-blue-font
+
+.membership_section
+    background-color: $membership_section_bg
