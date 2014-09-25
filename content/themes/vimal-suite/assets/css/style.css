@@ -1899,6 +1899,9 @@ h1,
 h2 {
   text-align: center;
 }
+test {
+  background: #000;
+}
 empty {
   min-width: 0px;
   min-height: 0px;
@@ -1925,12 +1928,16 @@ textarea {
 .membership_section {
   background-color: #d3d2d2;
 }
+.section {
+  padding: 50px 0;
+}
 footer {
   background-color: #636363;
 }
-@media (max-width: 960px) {
+@media (min-width: 960px) {
   .container {
-    display: none;
+    width: 750px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 960px) {

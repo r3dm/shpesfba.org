@@ -8,6 +8,9 @@ h1, h2 {
     text-align: center;
 }
 
+test
+  background black
+
 empty
   min-width 0px
   min-height 0px
@@ -40,12 +43,16 @@ $footer_bg_color = #636363
 .membership_section
     background-color: $membership_section_bg
 
+.section
+  padding: 50px 0
+
 footer
   background-color: $footer_bg_color
 
 .container
-  @media (max-width: 960px)
-    display none
+  @media (min-width: 960px)
+    width: 750px
+    margin: 0 auto
 
 .menu_hide
   @media (max-width: 960px)
