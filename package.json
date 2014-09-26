@@ -105,6 +105,7 @@
     "rewire": "~2.0.0",
     "should": "~2.1.1",
     "sinon": "~1.7.3",
-    "supertest": "~0.8.2"
+    "supertest": "~0.8.2",
+    "gulp-plumber": "^0.6.5"
   }
 }

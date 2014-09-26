@@ -2170,3 +2170,6 @@ footer {
 .menu_hamburger-size {
   font-size: 4em;
 }
+.menu_hamburger-center {
+  text-align: center;
+}

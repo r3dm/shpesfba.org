@@ -4,3 +4,10 @@
  * Lenore Messler, lenoremessler.com
  * Harry Moreno, harrymoreno.com
  */
+$(document).ready(function() {
+
+  $('.carousel-upcoming').slick({
+    arrows: true
+  });
+
+});
