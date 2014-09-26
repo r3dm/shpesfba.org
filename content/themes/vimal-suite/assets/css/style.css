@@ -2130,10 +2130,10 @@ empty {
   min-width: 0px;
   min-height: 0px;
 }
-.section:nth-child(2n + 3) {
+.section:nth-child(odd) {
   background-color: #d3d2d2;
 }
-.headline {
+.section:nth-child(odd) .headline {
   background-color: #33648c;
   color: #fff;
   min-height: 300px;
