@@ -2,6 +2,7 @@
 @import "pure/buttons.css"
 @import "pure/menus.css"
 @import "pure/grids-core.css"
+@import "pure/grids-units.css"
 @import "pure/grids-responsive.css"
 
 h1, h2 {
@@ -29,19 +30,19 @@ $membership_section_bg = #d3d2d2
 $footer_bg_color = #636363
 
 .headline
-    background-color: $shpe-blue
-    color: $white
-    min-height: 300px
+  background-color: $shpe-blue
+  color: $white
+  min-height: 300px
 
 .headline_text
-    font-weight: 100
-    padding-top: 100px
+  font-weight: 100
+  padding-top: 100px
 
 .section_title
-    color: $shpe-blue-font
+  color: $shpe-blue-font
 
 .membership_section
-    background-color: $membership_section_bg
+  background-color: $membership_section_bg
 
 .section
   padding: 50px 0
@@ -54,7 +55,10 @@ footer
     width: 750px
     margin: 0 auto
 
-.menu_hide
+.menu_hide-sm
   @media (max-width: 960px)
     display none
 
+.menu_hide-lg
+  @media (min-width: 960px)
+    display none
