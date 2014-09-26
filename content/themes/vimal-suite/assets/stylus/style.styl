@@ -29,14 +29,13 @@ empty
   min-width 0px
   min-height 0px
 
-//TODO fix this selector to not use negation
-.section:nth-child(odd)
+.section:nth-child(2n + 1)
   background-color $shpe-gray
 
-  .headline
-    background-color: $shpe-blue
-    color: $white
-    min-height: 300px
+.headline
+  background-color: $shpe-blue !important
+  color: $white
+  min-height: 300px
 
 .headline_text
   font-weight: 100
