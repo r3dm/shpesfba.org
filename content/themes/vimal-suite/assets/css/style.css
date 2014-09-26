@@ -2130,11 +2130,11 @@ empty {
   min-width: 0px;
   min-height: 0px;
 }
-.section:nth-child(2n + 3) {
+.section:nth-child(2n + 1) {
   background-color: #d3d2d2;
 }
 .headline {
-  background-color: #33648c;
+  background-color: #33648c !important;
   color: #fff;
   min-height: 300px;
 }
