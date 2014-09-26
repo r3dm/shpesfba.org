@@ -2168,8 +2168,12 @@ footer {
   }
 }
 .menu_hamburger-size {
-  font-size: 4em;
+  font-size: 2em;
 }
-.menu_hamburger-center {
+.menu_hamburger-container {
   text-align: center;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #808080;
 }

@@ -7,6 +7,7 @@
 $(document).ready(function() {
 
   $('.carousel-upcoming').slick({
+    slidesToShow: 3,
     arrows: true
   });
 
