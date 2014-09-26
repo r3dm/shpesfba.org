@@ -11,4 +11,7 @@ $(document).ready(function() {
     arrows: true
   });
 
+  $('.menu_hamburger-container').menu({
+  })
+
 });
