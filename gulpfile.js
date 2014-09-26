@@ -2,6 +2,7 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     style = require('gulp-stylus'),
+    plumber = require('gulp-plumber'),
     nib = require('nib'),
     watch = require('gulp-watch');
 
@@ -37,6 +38,7 @@ gulp.task('serve', function(cb) {
 
 gulp.task('style', function() {
   return gulp.src(paths.stylus + '**/*.styl')
+    .pipe(plumber())
     .pipe(style({
       use: nib(),
       'include css': true
