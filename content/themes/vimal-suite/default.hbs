@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     {{! Document Settings }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,8 +22,8 @@
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
-</head>
-<body class="{{body_class}}">
+  </head>
+  <body class="{{body_class}}">
 
     {{> header}}
 
@@ -31,8 +31,8 @@
     {{{body}}}
 
     <footer class="site-footer clearfix">
-         <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-         <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
     </footer>
 
     {{! Ghost outputs important scripts and data with this tag }}

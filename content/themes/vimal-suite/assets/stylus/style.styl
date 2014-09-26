@@ -5,6 +5,19 @@
 @import "pure/grids-units.css"
 @import "pure/grids-responsive.css"
 
+$shpe-blue = #33648c
+$shpe-blue-font = #1a3851
+$white = #FFF
+$shpe-gray = #d3d2d2
+$footer_bg_color = #636363
+
+html,
+button,
+input,
+select,
+textarea
+  font-family: serif
+
 h1, h2 {
   text-align: center;
 }
@@ -16,18 +29,8 @@ empty
   min-width 0px
   min-height 0px
 
-html,
-button,
-input,
-select,
-textarea
-  font-family: serif
-
-$shpe-blue = #33648c
-$shpe-blue-font = #1a3851
-$white = #FFF
-$membership_section_bg = #d3d2d2
-$footer_bg_color = #636363
+.section:nth-child(2n + 3)
+  background-color $shpe-gray
 
 .headline
   background-color: $shpe-blue
@@ -40,9 +43,6 @@ $footer_bg_color = #636363
 
 .section_title
   color: $shpe-blue-font
-
-.membership_section
-  background-color: $membership_section_bg
 
 .section
   padding: 50px 0
@@ -62,8 +62,10 @@ footer
 .menu_hide-lg
   @media (min-width: 960px)
     display none
+
 .menu_hamburger-size
   font-size 2em
+
 .menu_hamburger-container
   text-align center
 

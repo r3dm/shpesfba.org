@@ -2112,6 +2112,13 @@ https://github.com/yui/pure/blob/master/LICENSE.md
         width: 100%;
     }
 }
+html,
+button,
+input,
+select,
+textarea {
+  font-family: serif;
+}
 h1,
 h2 {
   text-align: center;
@@ -2123,12 +2130,8 @@ empty {
   min-width: 0px;
   min-height: 0px;
 }
-html,
-button,
-input,
-select,
-textarea {
-  font-family: serif;
+.section:nth-child(2n + 3) {
+  background-color: #d3d2d2;
 }
 .headline {
   background-color: #33648c;
@@ -2141,9 +2144,6 @@ textarea {
 }
 .section_title {
   color: #1a3851;
-}
-.membership_section {
-  background-color: #d3d2d2;
 }
 .section {
   padding: 50px 0;
