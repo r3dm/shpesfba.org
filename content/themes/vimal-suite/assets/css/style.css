@@ -2177,3 +2177,6 @@ footer {
 .slick-next:before {
   color: #808080;
 }
+.slick-slide {
+  text-align: center;
+}
