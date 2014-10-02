@@ -8,10 +8,11 @@ $(document).ready(function() {
 
   $('.carousel-upcoming').slick({
     slidesToShow: 3,
-    arrows: true
+    arrows: true,
+    dots: true
   });
 
   $('.menu_hamburger-container').menu({
-  })
+  });
 
 });

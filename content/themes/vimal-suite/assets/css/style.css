@@ -2129,6 +2129,13 @@ textarea {
 h1,
 h2 {
   text-align: center;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2.1em;
+}
+h2 {
+  font-size: 2em;
 }
 empty {
   min-width: 0px;
@@ -2144,7 +2151,7 @@ empty {
 }
 .headline_text {
   font-weight: 100;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .headline_container_left {
   background-image: url("../img/shape-01.png");
@@ -2204,4 +2211,11 @@ footer {
 }
 .slick-slide {
   text-align: center;
+  height: 300px;
+}
+.slick-slide img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  margin: 20px auto;
 }
