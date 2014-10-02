@@ -4,6 +4,7 @@
 @import "pure/grids-core.css"
 @import "pure/grids-units.css"
 @import "pure/grids-responsive.css"
+@import "pure/forms.css"
 
 $shpe-blue = #33648c
 $shpe-blue-font = #1a3851
@@ -20,7 +21,7 @@ textarea
   font-family serif
 
 .menu
-  height 145px
+  min-height 145px
 
   a
     font-family serif
@@ -54,32 +55,42 @@ empty
 .headline_container_left
   background-image url(../img/shape-01.png)
   background-position 40% 0%
-  height 390px
+  min-height 390px
 
 .headline_container_right
   background-image url(../img/shape-02.png)
   background-position 50% 0%
-  height 390px
+  min-height 390px
 
 .section_title
   color: $shpe-blue-font
 
 .section_bio
-  height 265px
+  min-height 265px
 
 .section_upcoming
-  height 450px
+  min-height 450px
 
 .membership_section
-  height 200px
+  min-height 200px
 
 .section
   padding: 50px 0
 
 footer
   background-color: $footer_bg_color
-  height 350px
+  min-height 350px
   color white
+  font-size 0.8em
+
+  h3
+    font-size 1.5em
+
+  .pure-form
+    input
+      margin-bottom 10px
+    textarea
+      margin-bottom 10px
 
 .container
   @media (min-width: 960px)
@@ -114,3 +125,8 @@ footer
     border-radius 100px
     margin 20px auto
 
+  h3
+    margin 0
+
+  button
+    margin 10px
