@@ -2488,6 +2488,16 @@ footer *,
 textarea {
   font-family: serif;
 }
+@media (min-width: 1024px) {
+  .clearfix-lg {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .clearfix-sm {
+    display: none;
+  }
+}
 .menu {
   min-height: 145px;
 }
@@ -2560,6 +2570,11 @@ footer .pure-form input {
 }
 footer .pure-form textarea {
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  footer .pure-u-1 {
+    padding: 0 30px;
+  }
 }
 @media (min-width: 960px) {
   .container {

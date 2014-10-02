@@ -20,6 +20,14 @@ footer *,
 textarea
   font-family serif
 
+.clearfix-lg
+  @media (min-width: 1024px)
+    display none
+
+.clearfix-sm
+  @media (max-width: 768px)
+    display none
+
 .menu
   min-height 145px
 
@@ -91,6 +99,10 @@ footer
       margin-bottom 10px
     textarea
       margin-bottom 10px
+
+  .pure-u-1
+    @media (max-width: 768px)
+      padding 0 30px
 
 .container
   @media (min-width: 960px)
