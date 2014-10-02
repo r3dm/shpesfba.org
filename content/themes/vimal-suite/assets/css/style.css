@@ -2130,7 +2130,7 @@ empty {
   min-width: 0px;
   min-height: 0px;
 }
-.section:nth-child(2n + 1) {
+.section:nth-child(2n + 3) {
   background-color: #d3d2d2;
 }
 .headline {
@@ -2141,6 +2141,14 @@ empty {
 .headline_text {
   font-weight: 100;
   padding-top: 100px;
+}
+.headline_container_left {
+  background-image: url("../img/shape-01.png");
+  background-position: 40% 0%;
+}
+.headline_container_right {
+  background-image: url("../img/shape-02.png");
+  background-position: 50% 0%;
 }
 .section_title {
   color: #1a3851;
