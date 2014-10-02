@@ -2116,6 +2116,7 @@ html,
 button,
 input,
 select,
+footer *,
 textarea {
   font-family: serif;
 }
@@ -2158,11 +2159,22 @@ empty {
 .section_title {
   color: #1a3851;
 }
+.section_bio {
+  height: 265px;
+}
+.section_upcoming {
+  height: 450px;
+}
+.membership_section {
+  height: 200px;
+}
 .section {
   padding: 50px 0;
 }
 footer {
   background-color: #636363;
+  height: 350px;
+  color: #fff;
 }
 @media (min-width: 960px) {
   .container {
