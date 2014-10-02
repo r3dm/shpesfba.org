@@ -2119,12 +2119,15 @@ select,
 textarea {
   font-family: serif;
 }
+.menu {
+  height: 145px;
+}
+.menu a {
+  font-family: serif;
+}
 h1,
 h2 {
   text-align: center;
-}
-test {
-  background: #000;
 }
 empty {
   min-width: 0px;
@@ -2136,7 +2139,7 @@ empty {
 .headline {
   background-color: #33648c !important;
   color: #fff;
-  min-height: 300px;
+  min-height: 390px;
 }
 .headline_text {
   font-weight: 100;
@@ -2145,10 +2148,12 @@ empty {
 .headline_container_left {
   background-image: url("../img/shape-01.png");
   background-position: 40% 0%;
+  height: 390px;
 }
 .headline_container_right {
   background-image: url("../img/shape-02.png");
   background-position: 50% 0%;
+  height: 390px;
 }
 .section_title {
   color: #1a3851;
