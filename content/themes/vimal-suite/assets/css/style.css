@@ -2602,6 +2602,12 @@ footer .pure-form textarea {
 .slick-next:before {
   color: #808080;
 }
+.slick-prev {
+  left: 15px;
+}
+.slick-next {
+  right: 15px;
+}
 .slick-slide {
   text-align: center;
   height: 300px;
