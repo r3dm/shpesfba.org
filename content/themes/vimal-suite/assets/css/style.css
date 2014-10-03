@@ -2576,9 +2576,19 @@ footer .pure-form textarea {
     padding: 0 30px;
   }
 }
-@media (min-width: 960px) {
+.container {
+  width: 450px;
+  margin: 0 auto;
+}
+@media (min-width: 568px) {
   .container {
-    width: 750px;
+    width: 565px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 760px;
     margin: 0 auto;
   }
 }
