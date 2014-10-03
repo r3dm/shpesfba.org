@@ -2498,6 +2498,11 @@ textarea {
     display: none;
   }
 }
+@media (max-width: 568px) {
+  .clearfix-xs {
+    display: none;
+  }
+}
 .menu {
   min-height: 145px;
 }
@@ -2571,7 +2576,7 @@ footer .pure-form input {
 footer .pure-form textarea {
   margin-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   footer .pure-u-1 {
     padding: 0 30px;
   }
