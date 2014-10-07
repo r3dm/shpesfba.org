@@ -2480,13 +2480,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     }
 }
 
+@import url("http://fonts.googleapis.com/css?family=Merriweather");
 html,
 button,
 input,
 select,
 footer *,
 textarea {
-  font-family: serif;
+  font-family: 'Merriweather', serif;
 }
 @media (min-width: 1024px) {
   .clearfix-lg {
