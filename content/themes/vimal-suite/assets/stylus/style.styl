@@ -106,6 +106,7 @@ h1, h2
 
 h1
   font-size 1.5em
+  color $shpe-blue-dark
 
   @media (min-width: 568px)
     font-size 2em
@@ -121,35 +122,43 @@ empty
   min-height 0px
 
 .headline
-  background-color: $shpe-blue !important
-  color: $white
-  min-height: 390px
+  background-color $shpe-blue
+  color $white
+  height 250px
+  overflow hidden
 
-  @media (max-width: 568px)
-    min-height 200px
+  div
+    height 250px
 
-.headline_text
-  font-weight: 300
-  padding-top: 80px
+  @media (min-width: 568px)
+     height 390px
 
-  @media (max-width: 568px)
-    padding-top 0
+    div
+      height 390px
 
 .headline_container_left
   background-image url(../img/shape-01.png)
   background-position 40% 0%
-  min-height 390px
-
-  @media (max-width: 568px)
-    min-height 200px
 
 .headline_container_right
   background-image url(../img/shape-02.png)
-  background-position 50% 0%
-  min-height 390px
+  background-position 50% 75%
+
+.headline-min
+  background-color: $shpe-blue
+  height 75px
+  overflow hidden
+
+  @media (min-width: 568px)
+    height 100px
+
+.headline_text
+  font-weight: 300
+  padding-top: 80px
+  color white
 
   @media (max-width: 568px)
-    min-height 200px
+    padding-top 0
 
 /* section styles */
 
@@ -217,12 +226,12 @@ empty
 
   h3
     margin 0
-    color $shpe-blue
+    color $shpe-blue-dark
 
   button
     margin 10px
 
-/** membership section **/
+/** landing page membership section **/
 .membership_section
   min-height 200px
 
@@ -232,6 +241,36 @@ empty
 .membership_button-secondPadding
   @media (max-width: 568px)
     margin-top 15px
+
+/** membership levels page **/
+.membershipLevel
+  background-color $shpe-gray
+  border-radius 10px
+  margin-bottom 25px
+
+  > div
+    padding 10px
+
+  .head
+    background-color $shpe-blue
+    border-radius inherit
+    border-bottom-right-radius 0
+    border-bottom-left-radius 0
+    color white
+
+    span
+      float right
+
+  .body
+    font-size 12px
+
+  button
+    float right
+    width 155px
+    height 30px
+
+  li
+    padding-bottom 5px
 
 /* footer styles */
 footer

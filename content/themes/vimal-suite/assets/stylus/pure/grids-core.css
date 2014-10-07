@@ -69,5 +69,5 @@ Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
 .pure-g [class *= "pure-u"] {
-    font-family: sans-serif;
+    font-family: 'Merriweather', serif;
 }

@@ -1032,7 +1032,7 @@ Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
 .pure-g [class *= "pure-u"] {
-    font-family: sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 /*!
@@ -2576,6 +2576,7 @@ h2 {
 }
 h1 {
   font-size: 1.5em;
+  color: #1a3851;
 }
 @media (min-width: 568px) {
   h1 {
@@ -2595,42 +2596,48 @@ empty {
   min-height: 0px;
 }
 .headline {
-  background-color: #33648c !important;
+  background-color: #33648c;
   color: #fff;
-  min-height: 390px;
+  height: 250px;
+  overflow: hidden;
 }
-@media (max-width: 568px) {
+.headline div {
+  height: 250px;
+}
+@media (min-width: 568px) {
   .headline {
-    min-height: 200px;
+    height: 390px;
+  }
+}
+.headline div {
+  height: 390px;
+}
+.headline_container_left {
+  background-image: url("../img/shape-01.png");
+  background-position: 40% 0%;
+}
+.headline_container_right {
+  background-image: url("../img/shape-02.png");
+  background-position: 50% 75%;
+}
+.headline-min {
+  background-color: #33648c;
+  height: 75px;
+  overflow: hidden;
+}
+@media (min-width: 568px) {
+  .headline-min {
+    height: 100px;
   }
 }
 .headline_text {
   font-weight: 300;
   padding-top: 80px;
+  color: #fff;
 }
 @media (max-width: 568px) {
   .headline_text {
     padding-top: 0;
-  }
-}
-.headline_container_left {
-  background-image: url("../img/shape-01.png");
-  background-position: 40% 0%;
-  min-height: 390px;
-}
-@media (max-width: 568px) {
-  .headline_container_left {
-    min-height: 200px;
-  }
-}
-.headline_container_right {
-  background-image: url("../img/shape-02.png");
-  background-position: 50% 0%;
-  min-height: 390px;
-}
-@media (max-width: 568px) {
-  .headline_container_right {
-    min-height: 200px;
   }
 }
 /* section styles */
@@ -2708,12 +2715,12 @@ empty {
 }
 .slick-slide h3 {
   margin: 0;
-  color: #33648c;
+  color: #1a3851;
 }
 .slick-slide button {
   margin: 10px;
 }
-/** membership section **/
+/** landing page membership section **/
 .membership_section {
   min-height: 200px;
 }
@@ -2724,6 +2731,36 @@ empty {
   .membership_button-secondPadding {
     margin-top: 15px;
   }
+}
+/** membership levels page **/
+.membershipLevel {
+  background-color: #d3d2d2;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.membershipLevel > div {
+  padding: 10px;
+}
+.membershipLevel .head {
+  background-color: #33648c;
+  border-radius: inherit;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #fff;
+}
+.membershipLevel .head span {
+  float: right;
+}
+.membershipLevel .body {
+  font-size: 12px;
+}
+.membershipLevel button {
+  float: right;
+  width: 155px;
+  height: 30px;
+}
+.membershipLevel li {
+  padding-bottom: 5px;
 }
 /* footer styles */
 footer {
