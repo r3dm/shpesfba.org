@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Merriweather:400,300");
 /*!
 Pure v0.5.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
@@ -2480,7 +2481,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Merriweather");
+/* global styles */
 html,
 button,
 input,
@@ -2488,6 +2489,10 @@ select,
 footer *,
 textarea {
   font-family: 'Merriweather', serif;
+}
+p {
+  font-weight: 300;
+  font-size: 14px;
 }
 @media (min-width: 1024px) {
   .clearfix-lg {
@@ -2504,12 +2509,52 @@ textarea {
     display: none;
   }
 }
+/* button styles */
+.button-primary {
+  width: 140px;
+  height: 25px;
+  font-style: italic;
+  line-height: 0;
+  font-weight: 300;
+  color: #fff;
+  background-color: #34495e;
+}
+.button-footer {
+  width: 105px;
+  height: 25px;
+  color: #fff;
+  background-color: #464646;
+  float: right;
+  font-style: italic;
+  text-align: left;
+}
+.button-footer span {
+  float: right;
+}
+/* menu styles */
 .menu {
   min-height: 145px;
 }
 .menu a {
   font-family: serif;
 }
+@media (max-width: 960px) {
+  .menu_hide-sm {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .menu_hide-lg {
+    display: none;
+  }
+}
+.menu_hamburger-size {
+  font-size: 2em;
+}
+.menu_hamburger-container {
+  text-align: center;
+}
+/* headline styles */
 h1,
 h2 {
   text-align: center;
@@ -2524,9 +2569,6 @@ h2 {
 empty {
   min-width: 0px;
   min-height: 0px;
-}
-.section:nth-child(2n + 3) {
-  background-color: #d3d2d2;
 }
 .headline {
   background-color: #33648c !important;
@@ -2547,6 +2589,26 @@ empty {
   background-position: 50% 0%;
   min-height: 390px;
 }
+/* section styles */
+.container {
+  width: 450px;
+  margin: 0 auto;
+}
+@media (min-width: 568px) {
+  .container {
+    width: 565px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 690px;
+    margin: 0 auto;
+  }
+}
+.section:nth-child(2n + 3) {
+  background-color: #d3d2d2;
+}
 .section_title {
   color: #1a3851;
 }
@@ -2562,58 +2624,6 @@ empty {
 .section {
   padding: 50px 0;
 }
-footer {
-  background-color: #636363;
-  min-height: 350px;
-  color: #fff;
-  font-size: 0.8em;
-}
-footer h3 {
-  font-size: 1.5em;
-}
-footer .pure-form input {
-  margin-bottom: 10px;
-}
-footer .pure-form textarea {
-  margin-bottom: 10px;
-}
-@media (max-width: 568px) {
-  footer .pure-u-1 {
-    padding: 0 30px;
-  }
-}
-.container {
-  width: 450px;
-  margin: 0 auto;
-}
-@media (min-width: 568px) {
-  .container {
-    width: 565px;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 760px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 960px) {
-  .menu_hide-sm {
-    display: none;
-  }
-}
-@media (min-width: 960px) {
-  .menu_hide-lg {
-    display: none;
-  }
-}
-.menu_hamburger-size {
-  font-size: 2em;
-}
-.menu_hamburger-container {
-  text-align: center;
-}
 .slick-prev:before,
 .slick-next:before {
   color: #808080;
@@ -2627,6 +2637,8 @@ footer .pure-form textarea {
 .slick-slide {
   text-align: center;
   height: 300px;
+  font-size: 14px;
+  font-weight: 300;
 }
 .slick-slide img {
   height: 150px;
@@ -2636,7 +2648,36 @@ footer .pure-form textarea {
 }
 .slick-slide h3 {
   margin: 0;
+  color: #33648c;
 }
 .slick-slide button {
   margin: 10px;
+}
+/* footer styles */
+footer {
+  background-color: #636363;
+  min-height: 350px;
+  font-size: 12px;
+  color: #d3d2d2;
+}
+footer p {
+  font-size: 12px;
+}
+footer h3 {
+  color: #fff;
+  font-size: 1.4em;
+}
+footer .pure-form input {
+  margin-bottom: 10px;
+  background-color: #d3d2d2;
+}
+footer .pure-form textarea {
+  margin-bottom: 10px;
+  background-color: #d3d2d2;
+}
+*
+@media (max-width: 568px) {
+  footer .pure-u-1 {
+    padding: 0 30px;
+  }
 }

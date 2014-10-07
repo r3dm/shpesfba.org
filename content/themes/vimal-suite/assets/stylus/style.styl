@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+
 @import "pure/base.css"
 @import "pure/buttons.css"
 @import "pure/menus.css"
@@ -6,15 +8,16 @@
 @import "pure/grids-responsive.css"
 @import "pure/forms.css"
 
-//font
-@import url(http://fonts.googleapis.com/css?family=Merriweather)
-
 $shpe-blue = #33648c
-$shpe-blue-font = #1a3851
+$shpe-blue-dark = #1a3851
+$shpe-blue-dark2 = #34495e
 $white = #FFF
 $shpe-gray = #d3d2d2
 $footer_bg_color = #636363
+$footer_font_color = #d3d2d2
+$footer_button_color = #464646
 
+/* global styles */
 html,
 button,
 input,
@@ -22,6 +25,10 @@ select,
 footer *,
 textarea
   font-family 'Merriweather', serif
+
+p
+  font-weight 300
+  font-size 14px
 
 .clearfix-lg
   @media (min-width: 1024px)
@@ -35,12 +42,50 @@ textarea
   @media (max-width: 568px)
     display none
 
+/* button styles */
+.button-primary
+  width 140px
+  height 25px
+  font-style italic
+  line-height 0
+  font-weight 300
+  color white
+  background-color $shpe-blue-dark2
+
+.button-footer
+  width 105px
+  height 25px
+  color white
+  background-color $footer_button_color
+  float right
+  font-style italic
+  text-align left
+
+  span
+    float right
+
+/* menu styles */
 .menu
   min-height 145px
 
   a
     font-family serif
 
+.menu_hide-sm
+  @media (max-width: 960px)
+    display none
+
+.menu_hide-lg
+  @media (min-width: 960px)
+    display none
+
+.menu_hamburger-size
+  font-size 2em
+
+.menu_hamburger-container
+  text-align center
+
+/* headline styles */
 h1, h2
   text-align center
   line-height 1.5
@@ -54,9 +99,6 @@ h2
 empty
   min-width 0px
   min-height 0px
-
-.section:nth-child(2n + 3)
-  background-color $shpe-gray
 
 .headline
   background-color: $shpe-blue !important
@@ -77,8 +119,25 @@ empty
   background-position 50% 0%
   min-height 390px
 
+/* section styles */
+
+.container
+  width 450px
+  margin 0 auto
+
+  @media (min-width: 568px)
+    width: 565px
+    margin: 0 auto
+
+  @media (min-width: 768px)
+    width: 690px
+    margin: 0 auto
+
+.section:nth-child(2n + 3)
+  background-color $shpe-gray
+
 .section_title
-  color: $shpe-blue-font
+  color: $shpe-blue-dark
 
 .section_bio
   min-height 265px
@@ -91,51 +150,6 @@ empty
 
 .section
   padding: 50px 0
-
-footer
-  background-color: $footer_bg_color
-  min-height 350px
-  color white
-  font-size 0.8em
-
-  h3
-    font-size 1.5em
-
-  .pure-form
-    input
-      margin-bottom 10px
-    textarea
-      margin-bottom 10px
-
-  .pure-u-1
-    @media (max-width: 568px)
-      padding 0 30px
-
-.container
-  width 450px
-  margin 0 auto
-
-  @media (min-width: 568px)
-    width: 565px
-    margin: 0 auto
-
-  @media (min-width: 768px)
-    width: 760px
-    margin: 0 auto
-
-.menu_hide-sm
-  @media (max-width: 960px)
-    display none
-
-.menu_hide-lg
-  @media (min-width: 960px)
-    display none
-
-.menu_hamburger-size
-  font-size 2em
-
-.menu_hamburger-container
-  text-align center
 
 .slick-prev, .slick-next
   &:before
@@ -150,6 +164,8 @@ footer
 .slick-slide
   text-align center
   height 300px
+  font-size 14px
+  font-weight 300
 
   img
     height 150px
@@ -159,6 +175,35 @@ footer
 
   h3
     margin 0
+    color $shpe-blue
 
   button
     margin 10px
+
+/* footer styles */
+footer
+  background-color: $footer_bg_color
+  min-height 350px
+  font-size 12px
+  color $footer_font_color
+
+  p
+    font-size 12px
+
+  h3
+    color white
+    font-size 1.4em
+
+  .pure-form
+    input
+      margin-bottom 10px
+      background-color $shpe-gray
+    textarea
+      margin-bottom 10px
+      background-color $shpe-gray
+    *
+
+  .pure-u-1
+    @media (max-width: 568px)
+      padding 0 30px
+
