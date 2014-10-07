@@ -2493,6 +2493,7 @@ textarea {
 p {
   font-weight: 300;
   font-size: 14px;
+  text-align: justify;
 }
 @media (min-width: 1024px) {
   .clearfix-lg {
@@ -2510,14 +2511,27 @@ p {
   }
 }
 /* button styles */
-.button-primary {
+.button-rsvp {
   width: 140px;
   height: 25px;
   font-style: italic;
   line-height: 0;
   font-weight: 300;
+  border-radius: 4px;
   color: #fff;
   background-color: #34495e;
+}
+.button-primary {
+  width: 235px;
+  height: 45px;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #34495e;
+}
+.button-primary span {
+  float: right;
 }
 .button-footer {
   width: 105px;
@@ -2561,7 +2575,7 @@ h2 {
   line-height: 1.5;
 }
 h1 {
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 @media (min-width: 568px) {
   h1 {
@@ -2569,7 +2583,7 @@ h1 {
   }
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 @media (min-width: 568px) {
   h2 {
@@ -2621,7 +2635,7 @@ empty {
 }
 /* section styles */
 .container {
-  width: 300px;
+  width: 290px;
   margin: 0 auto;
 }
 @media (min-width: 568px) {
@@ -2654,9 +2668,6 @@ empty {
 .section_upcoming {
   min-height: 450px;
 }
-.membership_section {
-  min-height: 200px;
-}
 .section {
   padding: 50px 0;
 }
@@ -2688,6 +2699,18 @@ empty {
 }
 .slick-slide button {
   margin: 10px;
+}
+/** membership section **/
+.membership_section {
+  min-height: 200px;
+}
+.membership_button-center {
+  text-align: center;
+}
+@media (max-width: 568px) {
+  .membership_button-secondPadding {
+    margin-top: 15px;
+  }
 }
 /* footer styles */
 footer {

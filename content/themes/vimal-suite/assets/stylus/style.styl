@@ -29,6 +29,7 @@ textarea
 p
   font-weight 300
   font-size 14px
+  text-align justify
 
 .clearfix-lg
   @media (min-width: 1024px)
@@ -43,14 +44,27 @@ p
     display none
 
 /* button styles */
-.button-primary
+.button-rsvp
   width 140px
   height 25px
   font-style italic
   line-height 0
   font-weight 300
+  border-radius 4px
   color white
   background-color $shpe-blue-dark2
+
+.button-primary
+  width 235px
+  height 45px
+  text-align center
+  font-style italic
+  color white
+  border-radius 5px
+  background-color $shpe-blue-dark2
+
+  span
+    float right
 
 .button-footer
   width 105px
@@ -91,13 +105,13 @@ h1, h2
   line-height 1.5
 
 h1
-  font-size 1.6em
+  font-size 1.5em
 
   @media (min-width: 568px)
     font-size 2em
 
 h2
-  font-size 1.5em
+  font-size 1.4em
 
   @media (min-width: 568px)
     font-size 1.9em
@@ -140,7 +154,7 @@ empty
 /* section styles */
 
 .container
-  width 300px
+  width 290px
   margin 0 auto
 
   @media (min-width: 568px)
@@ -166,9 +180,6 @@ empty
 
 .section_upcoming
   min-height 450px
-
-.membership_section
-  min-height 200px
 
 .section
   padding: 50px 0
@@ -201,6 +212,17 @@ empty
 
   button
     margin 10px
+
+/** membership section **/
+.membership_section
+  min-height 200px
+
+.membership_button-center
+  text-align center
+
+.membership_button-secondPadding
+  @media (max-width: 568px)
+    margin-top 15px
 
 /* footer styles */
 footer
