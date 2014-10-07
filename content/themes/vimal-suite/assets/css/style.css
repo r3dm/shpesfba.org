@@ -2591,7 +2591,7 @@ empty {
 }
 /* section styles */
 .container {
-  width: 450px;
+  width: 340px;
   margin: 0 auto;
 }
 @media (min-width: 568px) {
