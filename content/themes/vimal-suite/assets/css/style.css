@@ -2667,6 +2667,19 @@ empty {
 }
 .section_upcoming {
   min-height: 450px;
+  background-image: url("../img/shape-03.png");
+  background-position: 60% 0%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 568px) {
+  .section_upcoming {
+    background-position: 40% 0%;
+  }
+}
+@media (min-width: 1024px) {
+  .section_upcoming {
+    background-position: 30% 0%;
+  }
 }
 .section {
   padding: 50px 0;
