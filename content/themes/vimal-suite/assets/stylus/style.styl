@@ -249,7 +249,7 @@ empty
   margin-bottom 25px
 
   > div
-    padding 10px
+    padding 10px 40px
 
   .head
     background-color $shpe-blue
@@ -261,6 +261,9 @@ empty
     span
       float right
 
+    @media (max-width: 568px)
+      background-color transparent
+
   .body
     font-size 12px
 
@@ -271,6 +274,34 @@ empty
 
   li
     padding-bottom 5px
+
+  @media (max-width: 568px)
+    text-align center
+    border-radius 0
+    min-height 200px
+    font-weight bold
+    *, .head
+      color $shpe-blue-dark
+    .head span
+      color $shpe-blue
+      float none
+      display block
+
+    &:nth-child(2n+1)
+      background-color $shpe-gray
+    &:nth-child(2n)
+      background-color transparent
+
+.membership_page-bg
+  background-image url(../img/shape-04.png)
+  background-repeat no-repeat
+  background-position 67% 100%
+
+  @media (min-width: 568px)
+    background-position 67% 100%
+
+  @media (min-width: 1024px)
+    background-position 40% 100%
 
 /* footer styles */
 footer

@@ -2739,7 +2739,7 @@ empty {
   margin-bottom: 25px;
 }
 .membershipLevel > div {
-  padding: 10px;
+  padding: 10px 40px;
 }
 .membershipLevel .head {
   background-color: #33648c;
@@ -2751,6 +2751,11 @@ empty {
 .membershipLevel .head span {
   float: right;
 }
+@media (max-width: 568px) {
+  .membershipLevel .head {
+    background-color: transparent;
+  }
+}
 .membershipLevel .body {
   font-size: 12px;
 }
@@ -2761,6 +2766,44 @@ empty {
 }
 .membershipLevel li {
   padding-bottom: 5px;
+}
+@media (max-width: 568px) {
+  .membershipLevel {
+    text-align: center;
+    border-radius: 0;
+    min-height: 200px;
+    font-weight: bold;
+  }
+  .membershipLevel *,
+  .membershipLevel .head {
+    color: #1a3851;
+  }
+  .membershipLevel .head span {
+    color: #33648c;
+    float: none;
+    display: block;
+  }
+  .membershipLevel:nth-child(2n+1) {
+    background-color: #d3d2d2;
+  }
+  .membershipLevel:nth-child(2n) {
+    background-color: transparent;
+  }
+}
+.membership_page-bg {
+  background-image: url("../img/shape-04.png");
+  background-repeat: no-repeat;
+  background-position: 67% 100%;
+}
+@media (min-width: 568px) {
+  .membership_page-bg {
+    background-position: 67% 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .membership_page-bg {
+    background-position: 40% 100%;
+  }
 }
 /* footer styles */
 footer {
