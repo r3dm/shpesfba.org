@@ -2784,13 +2784,15 @@ empty {
     min-height: 200px;
     font-weight: bold;
   }
-  .membershipLevel *,
   .membershipLevel .head {
     color: #1a3851;
   }
   .membershipLevel button {
     color: #fff;
     margin-bottom: 10px;
+  }
+  .membershipLevel button span {
+    color: #fff;
   }
   .membershipLevel .head span {
     color: #33648c;
@@ -2853,5 +2855,6 @@ footer .pure-form textarea {
   footer .footer_form-container {
     width: 300px;
     margin: 0 auto;
+    display: block;
   }
 }
