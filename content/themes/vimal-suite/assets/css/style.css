@@ -2510,6 +2510,14 @@ p {
     display: none;
   }
 }
+.show-on-mobile {
+  display: inherit;
+}
+@media (min-width: 568px) {
+  .show-on-mobile {
+    display: none;
+  }
+}
 /* button styles */
 .button-rsvp {
   width: 140px;
@@ -2759,10 +2767,12 @@ empty {
 .membershipLevel .body {
   font-size: 12px;
 }
-.membershipLevel button {
-  float: right;
-  width: 155px;
-  height: 30px;
+@media (min-width: 568px) and (max-width: 1024px) {
+  .membershipLevel button {
+    float: right;
+    width: 155px;
+    height: 30px;
+  }
 }
 .membershipLevel li {
   padding-bottom: 5px;
@@ -2778,10 +2788,15 @@ empty {
   .membershipLevel .head {
     color: #1a3851;
   }
+  .membershipLevel button {
+    color: #fff;
+    margin-bottom: 10px;
+  }
   .membershipLevel .head span {
     color: #33648c;
     float: none;
     display: block;
+    padding: 20px 0 0 0;
   }
   .membershipLevel:nth-child(2n+1) {
     background-color: #d3d2d2;

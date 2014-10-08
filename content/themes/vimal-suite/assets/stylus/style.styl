@@ -43,6 +43,12 @@ p
   @media (max-width: 568px)
     display none
 
+.show-on-mobile
+  display inherit
+
+  @media (min-width: 568px)
+    display none
+
 /* button styles */
 .button-rsvp
   width 140px
@@ -267,10 +273,11 @@ empty
   .body
     font-size 12px
 
-  button
-    float right
-    width 155px
-    height 30px
+  @media (min-width: 568px) and (max-width: 1024px)
+    button
+      float right
+      width 155px
+      height 30px
 
   li
     padding-bottom 5px
@@ -282,10 +289,14 @@ empty
     font-weight bold
     *, .head
       color $shpe-blue-dark
+    button
+      color white
+      margin-bottom 10px
     .head span
       color $shpe-blue
       float none
       display block
+      padding 20px 0 0 0
 
     &:nth-child(2n+1)
       background-color $shpe-gray
