@@ -2836,7 +2836,8 @@ empty {
   position: absolute;
   display: none;
 }
-.gallery_photo img {
+.gallery_photo img,
+.gallery_photo .gallery_photo-metadata {
   width: 250px;
   height: 250px;
 }
@@ -2844,7 +2845,8 @@ empty {
   display: block;
 }
 @media (min-width: 568px) {
-  .gallery_photo img {
+  .gallery_photo img,
+  .gallery_photo .gallery_photo-metadata {
     width: 200px;
     height: 200px;
   }
