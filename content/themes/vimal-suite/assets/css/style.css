@@ -2807,20 +2807,52 @@ empty {
     background-color: transparent;
   }
 }
-.membership_page-bg {
+.inner_page-bg {
   background-image: url("../img/shape-04.png");
   background-repeat: no-repeat;
   background-position: 67% 100%;
 }
 @media (min-width: 568px) {
-  .membership_page-bg {
+  .inner_page-bg {
     background-position: 67% 100%;
   }
 }
 @media (min-width: 1024px) {
-  .membership_page-bg {
+  .inner_page-bg {
     background-position: 40% 100%;
   }
+}
+/** gallery page styles **/
+.gallery_page-container {
+  text-align: center;
+  z-index: 1;
+}
+.gallery_photo {
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+}
+.gallery_photo .gallery_photo-metadata {
+  position: absolute;
+  display: none;
+}
+.gallery_photo img {
+  width: 250px;
+  height: 250px;
+}
+.gallery_photo:hover .gallery_photo-metadata {
+  display: block;
+}
+@media (min-width: 568px) {
+  .gallery_photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.gallery_photo-metadata {
+  top: 0;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.5);
 }
 /* footer styles */
 footer {
