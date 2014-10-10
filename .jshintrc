@@ -8,7 +8,7 @@
   "freeze": true,
   "immed": true,
   "indent": 1,  /* custom */
-  "latedef": true,
+  "latedef": "nofunc",
   "newcap": true,
   "noarg": true,
   "noempty": true,
