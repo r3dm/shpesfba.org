@@ -2621,11 +2621,11 @@ empty {
   height: 390px;
 }
 .headline_container_left {
-  background-image: url("../img/shape-01.png");
+  background-image: url("../images/shape-01.png");
   background-position: 40% 0%;
 }
 .headline_container_right {
-  background-image: url("../img/shape-02.png");
+  background-image: url("../images/shape-02.png");
   background-position: 50% 75%;
 }
 .headline-min {
@@ -2682,7 +2682,7 @@ empty {
 }
 .section_upcoming {
   min-height: 450px;
-  background-image: url("../img/shape-03.png");
+  background-image: url("../images/shape-03.png");
   background-position: 60% 0%;
   background-repeat: no-repeat;
 }
@@ -2808,7 +2808,7 @@ empty {
   }
 }
 .inner_page-bg {
-  background-image: url("../img/shape-04.png");
+  background-image: url("../images/shape-04.png");
   background-repeat: no-repeat;
   background-position: 67% 100%;
 }

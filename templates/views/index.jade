@@ -1,23 +1,93 @@
 extends ../layouts/default
 
 block content
-  .container: .jumbotron
-    img(src='/images/logo.svg', width='160')
-    h1 Dat money
-    p This is your new <a href='http://keystonejs.com', target='_blank'>KeystoneJS</a> website.
-    p It includes the latest versions of
-      | <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-      | and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-    p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-    hr
-    if user && user.canAccessKeystone
+  .headline
+    .headline_container_left
+      .headline_container_right
+        .section.container
+          h1.headline_text
+            | San Francisco Bay Area
+            br
+            |           Society of Hispanic Professional Engineers
+  .section_bio.section
+    .container
+      h2.section_title What is SHPE?
       p
-        a(href='/keystone/signin').btn.btn-lg.btn-primary Open the Admin UI
-    else
-      p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
+        | The society of Hispanic Professional Engineers (SHPE) was founded in Los Angeles, California,
+        | in 1974 by a group of engineers employed by the city of Los Angeles. Their objective was to
+        | form a national organiztion of professional engineers to serve as role models in the Hispanic Community.
       p
-        a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-        |  to use the Admin UI.
-    hr
-    p Remember to <a href='https://github.com/JedWatson/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-      | <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+        | The concept of Networking was the key basis for the organization. SHPE quickly established two
+        | student chapters to begin the network that would grow to encompass the nation as well as reach
+        | countries outside of the United States. Today, SHPE enjoys a strong but independent network of
+        | professionals and student chapters throughout the nation.
+  .section_upcoming.section
+    .container
+      h2.section_title Upcoming Events
+      .carousel-upcoming
+        div
+          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+          h3 SHPE SFBA @ Google
+          |             August 6, 2014
+          br
+          |             5:30pm - 8:00pm
+          br
+          button.pure-button.button-rsvp RSVP
+        div
+          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+          h3 SHPE SFBA @ Google
+          |             August 6, 2014
+          br
+          |             5:30pm - 8:00pm
+          br
+          button.pure-button.button-rsvp RSVP
+        div
+          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+          h3 SHPE SFBA @ Google
+          |             August 6, 2014
+          br
+          |             5:30pm - 8:00pm
+          br
+          button.pure-button.button-rsvp RSVP
+        div
+          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+          h3 SHPE SFBA @ Google
+          |             August 6, 2014
+          br
+          |             5:30pm - 8:00pm
+          br
+          button.pure-button.button-rsvp RSVP
+        div
+          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+          h3 SHPE SFBA @ Google
+          |             August 6, 2014
+          br
+          |             5:30pm - 8:00pm
+          br
+          button.pure-button.button-rsvp RSVP
+        div
+          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+          h3 SHPE SFBA @ Google
+          |             August 6, 2014
+          br
+          |             5:30pm - 8:00pm
+          br
+          button.pure-button.button-rsvp RSVP
+  .membership_section.section
+    .container
+      h2.section_title Membership
+      p
+        | Membership is open to all individuals who believe in the mission and goals set forth by the organization.
+        | SF Bay Area SHPE does not discriminate based on occupation, ethnicity, or any other classification.
+        | The chapter welcomes individuals and corporations alike to join together to fufill the mission and goals of
+        | SF Bay Area SHPE.
+      .pure-g.membership_button-center
+        .pure-u-1.pure-u-sm-1-2
+          a(href='/membership')
+            button.pure-button.button-primary
+              span &gt;
+              | Learn More
+        .pure-u-1.pure-u-sm-1-2
+          button.pure-button.button-primary.membership_button-secondPadding
+            span &gt;
+            | Apply Now
