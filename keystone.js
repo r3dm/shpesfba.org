@@ -6,8 +6,8 @@ keystone.init({
   'name': 'shpe',
   'brand': 'shpe',
 
-  'less': 'public',
   'static': 'public',
+  'less': null,
   'favicon': 'public/favicon.ico',
   'views': 'templates/views',
   'view engine': 'jade',
@@ -20,7 +20,6 @@ keystone.init({
   'user model': 'User',
   'cookie secret':
     'y5g?X/e0X}UnGnBz/)ZnzRTziV=,pmh$9WOIS$[u$wiTEsb~,ng)]|ow%1[!_D:H'
-
 });
 
 // Load your project's Models
