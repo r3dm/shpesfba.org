@@ -9,7 +9,7 @@ exports.create = {
     'name.first': 'Admin',
     'name.last': 'User',
     email: 'info@r3dm.com',
-    password: 'thebigredmiscoming',
+    password: 'dummypass', //replace this manually when you sign in
     isAdmin: true
   }]
 };

@@ -50,8 +50,6 @@ exports.flashMessages = function(req, res, next) {
     error: req.flash('error')
   };
 
-  // No docs for _.any() method
-  // Not sure if this works. - Berks
   res.locals.messages = _.any(flashMessages, hasLength ? flashMessages : false);
 
   next();
