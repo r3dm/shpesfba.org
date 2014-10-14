@@ -42,27 +42,25 @@ html
 
       //- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
       //- ... or completely change this header to suit your design.
-
-      div(role="navigation").navbar.navbar-default
-        .container-fluid
-          .navbar-header
-            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-              span.sr-only Toggle navigation
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a.navbar-brand(href='/') shpe
-          .collapse.navbar-collapse
-            ul.nav.navbar-nav.navbar-left
-              each link in navLinks
-                li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-            ul.nav.navbar-nav.navbar-right
-              if user
-                if user.canAccessKeystone
-                  li: a(href='/keystone') Open Keystone
-                li: a(href='/keystone/signout') Sign Out
-              else
-                li: a(href='/keystone/signin') Sign In
+    div(role="navigation").menu.pure-g.menu_hide-sm
+      .pure-u-sm-1-8.empty
+      .pure-u-sm-3-4
+        .pure-menu.pure-menu-open.pure-menu-horizontal
+          ul
+            each link in navLinks
+              li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+            if user
+              if user.canAccessKeystone
+                li: a(href='/keystone') Open Keystone
+              li: a(href='/keystone/signout') Sign Out
+            else
+              li: a(href='/keystone/signin') Sign In
+      .pure-u-sm-1-8.empty
+    .pure-g.menu_hide-lg
+      .pure-u-1-4
+      .pure-u-2-3.empty
+      .pure-u-2-24.menu_hamburger-size.menu_hamburger-container
+        i.fa.fa-bars
 
     //- BODY
     #body
