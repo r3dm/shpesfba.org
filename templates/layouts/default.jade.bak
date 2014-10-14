@@ -15,7 +15,6 @@ html
     link(rel='stylesheet', type='text/css', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css')
 
     link(href="/styles/site.min.css", rel="stylesheet")
-    link(href="/styles/slick.css", rel="stylesheet")
 
     //- This file provides the default styling for the KeystoneJS Content Editor
     if user && user.canAccessKeystone
@@ -90,17 +89,17 @@ html
         .pure-u-1.pure-u-sm-6-24.pure-u-lg-4-24.clearfix-xs
           h3 About SHPE
           p
-            Lorem ipsum dolor sit amet, ex deleniti maluisset dissentiunt vis, illum suavitate sit id, at duis integre per. Qui cu docendi blandit assentior, est an inani nemore electram. Sea at alii eros, vim ea ridens minimum.
+            | Lorem ipsum dolor sit amet, ex deleniti maluisset dissentiunt vis, illum suavitate sit id, at duis integre per. Qui cu docendi blandit assentior, est an inani nemore electram. Sea at alii eros, vim ea ridens minimum.
         .pure-u-1.pure-u-sm-1-24.pure-u-lg-2-24.clearfix-xs
         .pure-u-1.pure-u-sm-7-24.pure-u-lg-5-24.clearfix-xs
           h3 Latest News
-            San Jose Earthquakes Stadium Tour
+          |           San Jose Earthquakes Stadium Tour
           hr
-          Welcome back mixer!
+          |           Welcome back mixer!
           hr
-          SHPE Engineering Day at The Exploratorium
+          |           SHPE Engineering Day at The Exploratorium
           hr
-          Win a Chevrolet Spark! - SHPE Raffle
+          |           Win a Chevrolet Spark! - SHPE Raffle
         .pure-u-1.pure-u-sm-1-24.pure-u-lg-2-24.clearfix-xs
         .pure-u-1.pure-u-sm-7-24.pure-u-lg-5-24.footer_form-container
           h3 Contact Us
@@ -110,12 +109,21 @@ html
             textarea.pure-input-1(name='message', placeholder='Message', rows='3')
             br
             button.pure-button.button-footer(type='submit')
-              | send
+              | send 
               span &gt;
         .pure-u-1.pure-u-sm-1-24.pure-u-lg-3-24
+    |     {{! Ghost outputs important scripts and data with this tag }}
+    |     {{ghost_foot}}
+    |     {{! The main JavaScript file for vimalSuite }}
+    script(type='text/javascript', src='{{asset ', js='')
+    script(type='text/javascript', src='{{asset ', js='')
+    script(type='text/javascript', src='{{asset ', js='', vendor='')
 
     //- JAVASCRIPT
 
+    //- jQuery 1.11.1 is included by default, and required by both Bootstrap
+    //- and the KeystoneJS Content Editor. If you are not targeting IE8,
+    //- you can upgrade to 2.1.1 (also bundled) for better performance.
     script(src='/js/lib/jquery/jquery-2.1.1.min.js')
 
     //- Customise which Bootstrap javascript files are served by including
@@ -133,3 +141,6 @@ html
 
     //- Include template-specific javascript files by extending the js block
     block js
+
+//- vimal suite
+
