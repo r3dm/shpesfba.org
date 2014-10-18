@@ -36,7 +36,22 @@ html
 
   //- HTML BODY
   body
+    script.
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1540860829462325',
+          xfbml      : false,
+          version    : 'v2.1'
+        });
+      };
 
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     //- HEADER
     #header: .container
 
@@ -108,8 +123,8 @@ html
             textarea.pure-input-1(name='message', placeholder='Message', rows='3')
             br
             button.pure-button.button-footer(type='submit')
-              | send
               span &gt;
+              | send
         .pure-u-1.pure-u-sm-1-24.pure-u-lg-3-24
 
     //- JAVASCRIPT

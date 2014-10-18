@@ -1,5 +1,5 @@
 var keystone = require('keystone'),
-	Types = keystone.Field.Types;
+  Types = keystone.Field.Types;
 
 /**
  * PostCategory Model
@@ -7,11 +7,11 @@ var keystone = require('keystone'),
  */
 
 var PostCategory = new keystone.List('PostCategory', {
-	autokey: { from: 'name', path: 'key', unique: true }
+  autokey: { from: 'name', path: 'key', unique: true }
 });
 
 PostCategory.add({
-	name: { type: String, required: true }
+  name: { type: String, required: true }
 });
 
 PostCategory.relationship({ ref: 'Post', path: 'categories' });
