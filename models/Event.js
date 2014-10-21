@@ -4,22 +4,24 @@ var keystone = require('keystone'),
 var Event = new keystone.List('Event');
 
 Event.add({
-  id:             { type: Types.Number,   required: true, index: true },
-  name:           { type: Types.Text,     required: true, index: true },
-  description:    { type: Types.Textarea, required: true, index: true },
-  start_time:     { type: Types.Datetime, required: true, index: true },
-  end_time:       { type: Types.Datetime, required: true, index: true },
-  is_date_only:   { type: Types.Boolean,  required: false, index: true },
-  location:       { type: Types.Text,     required: false, index: true },
-  owner_name:     { type: Types.Text,     required: false, index: true },
-  updated_time:   { type: Types.Datetime, required: false, index: true },
-  venue_name:     { type: Types.Text,     required: false             }, // typically given if lat/long data isn't
-  venue_city :    { type: Types.Name,     required: false, index: true },
-  venue_lat :     { type: Types.Name,     required: false, index: true },
-  venue_long :    { type: Types.Name,     required: false, index: true },
-  venue_state :   { type: Types.Name,     required: false, index: true },
-  venue_street :  { type: Types.Name,     required: false, index: true },
-  venue_zip :     { type: Types.Name,     required: false, index: true }
+  FB_event_id:    { type: Types.Number, required: true, initial: true },
+  name:           { type: Types.Text },
+  FB_event_name:  { type: Types.Text },
+  description:    { type: Types.Textarea },
+  start_time:     { type: Types.Datetime },
+  end_time:       { type: Types.Datetime },
+  is_date_only:   { type: Types.Boolean },
+  location:       { type: Types.Text },
+  owner_name:     { type: Types.Text },
+  updated_time:   { type: Types.Datetime },
+  venue_name:     { type: Types.Text }, // typically given if lat/long data isn't
+  venue_city :    { type: Types.Text },
+  venue_lat :     { type: Types.Number },
+  venue_long :    { type: Types.Number },
+  venue_state :   { type: Types.Text },
+  venue_street :  { type: Types.Text },
+  venue_zip :     { type: Types.Number },
+  cover_photo:    { type: Types.S3File }
 });
 
 Event.register();
