@@ -4,8 +4,8 @@ var keystone = require('keystone'),
   Types = keystone.Field.Types,
   https = require('https');
 
-var Event = new keystone.List('Event', { defaultSort: 'startTime' });
-Event.defaultColumns = 'FBEventName';
+var Event = new keystone.List('Event', { defaultSort: '-startTime' });
+Event.defaultColumns = 'FBEventName, startTime';
 
 Event.add({
   FBEventId:     { type: Types.Number, required: true, initial: true, unique: true },
