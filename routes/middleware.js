@@ -20,8 +20,9 @@ var _ = require('underscore');
 */
 
 exports.initLocals = function(req, res, next) {
-
-  var locals = res.locals;
+  var keystone = require('keystone'),
+    Event = keystone.list('Event'),
+    locals = res.locals;
 
   locals.navLinks = [
     { label: 'Home',    key: 'home',    href: '/' },
@@ -30,11 +31,13 @@ exports.initLocals = function(req, res, next) {
     { label: 'Contact',   key: 'contact',   href: '/contact' }
   ];
 
-  locals.user = req.user;
-  locals.events = 'hi';
-
-  next();
-
+  Event.model.find()
+    .populate('author')
+    .exec(function(err, events) {
+      locals.user = req.user;
+      locals.events = events;
+      next();
+    });
 };
 
 
