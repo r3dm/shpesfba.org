@@ -4,17 +4,17 @@ var keystone = require('keystone'),
   Types = keystone.Field.Types,
   https = require('https');
 
-var Event = new keystone.List('Event');
+var Event = new keystone.List('Event', { defaultSort: 'startTime' });
+Event.defaultColumns = 'FBEventName';
 
 Event.add({
-  FBEventId:    { type: Types.Number, required: true, initial: true, unique: true },
-  name:           { type: Types.Text },
-  FBEventName:  { type: Types.Text },
-  description:    { type: Types.Textarea },
+  FBEventId:     { type: Types.Number, required: true, initial: true, unique: true },
+  FBEventName:   { type: Types.Text },
+  description:   { type: Types.Textarea },
   startTime:     { type: Types.Datetime },
   endTime:       { type: Types.Datetime },
-  isDateOnly:   { type: Types.Boolean },
-  location:       { type: Types.Text },
+  isDateOnly:    { type: Types.Boolean },
+  location:      { type: Types.Text },
   ownerName:     { type: Types.Text },
   updatedTime:   { type: Types.Datetime },
   venueName:     { type: Types.Text }, // typically given if lat/long data isn't
@@ -48,18 +48,20 @@ Event.schema.pre('save', function(next) {
           myEvent.location = body.location;
           myEvent.ownerName = body.owner.name;
           myEvent.updatedTime = body.updated_time;
-          if (body.venue.name) {
-            myEvent.venueName = body.venue.name;
-            myEvent.venueCity = myEvent.venueLat = myEvent.venueLong = null;
-            myEvent.venueStreet = myEvent.venueZip = myEvent.venueState = null;
-          } else {
-            myEvent.venueName = null;
-            myEvent.venueCity = body.venue.city;
-            myEvent.venueLat = body.venue.latitude;
-            myEvent.venueLong = body.venue.longitude;
-            myEvent.venueState = body.venue.state;
-            myEvent.venueStreet = body.venue.street;
-            myEvent.venueZip = body.venue.zip;
+          if (body.venue) {
+            if (body.venue.name) {
+              myEvent.venueName = body.venue.name;
+              myEvent.venueCity = myEvent.venueLat = myEvent.venueLong = null;
+              myEvent.venueStreet = myEvent.venueZip = myEvent.venueState = null;
+            } else {
+              myEvent.venueName = null;
+              myEvent.venueCity = body.venue.city;
+              myEvent.venueLat = body.venue.latitude;
+              myEvent.venueLong = body.venue.longitude;
+              myEvent.venueState = body.venue.state;
+              myEvent.venueStreet = body.venue.street;
+              myEvent.venueZip = body.venue.zip;
+            }
           }
         }
         next();

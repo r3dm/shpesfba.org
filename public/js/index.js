@@ -33,17 +33,17 @@ $(document).ready(function() {
     1530629657165894
   ];
 
-  events.forEach(function(element, index, array) {
-    $.get(
-      "https://graph.facebook.com/v2.1/" + element +
-      "?access_token=1540860829462325|w119GKY-gtms6pHnBUIMhAUDun4",
-      {},
-      function(data) {
-        console.log(data);
-        a = data;
-      }
-    );
-  });
+  // events.forEach(function(element, index, array) {
+  //   $.get(
+  //     "https://graph.facebook.com/v2.1/" + element +
+  //     "?access_token=1540860829462325|w119GKY-gtms6pHnBUIMhAUDun4",
+  //     {},
+  //     function(data) {
+  //       console.log(data);
+  //       a = data;
+  //     }
+  //   );
+  // });
   //
   // FB.login(function(){}, {scope: 'user_groups'});
   //
