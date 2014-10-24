@@ -21,60 +21,20 @@ block content
         | student chapters to begin the network that would grow to encompass the nation as well as reach
         | countries outside of the United States. Today, SHPE enjoys a strong but independent network of
         | professionals and student chapters throughout the nation.
-      for event in events
-        p #{event.FBEventName}
   .section_upcoming.section
     .container
       h2.section_title Upcoming Events
       .carousel-upcoming
-        div
-          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-          h3 SHPE SFBA @ Google
-          |             August 6, 2014
-          br
-          |             5:30pm - 8:00pm
-          br
-          button.pure-button.button-rsvp RSVP
-        div
-          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-          h3 SHPE SFBA @ Google
-          |             August 6, 2014
-          br
-          |             5:30pm - 8:00pm
-          br
-          button.pure-button.button-rsvp RSVP
-        div
-          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-          h3 SHPE SFBA @ Google
-          |             August 6, 2014
-          br
-          |             5:30pm - 8:00pm
-          br
-          button.pure-button.button-rsvp RSVP
-        div
-          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-          h3 SHPE SFBA @ Google
-          |             August 6, 2014
-          br
-          |             5:30pm - 8:00pm
-          br
-          button.pure-button.button-rsvp RSVP
-        div
-          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-          h3 SHPE SFBA @ Google
-          |             August 6, 2014
-          br
-          |             5:30pm - 8:00pm
-          br
-          button.pure-button.button-rsvp RSVP
-        div
-          img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-          h3 SHPE SFBA @ Google
-          |             August 6, 2014
-          br
-          |             5:30pm - 8:00pm
-          br
-          button.pure-button.button-rsvp RSVP
+        for event in events
+          div
+            img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+            h3 #{event.FBEventName}
+            = getStartTime(event.startTime)
+            br
+            |             0:00pm - 0:00pm
+            br
+            button.pure-button.button-rsvp
+              a(href='https://www.facebook.com/events/' + event.FBEventId) RSVP
   .membership_section.section
     .container
       h2.section_title Membership

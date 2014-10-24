@@ -38,6 +38,16 @@ exports.initLocals = function(req, res, next) {
       locals.events = events;
       next();
     });
+
+  locals.getStartTime = function(date) {
+    return date.toDateString().slice(3);
+  };
+  locals.getEndTime = function(date) {
+    return date;
+  };
+  locals.getDate = function(str) {
+    return str;
+  };
 };
 
 
