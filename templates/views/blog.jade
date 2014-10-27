@@ -46,7 +46,7 @@ block content
           .blog
             each post in data.posts.results
               +post(post)
-          
+
           if data.posts.totalPages > 1
             ul.pagination
               if data.posts.previous
