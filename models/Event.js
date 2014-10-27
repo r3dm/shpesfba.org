@@ -8,7 +8,7 @@ var Event = new keystone.List('Event', { defaultSort: '-startTime' });
 Event.defaultColumns = 'FBEventName, startTime';
 
 Event.add({
-  FBEventId:     { type: Types.Number, required: true, initial: true, unique: true },
+  FBEventId:     { type: Types.Number, format: false, required: true, initial: true, unique: true },
   FBEventName:   { type: Types.Text },
   description:   { type: Types.Textarea },
   startTime:     { type: Types.Datetime },
