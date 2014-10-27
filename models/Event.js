@@ -24,21 +24,27 @@ Event.add({
   venueState :   { type: Types.Text },
   venueStreet :  { type: Types.Text },
   venueZip :     { type: Types.Number, format: false },
-  coverPhoto:    { type: Types.S3File }
+  coverPhoto:    { type: Types.S3File },
+  error:         { type: Types.Boolean }
 });
 
 Event.schema.pre('save', function(next) {
   var myEvent = this;
   https.get(
-    'https://graph.facebook.com/v2.1/' + this.FBEventId + '?access_token=1540860829462325|w119GKY-gtms6pHnBUIMhAUDun4',
+    'https://graph.facebook.com/v2.1/' + this.FBEventId +
+    '?access_token=' + process.env.FB_ACCESS_TOKEN + '|' + process.env.FB_SECRET,
     function(res) {
       var body = '';
       res.on('data', function(d) { body += d; });
       res.on('end', function() {
         body = JSON.parse(body);
-        if (body.type === 'GraphMethodException') {
+        if (body.error) {
           // TODO prevent completion of event save
-          console.log('graphMethodException :(');
+          console.log('graphMethodException :(', body.error);
+          myEvent.FBEventName = 'graphMethodException';
+          myEvent.error = true;
+          myEvent.description = 'We\'ve encountered an error with the provided id.' +
+            'Double check that the event is public';
         } else {
           myEvent.FBEventName = body.name;
           myEvent.description = body.description;
@@ -46,8 +52,8 @@ Event.schema.pre('save', function(next) {
           myEvent.endTime = body.end_time;
           myEvent.is_data_only = body.is_data_only;
           myEvent.location = body.location;
-          myEvent.ownerName = body.owner.name;
           myEvent.updatedTime = body.updated_time;
+          myEvent.ownerName = body.owner.name;
           if (body.venue) {
             if (body.venue.name) {
               myEvent.venueName = body.venue.name;

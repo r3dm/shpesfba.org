@@ -26,20 +26,22 @@ block content
       h2.section_title Upcoming Events
       .carousel-upcoming
         for event in events
-          div
-            if event.coverPhoto.url
-              img(alt='event photo', src=event.coverPhoto.url)
-            else
-              img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-            h3 #{event.FBEventName}
-            = getDate(event.startTime)
-            br
-            = getStartTime(event.startTime)
-            | -
-            = getEndTime(event.endTime)
-            br
-            button.pure-button.button-rsvp
-              a(href='https://www.facebook.com/events/' + event.FBEventId) RSVP
+          if event.error
+          else
+            div
+              if event.coverPhoto.url
+                img(alt='event photo', src=event.coverPhoto.url)
+              else
+                img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+              h3 #{event.FBEventName}
+              = getDate(event.startTime)
+              br
+              = getStartTime(event.startTime)
+              | -
+              = getEndTime(event.endTime)
+              br
+              a(href='https://www.facebook.com/events/' + event.FBEventId)
+                button.pure-button.button-rsvp RSVP
   .membership_section.section
     .container
       h2.section_title Membership
@@ -55,6 +57,7 @@ block content
               span &gt;
               | Learn More
         .pure-u-1.pure-u-sm-1-2
-          button.pure-button.button-primary.membership_button-secondPadding
-            span &gt;
-            | Apply Now
+          a(href='#')
+            button.pure-button.button-primary.membership_button-secondPadding
+              span &gt;
+              | Apply Now

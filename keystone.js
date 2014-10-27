@@ -23,7 +23,6 @@ keystone.init({
 });
 
 // Load your project's Models
-
 keystone['import']('models');
 
 // Setup common locals for your templates. The following are required for the
