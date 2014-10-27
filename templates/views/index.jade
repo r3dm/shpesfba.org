@@ -27,7 +27,10 @@ block content
       .carousel-upcoming
         for event in events
           div
-            img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+            if event.coverPhoto.url
+              img(alt='event photo', src=event.coverPhoto.url)
+            else
+              img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
             h3 #{event.FBEventName}
             = getDate(event.startTime)
             br

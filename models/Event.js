@@ -23,7 +23,7 @@ Event.add({
   venueLong :    { type: Types.Number },
   venueState :   { type: Types.Text },
   venueStreet :  { type: Types.Text },
-  venueZip :     { type: Types.Number },
+  venueZip :     { type: Types.Number, format: false },
   coverPhoto:    { type: Types.S3File }
 });
 
