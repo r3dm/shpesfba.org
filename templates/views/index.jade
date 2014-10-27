@@ -29,9 +29,11 @@ block content
           div
             img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
             h3 #{event.FBEventName}
-            = getStartTime(event.startTime)
+            = getDate(event.startTime)
             br
-            |             0:00pm - 0:00pm
+            = getStartTime(event.startTime)
+            | -
+            = getEndTime(event.endTime)
             br
             button.pure-button.button-rsvp
               a(href='https://www.facebook.com/events/' + event.FBEventId) RSVP
