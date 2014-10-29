@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block intro
+  .container
+    h1 Photo Gallery
+
+block content
+  .headline-min
+    .headline_container_left
+      .headline_container_right
+        .section.container
+  .pure-g.gallery_page-container.inner_page-bg
+    .pure-u.pure-u-sm-1-12
+    .pure-u.pure-u-sm-5-6
+      if galleries.length
+        each gallery in galleries
+          .gallery_photo
+            if gallery.heroImage.exists
+              img(src=gallery._.heroImage.fill(200,200), alt=gallery.name)
+              .gallery_photo-metadata
+                | #{gallery.name}
+                hr
+                a(href='gallery/#{gallery.key}') Click to view gallery
+      else
+        h3.text-muted There are no image galleries yet.
+    .pure-u.pure-u-sm-1-12

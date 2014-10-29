@@ -3,22 +3,25 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     style = require('gulp-stylus'),
     plumber = require('gulp-plumber'),
-    nib = require('nib'),
-    watch = require('gulp-watch');
+    nib = require('nib');
+    //watch = require('gulp-watch');
 
 var started = false;
 var paths = {
-  stylus: './content/themes/vimal-suite/assets/stylus/',
-  css: './content/themes/vimal-suite/assets/css/',
-  js: './content/themes/vimal-suite/js/',
-  hbs: './content/themes/vimal-suite/'
+  stylus: './stylus/style.styl',
+  css: './public/styles/',
+  js: [
+    '**/*.js',
+    '!node_modules'
+  ],
+  jade: './templates/**/*.js'
 };
 
 gulp.task('serve', function(cb) {
   nodemon({
-  script: 'index.js',
-  ext: 'js hbs',
-  watch: [paths.hbs],
+  script: './keystone.js',
+  ext: 'js',
+  watch: [paths.jade],
   env: {
     'NODE_ENV': 'development'
   },
@@ -30,14 +33,11 @@ gulp.task('serve', function(cb) {
         started = true;
         cb();
       }
-    })
-    .on('restart', function() {
-      console.log('Restart, yo');
     });
 });
 
 gulp.task('style', function() {
-  return gulp.src(paths.stylus + '**/*.styl')
+  return gulp.src(paths.stylus)
     .pipe(plumber())
     .pipe(style({
       use: nib(),
@@ -47,7 +47,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.stylus + '**/*.styl', ['style']);
+  gulp.watch(paths.stylus, ['style']);
 });
 
 gulp.task('default', ['serve', 'style', 'watch']);

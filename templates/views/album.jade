@@ -1,0 +1,21 @@
+extends ../layouts/default
+
+block intro
+  .container
+    h1 #{gallery.name}
+
+block content
+  .headline-min
+    .headline_container_left
+      .headline_container_right
+        .section.container
+  .pure-g.gallery_page-container.inner_page-bg
+    .pure-u.pure-u-sm-1-12
+    .pure-u.pure-u-sm-5-6
+      if gallery.images.length
+        each photo in gallery.images
+          .gallery_photo
+            img(src=photo.fill(200,200), alt=gallery.name)
+      else
+        h3.text-muted There are no images in this gallery.
+    .pure-u.pure-u-sm-1-12

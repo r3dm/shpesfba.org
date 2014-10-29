@@ -1,0 +1,66 @@
+extends ../layouts/default
+
+// displays above the flash messages
+block intro
+
+block content
+  .headline
+    .headline_container_left
+      .headline_container_right
+        .section.container
+          h1.headline_text
+            | San Francisco Bay Area
+            br
+            |           Society of Hispanic Professional Engineers
+  .section_bio.section
+    .container
+      h2.section_title What is SHPE?
+      p
+        | The society of Hispanic Professional Engineers (SHPE) was founded in Los Angeles, California,
+        | in 1974 by a group of engineers employed by the city of Los Angeles. Their objective was to
+        | form a national organiztion of professional engineers to serve as role models in the Hispanic Community.
+      p
+        | The concept of Networking was the key basis for the organization. SHPE quickly established two
+        | student chapters to begin the network that would grow to encompass the nation as well as reach
+        | countries outside of the United States. Today, SHPE enjoys a strong but independent network of
+        | professionals and student chapters throughout the nation.
+  .section_upcoming.section
+    .container
+      h2.section_title Upcoming Events
+      .carousel-upcoming
+        for event in events
+          if event.error
+          else
+            div
+              if event.coverPhoto.url
+                img(alt='event photo', src=event.coverPhoto.url)
+              else
+                img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+              h3 #{event.FBEventName}
+              = getDate(event.startTime)
+              br
+              = getStartTime(event.startTime)
+              | -
+              = getEndTime(event.endTime)
+              br
+              a(href='https://www.facebook.com/events/' + event.FBEventId)
+                button.pure-button.button-rsvp RSVP
+  .membership_section.section
+    .container
+      h2.section_title Membership
+      p
+        | Membership is open to all individuals who believe in the mission and goals set forth by the organization.
+        | SF Bay Area SHPE does not discriminate based on occupation, ethnicity, or any other classification.
+        | The chapter welcomes individuals and corporations alike to join together to fufill the mission and goals of
+        | SF Bay Area SHPE.
+      .pure-g.membership_button-center
+        .pure-u-1.pure-u-sm-1-2
+          a(href='/membership')
+            button.pure-button.button-primary
+              span &gt;
+              | Learn More
+        .pure-u-1.pure-u-sm-1-2
+          a(href='#')
+            button.pure-button.button-primary.membership_button-secondPadding
+              span &gt;
+              | Apply Now
