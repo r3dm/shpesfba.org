@@ -6,3 +6,5 @@ npm_debug.log
 content/data/r3dm.sqlite
 content/data/ghost-dev.db
 content/data/ghost-production.db
+.env
+pg*
