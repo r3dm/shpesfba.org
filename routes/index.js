@@ -1,4 +1,3 @@
-
 /**
  * This file is where you define your application routes and controllers.
  *
@@ -37,8 +36,8 @@ exports = module.exports = function(app) {
 
   // Views
   app.get('/', routes.views.index);
-  app.get('/blog/:category?', routes.views.blog);
-  app.get('/blog/post/:post', routes.views.post);
+  // app.get('/blog/:category?', routes.views.blog);
+  // app.get('/blog/post/:post', routes.views.post);
   app.get('/gallery', routes.views.gallery);
   app.get('/gallery/:album', routes.views.album);
   app.all('/contact', routes.views.contact);

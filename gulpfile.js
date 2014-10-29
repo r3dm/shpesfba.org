@@ -8,8 +8,8 @@ var gulp = require('gulp'),
 
 var started = false;
 var paths = {
-  stylus: './stylus/**/*.styl',
-  css: './public/css/',
+  stylus: './stylus/style.styl',
+  css: './public/styles/',
   js: [
     '**/*.js',
     '!node_modules'

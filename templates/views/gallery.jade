@@ -16,7 +16,7 @@ block content
         each gallery in galleries
           .gallery_photo
             if gallery.heroImage.exists
-              img(src=gallery._.heroImage.limit(680,680), alt=gallery.name)
+              img(src=gallery._.heroImage.fill(200,200), alt=gallery.name)
               .gallery_photo-metadata
                 | #{gallery.name}
                 hr

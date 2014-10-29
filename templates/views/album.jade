@@ -15,7 +15,7 @@ block content
       if gallery.images.length
         each photo in gallery.images
           .gallery_photo
-            img(src=photo.limit(680,680), alt='gallery.name')
+            img(src=photo.fill(200,200), alt=gallery.name)
       else
         h3.text-muted There are no images in this gallery.
     .pure-u.pure-u-sm-1-12
