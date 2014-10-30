@@ -1,0 +1,23 @@
+{
+  "name": "shpesfba",
+  "version": "0.0.0",
+  "authors": [
+    "Harry Moreno <morenoh149@gmail.com> Berkeley martinez",
+    "lenore messler"
+  ],
+  "description": "website for shpesfba",
+  "main": "keystone.js",
+  "license": "copyright r3dm LLP 2014",
+  "homepage": "r3dm.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-stylus": "~3.3.0"
+  }
+}

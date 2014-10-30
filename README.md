@@ -7,6 +7,7 @@ Lenore Messler
 
 # SHPE SFBAY AREA website
 
+run `npm install`
+`bower install`
+
 ## TODO
-* fix bg overlap on mobile
-* fix firefox mobile display of buttons
