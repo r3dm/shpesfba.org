@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
 
-$font-family-base = $font-family-serif
-@import "bootstrap/bootstrap.css"
+$font-family-serif ?=      'Merriweather', serif
+$font-family-base  ?=      $font-family-serif
+@import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
 
 $shpe-blue = #33648c
 $shpe-blue-dark = #1a3851
@@ -13,14 +14,6 @@ $footer_font_color = #d3d2d2
 $footer_button_color = #464646
 
 /* global styles */
-html,
-button,
-input,
-select,
-footer *,
-textarea
-  font-family 'Merriweather', serif
-
 p
   font-weight 300
   font-size 14px
