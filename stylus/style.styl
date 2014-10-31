@@ -2,6 +2,8 @@
 
 $font-family-serif ?=      'Merriweather', serif
 $font-family-base  ?=      $font-family-serif
+$navbar-height  ?=         145px
+$navbar-margin-bottom  ?=  0px
 @import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
 
 $shpe-blue = #33648c
@@ -375,3 +377,8 @@ footer
       width 300px
       margin 0 auto
       display block
+
+/* navbar */
+@media (min-width: 750px)
+  .container-fluid
+    width 750px
