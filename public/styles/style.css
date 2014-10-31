@@ -6650,3 +6650,6 @@ footer .pure-form textarea {
     width: 750px;
   }
 }
+.navbar-brand {
+  padding: 25px 15px;
+}
