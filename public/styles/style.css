@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,300");
+/* colors */
+/* bootstrap overrides */
 /*
  * Bootstrap v3.2.0 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -2519,7 +2521,7 @@ output {
   font-size: 14px;
   line-height: 1.428571429;
   color: #555;
-  background-color: #fff;
+  background-color: #d3d2d2;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -4224,8 +4226,8 @@ tbody.collapse.in {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e8e8e8;
+  background-color: #fff;
+  border-color: #eee;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -4250,7 +4252,7 @@ tbody.collapse.in {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #e8e8e8;
+  background-color: #eee;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4270,12 +4272,12 @@ tbody.collapse.in {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e8e8e8;
+  border-color: #eee;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e8e8e8;
+  background-color: #eee;
   color: #555;
 }
 @media (max-width: 767px) {
@@ -4291,7 +4293,7 @@ tbody.collapse.in {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: #e8e8e8;
+    background-color: #eee;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -6287,41 +6289,6 @@ p {
 .button-primary span {
   float: right;
 }
-.button-footer {
-  width: 105px;
-  height: 25px;
-  color: #fff;
-  background-color: #464646;
-  float: right;
-  font-style: italic;
-  text-align: left;
-}
-.button-footer span {
-  float: right;
-}
-/* menu styles */
-.menu {
-  min-height: 145px;
-}
-.menu a {
-  font-family: serif;
-}
-@media (max-width: 960px) {
-  .menu_hide-sm {
-    display: none;
-  }
-}
-@media (min-width: 960px) {
-  .menu_hide-lg {
-    display: none;
-  }
-}
-.menu_hamburger-size {
-  font-size: 2em;
-}
-.menu_hamburger-container {
-  text-align: center;
-}
 /* headline styles */
 h1,
 h2 {
@@ -6623,19 +6590,27 @@ footer h3 {
   color: #fff;
   font-size: 1.2em;
 }
-footer .pure-form input {
-  margin-bottom: 10px;
-  background-color: #d3d2d2;
+footer hr {
+  margin: 5px 0;
+  color: #d3d2d2;
 }
-footer .pure-form textarea {
-  margin-bottom: 10px;
-  background-color: #d3d2d2;
+footer .btn-default {
+  width: 105px;
+  height: 25px;
+  color: #fff;
+  background-color: #464646;
+  float: right;
+  font-style: italic;
+  text-align: left;
+  line-height: 13px;
+  border-color: rgba(0,0,0,0);
 }
-*
-@media (max-width: 568px) {
-  footer .pure-u-1 {
-    padding: 0 30px;
-  }
+footer .btn-default span {
+  float: right;
+}
+footer input.form-control {
+  height: 25px;
+  margin-bottom: 10px;
 }
 @media (max-width: 568px) {
   footer .footer_form-container {

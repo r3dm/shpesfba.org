@@ -1,19 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300);
 
-$font-family-serif ?=      'Merriweather', serif
-$font-family-base  ?=      $font-family-serif
-$navbar-height  ?=         145px
-$navbar-margin-bottom  ?=  0px
-@import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
+/* colors */
+$shpe-blue            = #33648c
+$shpe-blue-dark       = #1a3851
+$shpe-blue-dark2      = #34495e
+$white                = #FFF
+$shpe-gray            = #d3d2d2
+$footer_bg_color      = #636363
+$footer_font_color    = #d3d2d2
+$footer_button_color  = #464646
 
-$shpe-blue = #33648c
-$shpe-blue-dark = #1a3851
-$shpe-blue-dark2 = #34495e
-$white = #FFF
-$shpe-gray = #d3d2d2
-$footer_bg_color = #636363
-$footer_font_color = #d3d2d2
-$footer_button_color = #464646
+/* bootstrap overrides */
+$font-family-serif    ?= 'Merriweather', serif
+$font-family-base     ?= $font-family-serif
+$navbar-height        ?= 145px
+$navbar-margin-bottom ?= 0px
+$navbar-default-bg    ?= #fff
+$input-bg             ?= $shpe-gray
+@import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
 
 /* global styles */
 p
@@ -61,39 +65,6 @@ p
 
   span
     float right
-
-.button-footer
-  width 105px
-  height 25px
-  color white
-  background-color $footer_button_color
-  float right
-  font-style italic
-  text-align left
-
-  span
-    float right
-
-/* menu styles */
-.menu
-  min-height 145px
-
-  a
-    font-family serif
-
-.menu_hide-sm
-  @media (max-width: 960px)
-    display none
-
-.menu_hide-lg
-  @media (min-width: 960px)
-    display none
-
-.menu_hamburger-size
-  font-size 2em
-
-.menu_hamburger-container
-  text-align center
 
 /* headline styles */
 h1, h2
@@ -157,7 +128,6 @@ empty
     padding-top 0
 
 /* section styles */
-
 .container
   width 290px
   margin 0 auto
@@ -359,18 +329,27 @@ footer
     color white
     font-size 1.2em
 
-  .pure-form
-    input
-      margin-bottom 10px
-      background-color $shpe-gray
-    textarea
-      margin-bottom 10px
-      background-color $shpe-gray
-    *
+  hr
+    margin 5px 0
+    color $footer_font_color
 
-  .pure-u-1
-    @media (max-width: 568px)
-      padding 0 30px
+  .btn-default
+    width 105px
+    height 25px
+    color white
+    background-color $footer_button_color
+    float right
+    font-style italic
+    text-align left
+    line-height 13px
+    border-color rgba(0,0,0,0)
+
+    span
+      float right
+
+  input.form-control
+    height 25px
+    margin-bottom 10px
 
   @media (max-width: 568px)
     .footer_form-container
