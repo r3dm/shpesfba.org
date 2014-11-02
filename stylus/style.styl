@@ -17,6 +17,9 @@ $navbar-height        ?= 145px
 $navbar-margin-bottom ?= 0px
 $navbar-default-bg    ?= #fff
 $input-bg             ?= $shpe-gray
+$btn-default-border   ?= rgba(0,0,0,0)
+$btn-primary-border   ?= rgba(0,0,0,0)
+$brand-primary        ?= $shpe-blue-dark2
 @import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
 
 /* global styles */
@@ -44,7 +47,7 @@ p
     display none
 
 /* button styles */
-.button-rsvp
+.btn-rsvp
   width 140px
   height 25px
   font-style italic
@@ -52,17 +55,18 @@ p
   font-weight 300
   border-radius 4px
   color white
-  background-color $shpe-blue-dark2
+  background-color $brand-primary
 
-.button-primary
-  width 235px
-  height 45px
+  &:hover
+    color white
+    background-color darken($brand-primary, 5%)
+
+.btn-primary
   text-align center
   font-style italic
   color white
-  border-radius 5px
-  background-color $shpe-blue-dark2
 
+.spanfix
   span
     float right
 
@@ -168,10 +172,6 @@ empty
 .section
   padding: 50px 0
 
-.slick-prev, .slick-next
-  &:before
-    color: grey
-
 .slick-prev
   left: 15px
 
@@ -184,6 +184,8 @@ empty
   font-size 14px
   font-weight 300
 
+  //TODO display image without warping
+  //http://codepen.io/necolas/pen/oxDHc
   img
     height 150px
     width 150px
@@ -193,9 +195,19 @@ empty
   h3
     margin 0
     color $shpe-blue-dark
+    font-size 18px
 
   button
     margin 10px
+
+.slick-slider
+  .slick-dots li button:before
+    font-size 10px
+
+  .slick-prev, .slick-next
+    &:before
+      color: $brand-primary
+      font-size 30px
 
 /** landing page membership section **/
 .membership_section
@@ -205,7 +217,7 @@ empty
   text-align center
 
 .membership_button-secondPadding
-  @media (max-width: 568px)
+  @media (max-width: 768px)
     margin-top 15px
 
 /** membership levels page **/
@@ -342,17 +354,10 @@ footer
     font-style italic
     text-align left
     line-height 13px
-    border-color rgba(0,0,0,0)
-
-    span
-      float right
 
   input.form-control
     height 25px
     margin-bottom 10px
-
-    ::input-placeholder
-      color red
 
   @media (max-width: 568px)
     .footer_form-container
@@ -361,9 +366,16 @@ footer
       display block
 
 /* navbar */
-@media (min-width: 750px)
+@media (min-width: 790px)
   .container-fluid
-    width 750px
+    width 790px
 
 .navbar-brand
   padding 25px 15px
+
+.nav
+  font-size 16px
+
+  //TODO fix autoprefixer
+// ::placeholder
+//     color red

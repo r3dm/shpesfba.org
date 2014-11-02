@@ -44,7 +44,7 @@ block content
               = getEndTime(event.endTime)
               br
               a(href='https://www.facebook.com/events/' + event.FBEventId)
-                button.pure-button.button-rsvp RSVP
+                button.btn.btn-rsvp RSVP
   .membership_section.section
     .container
       h2.section_title Membership
@@ -53,14 +53,16 @@ block content
         | SF Bay Area SHPE does not discriminate based on occupation, ethnicity, or any other classification.
         | The chapter welcomes individuals and corporations alike to join together to fufill the mission and goals of
         | SF Bay Area SHPE.
-      .pure-g.membership_button-center
-        .pure-u-1.pure-u-sm-1-2
+      .membership_button-center.row
+        .col-sm-2
+        .col-sm-4
           a(href='/membership')
-            button.pure-button.button-primary
+            button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Learn More
-        .pure-u-1.pure-u-sm-1-2
+        .col-sm-4
           a(href='#')
-            button.pure-button.button-primary.membership_button-secondPadding
+            button.btn.btn-primary.membership_button-secondPadding.spanfix.btn-block
               span &gt;
               | Apply Now
+        .col-sm-2
