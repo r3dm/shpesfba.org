@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     style = require('gulp-stylus'),
     plumber = require('gulp-plumber'),
+    autoprefixer = require('autoprefixer-stylus'),
     nib = require('nib');
     //watch = require('gulp-watch');
 
@@ -40,7 +41,7 @@ gulp.task('style', function() {
   return gulp.src(paths.stylus)
     .pipe(plumber())
     .pipe(style({
-      use: nib(),
+      use: [nib(), autoprefixer()],
       'include css': true
     }))
     .pipe(gulp.dest(paths.css));

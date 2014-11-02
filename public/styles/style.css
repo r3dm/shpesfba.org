@@ -6612,6 +6612,9 @@ footer input.form-control {
   height: 25px;
   margin-bottom: 10px;
 }
+footer input.form-control ::input-placeholder {
+  color: #f00;
+}
 @media (max-width: 568px) {
   footer .footer_form-container {
     width: 300px;
