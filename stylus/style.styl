@@ -6,6 +6,7 @@ $shpe-blue-dark       = #1a3851
 $shpe-blue-dark2      = #34495e
 $white                = #FFF
 $shpe-gray            = #d3d2d2
+$shpe-gray-dark       = darken($shpe-gray, 50%)
 $footer_bg_color      = #636363
 $footer_font_color    = #d3d2d2
 $footer_button_color  = #464646
@@ -20,6 +21,14 @@ $input-bg             ?= $shpe-gray
 $btn-default-border   ?= rgba(0,0,0,0)
 $btn-primary-border   ?= rgba(0,0,0,0)
 $brand-primary        ?= $shpe-blue-dark2
+
+//TODO workaround for namespace bug in kouto https://github.com/krkn/kouto-swiss/issues/27#issuecomment-61550114
+@import "kouto-swiss"
+input.form-control, textarea.form-control
+  +placeholder()
+    color $shpe-gray-dark
+    font-style italic
+
 @import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
 
 /* global styles */
@@ -27,18 +36,6 @@ p
   font-weight 300
   font-size 14px
   text-align justify
-
-.clearfix-lg
-  @media (min-width: 1024px)
-    display none
-
-.clearfix-sm
-  @media (max-width: 768px)
-    display none
-
-.clearfix-xs
-  @media (max-width: 568px)
-    display none
 
 .show-on-mobile
   display inherit
@@ -66,6 +63,8 @@ p
   font-style italic
   color white
 
+/// needed for putting the arrows on the buttons near the right of the button
+/// like: 'Apply Now      ->'
 .spanfix
   span
     float right
@@ -366,16 +365,8 @@ footer
       display block
 
 /* navbar */
-@media (min-width: 768px)
-  .container-fluid
-    width 768px
-
 .navbar-brand
   padding 25px 0px
 
 .nav
   font-size 16px
-
-  //TODO fix autoprefixer
-// ::placeholder
-//     color red

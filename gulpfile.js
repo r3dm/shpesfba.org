@@ -3,9 +3,8 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     style = require('gulp-stylus'),
     plumber = require('gulp-plumber'),
-    autoprefixer = require('autoprefixer-stylus'),
-    nib = require('nib');
-    //watch = require('gulp-watch');
+    //watch = require('gulp-watch'),
+    koutoSwiss = require('kouto-swiss');
 
 var started = false;
 var paths = {
@@ -41,7 +40,7 @@ gulp.task('style', function() {
   return gulp.src(paths.stylus)
     .pipe(plumber())
     .pipe(style({
-      use: [nib(), autoprefixer()],
+      use: koutoSwiss(),
       'include css': true
     }))
     .pipe(gulp.dest(paths.css));
