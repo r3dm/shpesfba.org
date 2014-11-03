@@ -6558,6 +6558,8 @@ empty {
   background-color: #d3d2d2;
   border-radius: 10px;
   margin-bottom: 25px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .membershipLevel > div {
   padding: 10px 40px;
