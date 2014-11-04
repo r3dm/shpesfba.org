@@ -6354,14 +6354,6 @@ p {
   font-size: 14px;
   text-align: justify;
 }
-.show-on-mobile {
-  display: inherit;
-}
-@media (min-width: 568px) {
-  .show-on-mobile {
-    display: none;
-  }
-}
 /* button styles */
 .btn-rsvp {
   width: 140px;
@@ -6395,7 +6387,7 @@ h1 {
   font-size: 1.5em;
   color: #1a3851;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 2em;
   }
@@ -6403,7 +6395,7 @@ h1 {
 h2 {
   font-size: 1.4em;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   h2 {
     font-size: 1.9em;
   }
@@ -6421,7 +6413,7 @@ empty {
 .headline div {
   height: 250px;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   .headline {
     height: 390px;
   }
@@ -6442,7 +6434,7 @@ empty {
   height: 75px;
   overflow: hidden;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   .headline-min {
     height: 100px;
   }
@@ -6452,7 +6444,7 @@ empty {
   padding-top: 80px;
   color: #fff;
 }
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   .headline_text {
     padding-top: 0;
   }
@@ -6461,12 +6453,6 @@ empty {
 .container {
   width: 290px;
   margin: 0 auto;
-}
-@media (min-width: 568px) {
-  .container {
-    width: 565px;
-    margin: 0 auto;
-  }
 }
 @media (min-width: 768px) {
   .container {
@@ -6495,7 +6481,7 @@ empty {
   background-position: 60% 0%;
   background-repeat: no-repeat;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   .section_upcoming {
     background-position: 40% 0%;
   }
@@ -6574,7 +6560,7 @@ empty {
 .membershipLevel .head span {
   float: right;
 }
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   .membershipLevel .head {
     background-color: transparent;
   }
@@ -6582,7 +6568,7 @@ empty {
 .membershipLevel .body {
   font-size: 12px;
 }
-@media (min-width: 568px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .membershipLevel button {
     float: right;
     width: 155px;
@@ -6592,7 +6578,7 @@ empty {
 .membershipLevel li {
   padding-bottom: 5px;
 }
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   .membershipLevel {
     text-align: center;
     border-radius: 0;
@@ -6627,7 +6613,7 @@ empty {
   background-repeat: no-repeat;
   background-position: 67% 100%;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   .inner_page-bg {
     background-position: 67% 100%;
   }
@@ -6658,7 +6644,7 @@ empty {
 .gallery_photo:hover .gallery_photo-metadata {
   display: block;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   .gallery_photo img {
     width: 200px;
     height: 200px;
@@ -6671,7 +6657,7 @@ empty {
   width: 230px;
   height: 230px;
 }
-@media (min-width: 568px) {
+@media (min-width: 768px) {
   .gallery_photo-metadata {
     width: 180px;
     height: 180px;
@@ -6710,7 +6696,7 @@ footer input.form-control {
   height: 25px;
   margin-bottom: 10px;
 }
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   footer .footer_form-container {
     width: 300px;
     margin: 0 auto;
