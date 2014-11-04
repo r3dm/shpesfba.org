@@ -6726,7 +6726,7 @@ footer input.form-control {
 }
 @media (min-width: 768px) {
   .navbar .container-fluid {
-    width: 760px;
+    width: 765px;
     float: none;
     margin: 0 auto;
   }
