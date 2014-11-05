@@ -9,5 +9,7 @@ Lenore Messler
 
 run `npm install`
 `bower install`
+install gulp if necessary `npm install -g gulp`
+run `gulp`
 
 ## TODO
