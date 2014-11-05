@@ -7,13 +7,13 @@ block content
   .headline
     .headline_container_left
       .headline_container_right
-        .section.container
+        .section.inner-container
           h1.headline_text
             | San Francisco Bay Area
             br
             |           Society of Hispanic Professional Engineers
   .section_bio.section
-    .container
+    .inner-container
       h2.section_title What is SHPE?
       p
         | The society of Hispanic Professional Engineers (SHPE) was founded in Los Angeles, California,
@@ -25,7 +25,7 @@ block content
         | countries outside of the United States. Today, SHPE enjoys a strong but independent network of
         | professionals and student chapters throughout the nation.
   .section_upcoming.section
-    .container
+    .inner-container
       h2.section_title Upcoming Events
       .carousel-upcoming
         for event in events
@@ -46,7 +46,7 @@ block content
               a(href='https://www.facebook.com/events/' + event.FBEventId)
                 button.btn.btn-rsvp RSVP
   .membership_section.section
-    .container
+    .inner-container
       h2.section_title Membership
       p
         | Membership is open to all individuals who believe in the mission and goals set forth by the organization.

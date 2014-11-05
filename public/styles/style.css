@@ -6450,22 +6450,22 @@ empty {
   }
 }
 /* section styles */
-.container {
+.inner-container {
   padding: 0 40px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .container {
+  .inner-container {
     width: 690px;
   }
 }
 @media (min-width: 970px) {
-  .container {
+  .inner-container {
     width: 910px;
   }
 }
 @media (min-width: 1280px) {
-  .container {
+  .inner-container {
     width: 1024px;
   }
 }
