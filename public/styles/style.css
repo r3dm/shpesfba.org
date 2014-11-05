@@ -6636,7 +6636,7 @@ empty {
   position: relative;
   padding: 15px;
 }
-.gallery_photo .gallery_photo-metadata {
+.gallery_photo .gallery_photo-blur {
   position: absolute;
   display: none;
 }
@@ -6644,7 +6644,7 @@ empty {
   width: 250px;
   height: 250px;
 }
-.gallery_photo:hover .gallery_photo-metadata {
+.gallery_photo:hover .gallery_photo-blur {
   display: block;
 }
 @media (min-width: 768px) {
@@ -6653,15 +6653,15 @@ empty {
     height: 200px;
   }
 }
-.gallery_photo-metadata {
+.gallery_photo-blur {
   top: 15px;
   padding: 10px;
   background-color: rgba(255,255,255,0.5);
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
 }
 @media (min-width: 768px) {
-  .gallery_photo-metadata {
+  .gallery_photo-blur {
     width: 180px;
     height: 180px;
   }
