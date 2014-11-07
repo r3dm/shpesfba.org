@@ -8,7 +8,16 @@ block content
   .container
     if officers
       each officer in officers
-        #{officer.name}
+        .officer-square
+          img(src=officer._.photo.fill(250,250), alt=officer.name.first)
+          h3 #{officer.name.first} #{officer.name.last}
+          h4 #{officer.role}
+          p #{officer.bio}
+          a(href='mailto:' + officer.email)
+            i.fa.fa-envelope.fa-lg  #{officer.email}
+    else
+      | no officers wut!
+    // TODO remove this code once contact form in footer works
     // if enquirySubmitted
     //   h3 Thanks for getting in touch.
     // else

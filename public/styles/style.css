@@ -6720,3 +6720,25 @@ footer input.form-control {
     margin: 0 auto;
   }
 }
+/* contact page */
+.officer-square {
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+  width: 290px;
+  border: 1px solid #33648c;
+  vertical-align: top;
+  text-align: justify;
+}
+.officer-square img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+@media (min-width: 350px) {
+  .officer-square {
+    margin: 0 0px;
+    width: 350px;
+  }
+}
