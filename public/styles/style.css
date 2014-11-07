@@ -6735,6 +6735,9 @@ footer input.form-control {
   height: 250px;
   margin: 0 auto;
 }
+.officer-square a {
+  font-size: 1.2em;
+}
 @media (min-width: 480px) {
   .officer-square {
     max-width: 280px;
@@ -6747,4 +6750,12 @@ footer input.form-control {
 }
 .officer-container {
   text-align: center;
+}
+/* fonts */
+.font-lg {
+  top: 5px;
+  right: 5px;
+}
+.font-lg:before {
+  font-size: 1.5em;
 }
