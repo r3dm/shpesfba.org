@@ -6725,7 +6725,6 @@ footer input.form-control {
   display: inline-block;
   position: relative;
   padding: 15px;
-  width: 290px;
   border: 1px solid #33648c;
   vertical-align: top;
   text-align: justify;
@@ -6736,9 +6735,16 @@ footer input.form-control {
   height: 250px;
   margin: 0 auto;
 }
-@media (min-width: 350px) {
+@media (min-width: 480px) {
   .officer-square {
-    margin: 0 0px;
-    width: 350px;
+    max-width: 280px;
   }
+}
+@media (min-width: 768px) {
+  .officer-square {
+    min-width: 350px;
+  }
+}
+.officer-container {
+  text-align: center;
 }
