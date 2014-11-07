@@ -5,6 +5,8 @@ var keystone = require('keystone'),
   https = require('https');
 
 var Event = new keystone.List('Event', { defaultSort: '-startTime' });
+
+// Specifies what columns to display in AdminUI
 Event.defaultColumns = 'FBEventName, startTime';
 
 Event.add({

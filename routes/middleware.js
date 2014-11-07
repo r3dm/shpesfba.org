@@ -31,8 +31,8 @@ exports.initLocals = function(req, res, next) {
     // { label: 'Calender',  key: 'calender',  href: '/calender' },
     // { label: 'Job Listings',  key: 'jobs',  href: '/jobs' },
     // { label: 'Blog',        key: 'blog',        href: '/blog' },
-    { label: 'Photos',     key: 'gallery',     href: '/gallery' }
-    // { label: 'Contact',     key: 'contact',     href: '/contact' }
+    { label: 'Photos',     key: 'gallery',     href: '/gallery' },
+    { label: 'Contact',     key: 'contact',     href: '/contact' }
   ];
 
   Event.model.find()
