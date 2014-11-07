@@ -33,3 +33,6 @@ npm_debug.log
 
 # Ignore .DS_Store files on OS X
 .DS_Store
+
+# vim swap files
+.swp
