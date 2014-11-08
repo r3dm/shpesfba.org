@@ -10,18 +10,45 @@ block content
   h1 Membership Classification
   .membership_page-bg.container
     .row
+
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
           | Regular/Professional Member
           span $45.00 / year
         div
           .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block
+            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#regularModal')
               span &gt;
               | Learn More
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+            #regularModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                      span(aria-hidden='true') ×
+                      span.sr-only Close
+                    h4#regularModalLabel.modal-title Regular/Professional Member
+                  .modal-body
+                    p A Regular/Professional member shall be a person who at a minimum holds:
+                    ul
+                      li
+                        | An engineer-in-training certificate or a bachelor&apos;s degree in any discipline
+                        | of engineering, engineering technology, mathematics, physical science or a
+                        | mathematically based science field.
+                      li
+                        | Six years of experience as an engineer or in a mathematically based science field
+                        | or engineering educator may be substituted for the bachelor&apos;s degree.
+                    p Regular/Professional members shall be entitled to:
+                    ul
+                      li
+                        | Cast one vote in elections of officers and all business that the Board of Directors
+                        | refers to the membership.
+                      li Hold a Board position.
+                  .modal-footer
+                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
           .col-sm-6.hidden-xs
             | A Regular/Professional member shall be a person who at a minimum holds:
             ul
@@ -42,41 +69,48 @@ block content
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
-          | Associate Member 
+          | Associate Member
           span $35.00 / year
         div
           .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block
+            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#associateModal')
               span &gt;
               | Learn More
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+            #associateModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                      span(aria-hidden='true') ×
+                      span.sr-only Close
+                    h4#associateModalLabel.modal-title Associate Member
+                  .modal-body
+                    p An associate member shall be a person who believes and supports the purpose of this corporation
+                    ul
+                      li He/she shall not be entitled to nominate, vote nor hold a position in the Board
+                      li Associated members shall be extended all privileges of a Regular/Professional member less those exempted above
+                  .modal-footer
+                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
           .col-sm-6.hidden-xs
-            | A Regular/Professional member shall be a person who at a minimum holds:
+            | An associate member shall be a person who believes and supports the purpose of this corporation
             ul
-              li
-                | An engineer-in-training certificate or a bachelor&apos;s degree in any discipline
-                | of engineering, engineering technology, mathematics, physical science or a
-                | mathematically based science field.
-              li
-                | Six years of experience as an engineer or in a mathematically based science field
-                | or engineering educator may be substituted for the bachelor&apos;s degree.
+              li He/she shall not be entitled to nominate, vote nor hold a position in the Board
           .col-sm-6.hidden-xs
-            | Regular/Professional members shall be entitled to:
             ul
-              li
-                | Cast one vote in elections of officers and all business that the Board of Directors
-                | refers to the membership.
-              li Hold a Board position.
+              li Associated members shall be extended all privileges of a Regular/Professional member less those exempted above
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
-          | Honorary Member 
+          | Honorary Member
           span No Fee
         div
           .visible-xs-block
@@ -87,25 +121,17 @@ block content
               span &gt;
               | Apply Now
           .col-sm-6.hidden-xs
-            | A Regular/Professional member shall be a person who at a minimum holds:
+            | Honorary members shall be individuals who have been awarded a membership by the corporation's Board of Directors.
+            | Honorary members shall not be entitled to nominate, vote or hold a position on the Board.
             ul
-              li
-                | An engineer-in-training certificate or a bachelor&apos;s degree in any discipline
-                | of engineering, engineering technology, mathematics, physical science or a
-                | mathematically based science field.
-              li
-                | Six years of experience as an engineer or in a mathematically based science field
-                | or engineering educator may be substituted for the bachelor&apos;s degree.
+              li They shall be persons who have accomplished an outstanding achievement in their engineering or scientific profession.
           .col-sm-6.hidden-xs
-            | Regular/Professional members shall be entitled to:
             ul
-              li
-                | Cast one vote in elections of officers and all business that the Board of Directors
-                | refers to the membership.
-              li Hold a Board position.
+              li Persons who have participated beyond requirement for the advancement of Hispanic persons in the field of engineering or science.
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
           | SHPE Guild Member (aka Industrial Member) 
@@ -119,25 +145,16 @@ block content
               span &gt;
               | Apply Now
           .col-sm-6.hidden-xs
-            | A Regular/Professional member shall be a person who at a minimum holds:
+            | A SHPE Guild Member shall be a business or organization which supports and pursues the objectives and goals of this society.
             ul
-              li
-                | An engineer-in-training certificate or a bachelor&apos;s degree in any discipline
-                | of engineering, engineering technology, mathematics, physical science or a
-                | mathematically based science field.
-              li
-                | Six years of experience as an engineer or in a mathematically based science field
-                | or engineering educator may be substituted for the bachelor&apos;s degree.
+              li This member shall not be entitled to vote nor hold office in this society.
           .col-sm-6.hidden-xs
-            | Regular/Professional members shall be entitled to:
             ul
-              li
-                | Cast one vote in elections of officers and all business that the Board of Directors
-                | refers to the membership.
-              li Hold a Board position.
+              li Guild members shall be extended all privileges of membership less those exempted above.
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
           | Lifetime Professional Member 
@@ -151,22 +168,12 @@ block content
               span &gt;
               | Apply Now
           .col-sm-6.hidden-xs
-            | A Regular/Professional member shall be a person who at a minimum holds:
+            | A Lifetime Professional member shall be a person who at a minimum holds an engineer-in-training certificate or a bachelor’s degree in any discipline of engineering, engineering technology, mathematics, physical science or a mathematically based science or technical field.
             ul
-              li
-                | An engineer-in-training certificate or a bachelor&apos;s degree in any discipline
-                | of engineering, engineering technology, mathematics, physical science or a
-                | mathematically based science field.
-              li
-                | Six years of experience as an engineer or in a mathematically based science field
-                | or engineering educator may be substituted for the bachelor&apos;s degree.
+              li Six years of experience as an engineer or in a mathematically based science or technical field or engineering educator may be substituted for the bachelor’s degree.
           .col-sm-6.hidden-xs
-            | Regular/Professional members shall be entitled to:
             ul
-              li
-                | Cast one vote in elections of officers and all business that the Board of Directors
-                | refers to the membership.
-              li Hold a Board position.
+              li Membership dues for lifetime members will be waived in perpetuity.
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
