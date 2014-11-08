@@ -114,12 +114,27 @@ block content
           span No Fee
         div
           .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block
+            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#honoraryModal')
               span &gt;
               | Learn More
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+            #honoraryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                      span(aria-hidden='true') ×
+                      span.sr-only Close
+                    h4#honoraryModalLabel.modal-title Honorary Member
+                  .modal-body
+                    p Honorary members shall be individuals who have been awarded a membership by the corporation's Board of Directors. Honorary members shall not be entitled to nominate, vote or hold a position on the Board.
+                    ul
+                      li They shall be persons who have accomplished an outstanding achievement in their engineering or scientific profession.
+                      li Persons who have participated beyond requirement for the advancement of Hispanic persons in the field of engineering or science.
+                  .modal-footer
+                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
           .col-sm-6.hidden-xs
             | Honorary members shall be individuals who have been awarded a membership by the corporation's Board of Directors.
             | Honorary members shall not be entitled to nominate, vote or hold a position on the Board.
@@ -134,16 +149,31 @@ block content
 
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
-          | SHPE Guild Member (aka Industrial Member) 
+          | SHPE Guild Member (aka Industrial Member)
           span $500.00 / year
         div
           .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block
+            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#guildModal')
               span &gt;
               | Learn More
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+            #guildModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                      span(aria-hidden='true') ×
+                      span.sr-only Close
+                    h4#guildModalLabel.modal-title SHPE Guild Member
+                  .modal-body
+                    p A SHPE Guild Member shall be a business or organization which supports and pursues the objectives and goals of this society.
+                    ul
+                      li This member shall not be entitled to vote nor hold office in this society.
+                      li Guild members shall be extended all privileges of membership less those exempted above.
+                  .modal-footer
+                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
           .col-sm-6.hidden-xs
             | A SHPE Guild Member shall be a business or organization which supports and pursues the objectives and goals of this society.
             ul
@@ -157,16 +187,31 @@ block content
 
       .membershipLevel.col-sm-10.col-sm-offset-1
         .head
-          | Lifetime Professional Member 
+          | Lifetime Professional Member
           span $500.00 / year
         div
           .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block
+            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#lifetimeModal')
               span &gt;
               | Learn More
             button.btn.btn-primary.spanfix.btn-block
               span &gt;
               | Apply Now
+            #lifetimeModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                      span(aria-hidden='true') ×
+                      span.sr-only Close
+                    h4#lifetimeModalLabel.modal-title Lifetime Professional Member
+                  .modal-body
+                    p A Lifetime Professional member shall be a person who at a minimum holds an engineer-in-training certificate or a bachelor’s degree in any discipline of engineering, engineering technology, mathematics, physical science or a mathematically based science or technical field.
+                    ul
+                      li Six years of experience as an engineer or in a mathematically based science or technical field or engineering educator may be substituted for the bachelor’s degree.
+                      li Membership dues for lifetime members will be waived in perpetuity.
+                  .modal-footer
+                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
           .col-sm-6.hidden-xs
             | A Lifetime Professional member shall be a person who at a minimum holds an engineer-in-training certificate or a bachelor’s degree in any discipline of engineering, engineering technology, mathematics, physical science or a mathematically based science or technical field.
             ul
