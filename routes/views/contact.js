@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
     .list('Officer')
     .model
     .find()
-    .sort('priority');
+    .sort('sortOrder');
 
   // execute officers query and make it available to the view
   view.query('officers', officersQuery);
