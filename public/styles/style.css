@@ -4534,6 +4534,24 @@ footer input.form-control {
 .officer-container {
   text-align: center;
 }
+/* jobs listing */
+.job-post {
+  padding: 5px;
+}
+.job-post h3 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.job-post p {
+  margin-bottom: 0;
+}
+.job-post a.email {
+  padding-left: 5px;
+}
+.job-post:nth-of-type(even) {
+  background-color: #d3d2d2;
+}
 /* fonts */
 .font-lg {
   top: 5px;

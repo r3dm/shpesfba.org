@@ -5,16 +5,24 @@ block intro
     h1 Job Listings
 
 block content
-  .container-fluid.officer-container
-    if jobs
-      each job in jobs
-        .job-listing
-          h3 #{job.title}
-          p #{job.description}
-          p #{job.location}
-          p #{job.expirationDate}
-          a(href='mailto:' + job.email)
-            span.glyphicon.glyphicon-envelope.font-lg
-            | #{job.email}
-    else
-      | no jobs wut!
+  .container-fluid
+    .row
+      .col-sm-8.col-sm-offset-2.job-list
+        if jobs
+          each job in jobs
+            .job-post
+              h3
+                a(href="#") #{job.title}
+              p
+                strong
+                  a(href="#{job.companyUrl}") #{job.companyName} 
+                | #{job.location.suburb}, #{job.location.state} 
+                if job.relocationOffered
+                  i (relocation offered)
+                br
+                i Expires #{getDate(job.expirationDate)}
+              a.email(href='mailto:' + job.email)
+                span.glyphicon.glyphicon-envelope.font-lg
+                | #{job.email}
+        else
+          | no jobs wut!
