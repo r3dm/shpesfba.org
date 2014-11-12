@@ -13,3 +13,13 @@ install gulp if necessary `npm install -g gulp`
 run `gulp`
 
 ## TODO
+* add form to website that lets anyone submit a job posting, webmaster can then approve/edit/publish the
+ad onto the job listings page
+
+## Usage
+to add a new model/page to the site
+* add it to the navlinks in routes/middleware.js
+* add a route to it in routes/index.js
+* add a view handler in routes/views e.g. routes/views.jobs.js
+* add a model file for it under models/
+* update navbar appropriately 

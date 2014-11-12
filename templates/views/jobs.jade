@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block intro
+  .container
+    h1 Job Listings
+
+block content
+  .container-fluid.officer-container
+    if jobs
+      each job in jobs
+        .officer-square
+          img(src=officer._.photo.fill(250,250), alt='photo of ' + officer.name.full)
+          h3 #{officer.name.full}
+          h4 #{officer.role}
+          p #{officer.bio}
+          a(href='mailto:' + officer.email)
+            span.glyphicon.glyphicon-envelope.font-lg
+            | #{officer.email}
+    else
+      | no jobs wut!
