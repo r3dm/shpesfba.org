@@ -4234,7 +4234,7 @@ empty {
   padding-top: 80px;
   color: #fff;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .headline_text {
     padding-top: 0;
   }
@@ -4327,7 +4327,7 @@ empty {
 .membership_button-center {
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .membership_button-secondPadding {
     margin-top: 15px;
   }
@@ -4353,7 +4353,7 @@ empty {
 .membershipLevel .head span {
   float: right;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .membershipLevel .head {
     background-color: transparent;
   }
@@ -4367,7 +4367,7 @@ empty {
 .membershipLevel li {
   padding-bottom: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .membershipLevel {
     text-align: center;
     border-radius: 0;
@@ -4483,7 +4483,7 @@ footer input.form-control {
   height: 25px;
   margin-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   footer .footer_form-container {
     width: 300px;
     margin: 0 auto;
