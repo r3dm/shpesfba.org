@@ -21,6 +21,7 @@ ad onto the job listings page
 * gallery needs to indicate that you can load entire gallery on mobile somehow
 * Add job details to site. Either load a new page with more details or expand listing in the browser
 * fix firefox placeholder text clipping. the text is being clipped at the top
+* make `latest news` section in footer load events
 
 ## Usage
 to add a new model/page to the site
