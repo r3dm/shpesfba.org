@@ -15,6 +15,12 @@ run `gulp`
 ## TODO
 * add form to website that lets anyone submit a job posting, webmaster can then approve/edit/publish the
 ad onto the job listings page
+* fix contact form so that it actually submits an email to webmaster or shows up in a queue for him
+* revamp gallery presentation - load larger pictures
+* make hover blur text look more attractive and legible
+* gallery needs to indicate that you can load entire gallery on mobile somehow
+* Add job details to site. Either load a new page with more details or expand listing in the browser
+* fix firefox placeholder text clipping. the text is being clipped at the top
 
 ## Usage
 to add a new model/page to the site
