@@ -8,6 +8,8 @@ block content
   .container-fluid
     .row
       .col-sm-8.col-sm-offset-2.job-list
+        a(href="/jobs/new")
+          button.btn.btn-primary Submit your Job Listing here
         if jobs
           each job in jobs
             .job-post

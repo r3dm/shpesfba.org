@@ -1,0 +1,54 @@
+extends ../layouts/default
+
+block intro
+  .container
+    h1 Submit a new job post!
+
+block content
+  .container-fluid
+    .row
+      .col-sm-8.col-sm-offset-2.job-list
+        form.form-horizontal(role='form')
+          .form-group
+            label.col-sm-2.control-label Title
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Description
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Requirements
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Company Name
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Company Description
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Company Website
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Location
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Expiration Date
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Relocation Offered
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label Email
+            .col-sm-10
+              input.form-control#inputEmail(type='email' placeholder='Email')
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button.btn.btn-primary(type='submit') Submit
