@@ -7,9 +7,7 @@ block intro
 block content
   .container-fluid
     .row
-      .col-sm-8.col-sm-offset-2.job-list
-        a(href="/jobs/new")
-          button.btn.btn-primary Submit your Job Listing here
+      .col-sm-7.col-sm-offset-2.job-list
         if jobs
           each job in jobs
             if job.approved
@@ -29,3 +27,6 @@ block content
                   | #{job.email}
         else
           | no jobs wut!
+      .col-sm-3
+        a(href="/jobs/new")
+          button.btn.btn-primary Submit your Job
