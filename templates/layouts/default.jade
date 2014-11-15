@@ -20,13 +20,6 @@ html
     if user && user.canAccessKeystone
       link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
-    //- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-    //- Safely remove this block if you are not targeting IE8
-    //-[if lt IE 9]
-      script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
-      script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
-    //-[endif]
-
     //- Include template-specific stylesheets by extending the css block
     block css
 
@@ -118,6 +111,8 @@ html
 
     //- Add scripts that are globally required by your site here.
     script(src='/js/lib/bootstrap/bootstrap.min.js')
+    script(src='/js/lib/pickadate/picker.js')
+    script(src='/js/lib/pickadate/picker.date.js')
     script(src='/js/index.js')
     script(src='/js/slick.js')
 
