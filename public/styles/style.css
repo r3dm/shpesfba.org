@@ -6513,6 +6513,23 @@ empty {
   color: #34495e;
   font-size: 30px;
 }
+.slick-slider .slick-active {
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    height: 20px;
+  }
+  100% {
+    -ms-filter: none;
+    filter: none;
+    opacity: 1;
+  }
+}
 /** landing page membership section **/
 .membership_section {
   min-height: 200px;
@@ -6748,4 +6765,17 @@ footer input.form-control {
 }
 .font-lg:before {
   font-size: 1.5em;
+}
+@keyframes fadeIn {
+  0% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    height: 20px;
+  }
+  100% {
+    -ms-filter: none;
+    filter: none;
+    opacity: 1;
+  }
 }
