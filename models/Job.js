@@ -16,7 +16,8 @@ Job.add({
   location:           { type: Types.Location },
   expirationDate:     { type: Types.Date },
   relocationOffered:  { type: Types.Boolean },
-  email:              { type: Types.Email }
-});
+  email:              { type: Types.Email },
+  approved:           { type: Types.Boolean }
+ });
 
 Job.register();

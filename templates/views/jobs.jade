@@ -12,19 +12,20 @@ block content
           button.btn.btn-primary Submit your Job Listing here
         if jobs
           each job in jobs
-            .job-post
-              h3
-                a(href="#") #{job.title}
-              p
-                strong
-                  a(href="#{job.companyUrl}") #{job.companyName} 
-                | #{job.location.suburb}, #{job.location.state} 
-                if job.relocationOffered
-                  i (relocation offered)
-                br
-                i Expires #{getDate(job.expirationDate)}
-              a.email(href='mailto:' + job.email)
-                span.glyphicon.glyphicon-envelope.font-lg
-                | #{job.email}
+            if job.approved
+              .job-post
+                h3
+                  a(href="#") #{job.title}
+                p
+                  strong
+                    a(href="#{job.companyUrl}") #{job.companyName} 
+                  | #{job.location.suburb}, #{job.location.state} 
+                  if job.relocationOffered
+                    i (relocation offered)
+                  br
+                  i Expires #{getDate(job.expirationDate)}
+                a.email(href='mailto:' + job.email)
+                  span.glyphicon.glyphicon-envelope.font-lg
+                  | #{job.email}
         else
           | no jobs wut!
