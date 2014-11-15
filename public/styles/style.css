@@ -2201,7 +2201,7 @@ output {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #eee;
+  background-color: #d3d2d2;
   -ms-filter: none;
   filter: none;
   opacity: 1;
@@ -4557,7 +4557,8 @@ footer input.form-control {
 .job-post:nth-of-type(even) {
   background-color: #d3d2d2;
 }
-.job-list .checkbox label {
+.job-list .checkbox label,
+.job-form .checkbox label {
   font-weight: bold;
 }
 /* fonts */

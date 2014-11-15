@@ -21,11 +21,12 @@ $navbar-height        ?= 145px
 $navbar-margin-bottom ?= 0px
 $navbar-default-bg    ?= #fff
 $input-bg             ?= $shpe-gray
+$input-bg-disabled    ?= $shpe-gray
 $btn-default-border   ?= rgba(0,0,0,0)
 $btn-primary-border   ?= rgba(0,0,0,0)
 $brand-primary        ?= $shpe-blue-dark2
 
-//TODO workaround for namespace bug in kouto https://github.com/krkn/kouto-swiss/issues/27#issuecomment-61550114
+// TODO workaround for namespace bug in kouto https://github.com/krkn/kouto-swiss/issues/27#issuecomment-61550114
 @import "kouto-swiss"
 input.form-control, textarea.form-control
   +placeholder()
@@ -417,6 +418,9 @@ footer
   background-color $shpe-gray
 
 .job-list
+
+/* job form */
+.job-form
   .checkbox label
     font-weight bold
 

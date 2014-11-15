@@ -22,5 +22,7 @@ $(document).ready(function() {
     ]
   });
 
-  $('.datepicker').pickadate();
+  $('.datepicker').pickadate({
+    today: ''
+  });
  });
