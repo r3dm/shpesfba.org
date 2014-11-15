@@ -33,7 +33,7 @@ block content
           else
             div
               if event.coverPhoto.url
-                img(alt='event photo', src=event.coverPhoto.url)
+                div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
               else
                 img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
               h3 #{event.FBEventName}

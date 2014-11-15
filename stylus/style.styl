@@ -174,9 +174,7 @@ empty
   font-size 14px
   font-weight 300
 
-  //TODO display image without warping
-  //http://codepen.io/necolas/pen/oxDHc
-  img
+  div
     height 150px
     width 150px
     border-radius 100px
@@ -204,6 +202,22 @@ empty
     &:before
       color: $brand-primary
       font-size 30px
+
+.slick-slider .slick-active
+  animation fadeIn 1s
+
+@-webkit-keyframes fadeIn
+  0%
+    opacity 0
+    height 20px
+  100%
+    opacity 1
+@keyframes fadeIn
+  0%
+    opacity 0
+    height 20px
+  100%
+    opacity 1
 
 /** landing page membership section **/
 .membership_section
