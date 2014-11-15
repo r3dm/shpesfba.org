@@ -44,6 +44,7 @@ exports = module.exports = function(app) {
   app.all('/membership', routes.views.membership);
   app.get('/jobs', routes.views.jobs);
   app.get('/jobs/new', routes.views.jobForm);
+  app.post('/jobs/new', routes.views.jobForm);
 
   // NOTE: To protect a route so that only
   // admins can see it, use the requireUser middleware:

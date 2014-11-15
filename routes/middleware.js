@@ -68,13 +68,9 @@ exports.flashMessages = function(req, res, next) {
     error: req.flash('error')
   };
 
-  res.locals.messages = _.any(flashMessages, hasLength ? flashMessages : false);
+  res.locals.messages = _.any(flashMessages, function(msgs) { return msgs.length; }) ? flashMessages : false;
 
   next();
-
-  function hasLength(msgs) {
-    return msgs.length;
-  }
 };
 
 

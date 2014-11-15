@@ -5,51 +5,55 @@ block intro
     h1 Submit a new job post!
 
 block content
+  if enquirySubmitted
+    h3 Thanks for submitting your job.
+    p We'll review your ad an post display it after approval.
   .container-fluid
     .row
-      .col-sm-8.col-sm-offset-2.job-list
-        form.form-horizontal(role='form')
+      .col-sm-9.col-sm-offset-1.job-list
+        form.form-horizontal(role='form' method='post')
+          input(type='hidden', name='action', value='new')
           .form-group
-            label.col-sm-2.control-label Title
-            .col-sm-10
-              input.form-control(type='text' placeholder='Title')
+            label.col-sm-3.control-label Title
+            .col-sm-9
+              input.form-control(type='text' name='title' value=formData.title placeholder='Title')
           .form-group
-            label.col-sm-2.control-label Description
-            .col-sm-10
-              textarea.form-control(placeholder='Description')
+            label.col-sm-3.control-label Description
+            .col-sm-9
+              textarea.form-control(rows='5' name='description' value=formData.description placeholder='Description')
           .form-group
-            label.col-sm-2.control-label Requirements
-            .col-sm-10
-              textarea.form-control(placeholder='Requirements')
+            label.col-sm-3.control-label Requirements
+            .col-sm-9
+              textarea.form-control(rows='5' name='requirements' value=formData.requirements placeholder='Requirements')
           .form-group
-            label.col-sm-2.control-label Company Name
-            .col-sm-10
-              input.form-control(type='text' placeholder='Company Name')
+            label.col-sm-3.control-label Company Name
+            .col-sm-9
+              input.form-control(type='text' name='companyName' value=formData.companyName placeholder='Company Name')
           .form-group
-            label.col-sm-2.control-label Company Description
-            .col-sm-10
-              textarea.form-control(placeholder='Company Description')
+            label.col-sm-3.control-label Company Description
+            .col-sm-9
+              textarea.form-control(rows='5' name='companyBlurb' value=formData.companyName placeholder='Company Description')
           .form-group
-            label.col-sm-2.control-label Company Website
-            .col-sm-10
-              input.form-control(type='url' placeholder='Company Website')
+            label.col-sm-3.control-label Company Website
+            .col-sm-9
+              input.form-control(type='url' name='companyUrl' value=formData.companyName placeholder='Company Website')
           // TODO figure out how to input location - city (suburb), state
           .form-group
-            label.col-sm-2.control-label Location
-            .col-sm-10
-              input.form-control(type='text' placeholder='Location')
+            label.col-sm-3.control-label Location
+            .col-sm-9
+              input.form-control(type='text' name='location' value=formData.companyName placeholder='Location')
           .form-group
-            label.col-sm-2.control-label Expiration Date
-            .col-sm-10
-              input.form-control(type='date')
+            label.col-sm-3.control-label Expiration Date
+            .col-sm-9
+              input.form-control(type='date' name='expirationDate' value=formData.companyName)
           .form-group
-            label.col-sm-2.control-label Relocation Offered
-            .col-sm-10
-              input.form-control(type='checkbox')
+            label.col-sm-3.control-label Relocation Offered
+            .col-sm-9
+              input.form-control(type='checkbox' name='relocationOffered' value=formData.companyName)
           .form-group
-            label.col-sm-2.control-label Email
-            .col-sm-10
-              input.form-control#inputEmail(type='email' placeholder='Email')
+            label.col-sm-3.control-label Email
+            .col-sm-9
+              input.form-control#inputEmail(type='email' name='email' value=formData.companyName placeholder='Email')
           .form-group
-            .col-sm-offset-2.col-sm-10
+            .col-sm-offset-3.col-sm-10
               button.btn.btn-primary(type='submit') Submit
