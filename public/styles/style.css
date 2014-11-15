@@ -4552,12 +4552,14 @@ footer input.form-control {
 .job-post:nth-of-type(even) {
   background-color: #d3d2d2;
 }
-.job-list,
+.job-list .checkbox label {
+  font-weight: bold;
+}
+/* fonts */
 .font-lg {
   top: 5px;
   right: 5px;
 }
-.job-list:before,
 .font-lg:before {
   font-size: 1.5em;
 }

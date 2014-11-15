@@ -18,6 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-stylus": "~3.3.0"
+    "bootstrap-stylus": "~3.3.0",
+    "pickadate": "~3.5.4"
   }
 }
