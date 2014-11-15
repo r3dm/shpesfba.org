@@ -15,48 +15,48 @@ block content
           input(type='hidden', name='action', value='new')
           .form-group
             label.col-sm-3.control-label Title
-            .col-sm-9
+            .col-sm-8
               input.form-control(type='text' name='title' value=formData.title placeholder='Title')
           .form-group
             label.col-sm-3.control-label Description
-            .col-sm-9
+            .col-sm-8
               textarea.form-control(rows='5' name='description' value=formData.description placeholder='Description')
           .form-group
             label.col-sm-3.control-label Requirements
-            .col-sm-9
+            .col-sm-8
               textarea.form-control(rows='5' name='requirements' value=formData.requirements placeholder='Requirements')
           .form-group
             label.col-sm-3.control-label Company Name
-            .col-sm-9
+            .col-sm-8
               input.form-control(type='text' name='companyName' value=formData.companyName placeholder='Company Name')
           .form-group
             label.col-sm-3.control-label Company Description
-            .col-sm-9
+            .col-sm-8
               textarea.form-control(rows='5' name='companyBlurb' value=formData.companyBlurb placeholder='Company Description')
           .form-group
             label.col-sm-3.control-label Company Website
-            .col-sm-9
+            .col-sm-8
               input.form-control(type='url' name='companyUrl' value=formData.companyUrl placeholder='Company Website')
           // TODO figure out how to input location - city (suburb), state
           .form-group
             label.col-sm-3.control-label City
-            .col-sm-9
+            .col-sm-8
               input.form-control(type='text' name='city' value=formData.city placeholder='City')
           .form-group
             label.col-sm-3.control-label State
-            .col-sm-9
+            .col-sm-8
               input.form-control(type='text' name='state' value=formData.state placeholder='State')
           .form-group
             label.col-sm-3.control-label Expiration Date
-            .col-sm-9
+            .col-sm-4
               input.form-control(type='date' name='expirationDate' value=formData.expirationDate)
-          .form-group
-            label.col-sm-3.control-label Relocation Offered
-            .col-sm-9
-              input.form-control(type='checkbox' name='relocationOffered' value=formData.relocationOffered)
+            .col-sm-4.checkbox
+              label.checkbox-inline
+                input(type='checkbox' name='relocationOffered' value=formData.relocationOffered)
+                | Relocation Offered
           .form-group
             label.col-sm-3.control-label Email
-            .col-sm-9
+            .col-sm-8
               input.form-control#inputEmail(type='email' name='email' value=formData.email placeholder='Email')
           .form-group
             .col-sm-offset-3.col-sm-10

@@ -20,8 +20,6 @@ block content
                   | #{job.location.suburb}, #{job.location.state} 
                   if job.relocationOffered
                     i (relocation offered)
-                  br
-                  i Expires #{getDate(job.expirationDate)}
                 a.email(href='mailto:' + job.email)
                   span.glyphicon.glyphicon-envelope.font-lg
                   | #{job.email}

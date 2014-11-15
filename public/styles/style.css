@@ -4552,11 +4552,12 @@ footer input.form-control {
 .job-post:nth-of-type(even) {
   background-color: #d3d2d2;
 }
-/* fonts */
+.job-list,
 .font-lg {
   top: 5px;
   right: 5px;
 }
+.job-list:before,
 .font-lg:before {
   font-size: 1.5em;
 }
