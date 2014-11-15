@@ -32,28 +32,32 @@ block content
           .form-group
             label.col-sm-3.control-label Company Description
             .col-sm-9
-              textarea.form-control(rows='5' name='companyBlurb' value=formData.companyName placeholder='Company Description')
+              textarea.form-control(rows='5' name='companyBlurb' value=formData.companyBlurb placeholder='Company Description')
           .form-group
             label.col-sm-3.control-label Company Website
             .col-sm-9
-              input.form-control(type='url' name='companyUrl' value=formData.companyName placeholder='Company Website')
+              input.form-control(type='url' name='companyUrl' value=formData.companyUrl placeholder='Company Website')
           // TODO figure out how to input location - city (suburb), state
           .form-group
-            label.col-sm-3.control-label Location
+            label.col-sm-3.control-label City
             .col-sm-9
-              input.form-control(type='text' name='location' value=formData.companyName placeholder='Location')
+              input.form-control(type='text' name='city' value=formData.city placeholder='City')
+          .form-group
+            label.col-sm-3.control-label State
+            .col-sm-9
+              input.form-control(type='text' name='state' value=formData.state placeholder='State')
           .form-group
             label.col-sm-3.control-label Expiration Date
             .col-sm-9
-              input.form-control(type='date' name='expirationDate' value=formData.companyName)
+              input.form-control(type='date' name='expirationDate' value=formData.expirationDate)
           .form-group
             label.col-sm-3.control-label Relocation Offered
             .col-sm-9
-              input.form-control(type='checkbox' name='relocationOffered' value=formData.companyName)
+              input.form-control(type='checkbox' name='relocationOffered' value=formData.relocationOffered)
           .form-group
             label.col-sm-3.control-label Email
             .col-sm-9
-              input.form-control#inputEmail(type='email' name='email' value=formData.companyName placeholder='Email')
+              input.form-control#inputEmail(type='email' name='email' value=formData.email placeholder='Email')
           .form-group
             .col-sm-offset-3.col-sm-10
               button.btn.btn-primary(type='submit') Submit
