@@ -33,7 +33,7 @@ exports.initLocals = function(req, res, next) {
     // { label: 'Blog',        key: 'blog',        href: '/blog' },
     { label: 'Photos',     key: 'gallery',     href: '/gallery' },
     { label: 'Contact',     key: 'contact',     href: '/contact' }
-  ];
+   ];
 
   Event.model.find()
     .sort('-startTime')
