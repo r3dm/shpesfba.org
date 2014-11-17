@@ -13,7 +13,7 @@ block content
             if job.approved
               .job-post
                 h3
-                  a(href="#") #{job.title}
+                  a(href="/jobs/" + job.id) #{job.title}
                 p
                   strong
                     a(href="#{job.companyUrl}") #{job.companyName} 
