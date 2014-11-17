@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block intro
+  .container
+    a.navigation(href="/jobs")
+      span.glyphicon.glyphicon-chevron-left.font-lg
+        div Back
+
+block content
+  .container-fluid
+    .row
+      .col-sm-8.col-sm-offset-2
+        if job
+          if job.approved
+            .job-post
+              h3 #{job.title}
+              p
+                strong
+                  a(href="#{job.companyUrl}") #{job.companyName} 
+                | #{job.location.suburb}, #{job.location.state} 
+                if job.relocationOffered
+                  i (relocation offered)
+              h4 Job Description
+              p #{job.description}
+              h4 Skills & Requirements
+              p #{job.requirements}
+              h4 About #{job.companyName}
+              p #{job.companyBlurb}
+              a.email(href='mailto:' + job.email)
+                button.btn.btn-primary Apply Now
+        else
+          | no job wut!
+      .col-sm-2

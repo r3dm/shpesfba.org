@@ -4571,10 +4571,24 @@ footer input.form-control {
 .job-post a.email {
   padding-left: 5px;
 }
+.job-post button {
+  margin: 10px;
+}
 .job-post:nth-of-type(even) {
   background-color: #d3d2d2;
 }
-.job-list .checkbox label,
+.navigation {
+  font-size: 20px;
+}
+.navigation .glyphicon.font-lg {
+  color: #1a3851;
+}
+.navigation .glyphicon.font-lg div {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+}
+/* job form */
 .job-form .checkbox label {
   font-weight: bold;
 }
