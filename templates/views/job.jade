@@ -2,9 +2,11 @@ extends ../layouts/default
 
 block intro
   .container
-    a.navigation(href="/jobs")
-      span.glyphicon.glyphicon-chevron-left.font-lg
-        div Back
+    ul.nav.nav-pills
+      li.active
+        a.navigation(href="/jobs")
+          span.glyphicon.glyphicon-chevron-left
+          |  Back
 
 block content
   .container-fluid
