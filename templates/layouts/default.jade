@@ -72,35 +72,7 @@ html
       block content
 
 
-    //- FOOTER
-    // TODO figure out why placeholder text is getting clipped on the top in firefox
-    footer.site-footer.container-fluid(role='footer')
-      .section.row
-        .col-sm-1
-        .col-sm-4
-          h3 About SHPE
-          p SHPE's vision is to be the leading social-technical organization whose primary function is to enhance and achieve the potential of Hispanics in engineering, math and science.
-        .col-sm-3
-          h3 Latest News
-          | San Jose Earthquakes Stadium Tour
-          hr
-          | Welcome back mixer!
-          hr
-          | SHPE Engineering Day at The Exploratorium
-          hr
-          | Win a Chevrolet Spark! - SHPE Raffle
-        .col-sm-3
-          h3 Contact Us
-          form(action='')
-            input.form-control(type='text', name='name', placeholder='Name')
-            input.form-control(type='email', name='email', placeholder='Email')
-            textarea.form-control(name='message', placeholder='Message', rows='3')
-            br
-            button.btn.btn-default.spanfix(type='submit')
-              span &gt;
-              | Send
-        .col-sm-1
-
+      include ../includes/footer.jade
     //- JAVASCRIPT
     script(src='/js/lib/jquery/jquery-2.1.1.min.js')
 
