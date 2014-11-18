@@ -4436,6 +4436,7 @@ empty {
 .gallery_page-container {
   text-align: center;
   z-index: 1;
+  background-color: #fff;
 }
 .gallery_photo {
   display: inline-block;
@@ -4472,6 +4473,13 @@ empty {
     height: 200px;
   }
 }
+.gallery_photo-metadata {
+  font-size: 20px;
+}
+.gallery_photo-metadata hr {
+  margin: 0 0;
+  border: 1px solid #1a3851;
+}
 /* footer styles */
 footer {
   background-color: #636363;
@@ -4489,6 +4497,9 @@ footer h3 {
 }
 footer hr {
   margin: 5px 0;
+  color: #d3d2d2;
+}
+footer a {
   color: #d3d2d2;
 }
 footer .btn-default {
@@ -4577,16 +4588,11 @@ footer input.form-control {
 .job-post:nth-of-type(even) {
   background-color: #d3d2d2;
 }
-.navigation {
-  font-size: 20px;
-}
-.navigation .glyphicon.font-lg {
-  color: #1a3851;
-}
-.navigation .glyphicon.font-lg div {
-  position: absolute;
-  top: 5px;
-  left: 30px;
+a.navigation {
+  top: 10px;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
 }
 /* job form */
 .job-form .checkbox label {

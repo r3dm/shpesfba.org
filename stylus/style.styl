@@ -301,6 +301,7 @@ empty
 .gallery_page-container
   text-align center
   z-index 1
+  background-color #FFF
 
 .gallery_photo
   display inline-block
@@ -335,6 +336,13 @@ empty
     width 200px
     height 200px
 
+.gallery_photo-metadata
+  font-size 20px
+
+  hr
+    margin 0 0
+    border 1px solid $shpe-blue-dark
+
 /* footer styles */
 footer
   background-color: $footer_bg_color
@@ -352,6 +360,9 @@ footer
 
   hr
     margin 5px 0
+    color $footer_font_color
+
+  a
     color $footer_font_color
 
   .btn-default
@@ -434,16 +445,11 @@ footer
 .job-post:nth-of-type(even)
   background-color $shpe-gray
 
-.navigation
-  font-size 20px
-
-  .glyphicon.font-lg
-    color $shpe-blue-dark
-
-    div
-      position absolute
-      top 5px
-      left 30px
+a.navigation
+  top 10px
+  text-align center
+  font-style italic
+  color white
 
 /* job form */
 .job-form

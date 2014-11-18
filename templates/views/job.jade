@@ -2,9 +2,11 @@ extends ../layouts/default
 
 block intro
   .container
-    a.navigation(href="/jobs")
-      span.glyphicon.glyphicon-chevron-left.font-lg
-        div Back
+    ul.nav.nav-pills
+      li.active
+        a.navigation(href="/jobs")
+          span.glyphicon.glyphicon-chevron-left
+          |  Back
 
 block content
   .container-fluid
@@ -20,6 +22,9 @@ block content
                 | #{job.location.suburb}, #{job.location.state} 
                 if job.relocationOffered
                   i (relocation offered)
+                br
+                | Expires: 
+                = getDate(job.expirationDate)
               h4 Job Description
               p #{job.description}
               h4 Skills & Requirements
