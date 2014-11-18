@@ -4491,6 +4491,9 @@ footer hr {
   margin: 5px 0;
   color: #d3d2d2;
 }
+footer a {
+  color: #d3d2d2;
+}
 footer .btn-default {
   width: 105px;
   height: 25px;
