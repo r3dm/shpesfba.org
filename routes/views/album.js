@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
     locals = res.locals;
 
   // Set locals
-  locals.section = 'album'; //TODO make this a navbar item?
+  locals.section = 'gallery';
   locals.filters = {
     album: req.params.album
   };
