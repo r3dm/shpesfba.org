@@ -9,9 +9,13 @@ block content
     .headline_container_left
       .headline_container_right
         .section.container
-  .pure-g.gallery_page-container.inner_page-bg
-    .pure-u.pure-u-sm-1-12
-    .pure-u.pure-u-sm-5-6
+  .gallery_page-container
+    .inner_page-bg
+      ul.nav.nav-pills.col-sm-offset-1
+        li.active
+          a.navigation(href="/gallery")
+            span.glyphicon.glyphicon-chevron-left
+            |  Back
       if gallery.images.length
         #links
         each photo in gallery.images
@@ -20,7 +24,6 @@ block content
               img(src=photo.fill(200,200), alt=gallery.name)
       else
         h3.text-muted There are no images in this gallery.
-    .pure-u.pure-u-sm-1-12
 
   .blueimp-gallery.blueimp-gallery-controls#blueimp-gallery(data-use-bootstrap-modal="false")
     .slides
@@ -35,7 +38,7 @@ block content
       .modal-dialog
         .modal-content
           .modal-header
-            button.close(type="button")&times;
+            button.close(type="button") &times;
             h4.modal-title
           .modal-body.next
           .modal-footer
