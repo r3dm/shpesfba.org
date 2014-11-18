@@ -15,14 +15,14 @@ var paths = {
     '**/*.js',
     '!node_modules'
   ],
-  jade: './templates/**/*.js'
+  jade: './templates/**/*.jade'
 };
 
 gulp.task('serve', function(cb) {
   nodemon({
   script: './keystone.js',
   ext: 'js',
-  watch: [paths.jade],
+  watch: paths.js,
   env: {
     'NODE_ENV': 'development'
   },
