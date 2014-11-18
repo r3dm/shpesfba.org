@@ -13,9 +13,35 @@ block content
     .pure-u.pure-u-sm-1-12
     .pure-u.pure-u-sm-5-6
       if gallery.images.length
+        #links
         each photo in gallery.images
           .gallery_photo
-            img(src=photo.fill(200,200), alt=gallery.name)
+            a(href="#{photo.url}" title=photo.name data-gallery)
+              img(src=photo.fill(200,200), alt=gallery.name)
       else
         h3.text-muted There are no images in this gallery.
     .pure-u.pure-u-sm-1-12
+
+  .blueimp-gallery.blueimp-gallery-controls#blueimp-gallery(data-use-bootstrap-modal="false")
+    .slides
+    h3.title
+    a.prev <
+    a.next >
+    a.close x
+    a.play-pause
+    ol.indicator
+
+    .modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button")&times;
+            h4.modal-title
+          .modal-body.next
+          .modal-footer
+            button.btn.btn-default.pull-left.prev(type="button")
+              i.glyphicon.glyphicon-chevron-left
+              | Previous
+            button.btn.btn-primary.next
+              | Next
+              i.glyphicon.glyphicon-chevron-right

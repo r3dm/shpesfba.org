@@ -19,9 +19,7 @@ block content
               img(src=gallery._.heroImage.fill(200,200), alt=gallery.name)
               .gallery_photo-blur
                 .gallery_photo-metadata
-                  | #{gallery.name}
-                  hr
-                  a(href='gallery/#{gallery.key}') Click to view gallery
+                  a(href='gallery/#{gallery.key}') #{gallery.name}
       else
         h3.text-muted There are no image galleries yet.
     .pure-u.pure-u-sm-1-12
