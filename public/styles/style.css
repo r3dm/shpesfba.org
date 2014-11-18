@@ -4588,6 +4588,7 @@ footer input.form-control {
   background-color: #d3d2d2;
 }
 a.navigation {
+  top: 10px;
   text-align: center;
   font-style: italic;
   color: #fff;

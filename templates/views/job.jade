@@ -22,6 +22,9 @@ block content
                 | #{job.location.suburb}, #{job.location.state} 
                 if job.relocationOffered
                   i (relocation offered)
+                br
+                | Expires: 
+                = getDate(job.expirationDate)
               h4 Job Description
               p #{job.description}
               h4 Skills & Requirements
