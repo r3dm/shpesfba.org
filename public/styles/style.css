@@ -6342,6 +6342,9 @@ p {
   font-size: 14px;
   text-align: justify;
 }
+a:hover {
+  text-decoration: none;
+}
 /* button styles */
 .btn-rsvp {
   width: 140px;
@@ -6351,16 +6354,17 @@ p {
   font-weight: 300;
   border-radius: 4px;
   color: #fff;
-  background-color: #34495e;
+  background-color: #4f9bd8;
 }
 .btn-rsvp:hover {
   color: #fff;
   background-color: #314559;
 }
 .btn-primary {
-  text-align: center;
-  font-style: italic;
+  background-color: #4f9bd8;
   color: #fff;
+  font-style: italic;
+  text-align: center;
 }
 .spanfix span {
   float: right;
@@ -6694,6 +6698,10 @@ footer hr {
 }
 footer a {
   color: #d3d2d2;
+}
+footer a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 footer .btn-default {
   width: 105px;
