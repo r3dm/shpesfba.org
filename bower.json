@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "bootstrap-stylus": "~3.3.0",
-    "pickadate": "~3.5.4"
+    "pickadate": "~3.5.4",
+    "bootstrapvalidator": "~0.5.3"
   }
 }

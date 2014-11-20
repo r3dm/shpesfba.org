@@ -23,6 +23,37 @@ $(document).ready(function() {
   });
 
   $('.datepicker').pickadate({
-    today: ''
+    today: '',
+    format: 'yyyy-mm-dd',
+    formatSubmit: 'yyyy-mm-dd'
+  });
+
+  $('#jobForm').bootstrapValidator({
+    excluded: ':disabled',
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+      // expirationDate: {
+      //   validators: {
+      //     date: {
+      //       format: 'YYYY/MM/DD',
+      //       message: 'The value is not a valid date'
+      //     }
+      //   }
+      // }
+    }
+  });
+
+  $('#contactForm').bootstrapValidator({
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+    }
   });
  });

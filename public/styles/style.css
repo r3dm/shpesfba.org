@@ -4606,6 +4606,11 @@ a.navigation {
 .font-lg:before {
   font-size: 1.5em;
 }
+/* flash styles */
+.alert {
+  background-color: #ff0;
+  color: #1a3851;
+}
 @keyframes fadeIn {
   0% {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
