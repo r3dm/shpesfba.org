@@ -23,6 +23,29 @@ $(document).ready(function() {
   });
 
   $('.datepicker').pickadate({
-    today: ''
+    today: '',
+    format: 'yyyy-mm-dd',
+    formatSubmit: 'yyyy-mm-dd'
+  });
+
+  $('#jobForm').bootstrapValidator({
+    excluded: ':disabled',
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+    }
+  });
+
+  $('#contactForm').bootstrapValidator({
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+    }
   });
  });

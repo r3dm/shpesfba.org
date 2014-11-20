@@ -3,8 +3,8 @@
 var keystone = require('keystone'),
   Types = keystone.Field.Types;
 
-var Job = new keystone.List('Job');
-Job.defaultColumns = 'title, expirationDate';
+var Job = new keystone.List('Job', { defaultSort: '-createdAt' });
+Job.defaultColumns = 'title, createdAt, expirationDate';
 
 Job.add({
   title:              { type: Types.Text, required: true, initial: true },
@@ -17,7 +17,8 @@ Job.add({
   expirationDate:     { type: Types.Date },
   relocationOffered:  { type: Types.Boolean },
   email:              { type: Types.Email },
-  approved:           { type: Types.Boolean }
+  approved:           { type: Types.Boolean },
+  createdAt:          { type: Date, default: Date.now }
  });
 
 Job.register();
