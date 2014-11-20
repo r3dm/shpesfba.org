@@ -6647,6 +6647,7 @@ empty {
 .gallery_photo img {
   width: 250px;
   height: 250px;
+  box-shadow: 3px 6px 4px rgba(0,0,0,0.24);
 }
 .gallery_photo:hover .gallery_photo-blur {
   display: block;
