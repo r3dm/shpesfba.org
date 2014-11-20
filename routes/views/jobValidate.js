@@ -31,7 +31,6 @@ module.exports = form(
     .trim()
     .isEmail(),
   form.field('relocationOffered')
-    .required()
     .trim()
     .toBoolean()
 );
