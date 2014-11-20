@@ -36,6 +36,7 @@ module.exports = function(req, res, next) {
         if (err) { return next(err); }
         console.log(data);
 
+        req.flash('success', 'Your enquiry has been recieved. We will email a response.');
         res.redirect('/');
       });
     }

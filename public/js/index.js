@@ -36,6 +36,14 @@ $(document).ready(function() {
       validating: 'glyphicon glyphicon-refresh'
     },
     fields: {
+      // expirationDate: {
+      //   validators: {
+      //     date: {
+      //       format: 'YYYY/MM/DD',
+      //       message: 'The value is not a valid date'
+      //     }
+      //   }
+      // }
     }
   });
 
