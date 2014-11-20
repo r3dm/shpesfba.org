@@ -6802,6 +6802,7 @@ a.navigation {
 /* flash styles */
 .alert {
   color: #1a3851;
+  text-align: center;
 }
 .navbar-default {
   border: none;
