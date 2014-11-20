@@ -22,8 +22,8 @@ exports = module.exports = function(app) {
   app.all('/contact', routes.views.contact);
   app.all('/membership', routes.views.membership);
   app.get('/jobs', routes.views.jobs);
-  app.get('/jobs/new', routes.views.jobValidate, routes.views.jobForm);
-  app.post('/jobs/new', routes.views.jobForm);
+  app.get('/jobs/new', routes.views.jobForm);
+  app.post('/jobs/new', routes.views.jobValidate, routes.views.jobForm);
   app.get('/jobs/:job', routes.views.job);
   app.post(
     '/contact-general',
