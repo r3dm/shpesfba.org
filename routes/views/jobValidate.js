@@ -1,0 +1,44 @@
+var form = require('express-form');
+
+module.exports = form(
+  form.field('title')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('description')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('requirements')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('companyName')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('companyBlurb')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('companyUrl')
+    .required()
+    .trim()
+    .isUrl(),
+  form.field('location.city')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('location.state')
+    .required()
+    .trim()
+    .isAlphanumeric(),
+  form.field('email')
+    .required()
+    .trim()
+    .isEmail(),
+  form.field('relocationOffered')
+    .required()
+    .trim()
+    .toBoolean()
+);
