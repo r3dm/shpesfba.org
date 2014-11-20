@@ -3,36 +3,29 @@ var form = require('express-form');
 module.exports = form(
   form.field('title')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('description')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('requirements')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('companyName')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('companyBlurb')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('companyUrl')
     .required()
     .trim()
     .isUrl(),
   form.field('location.city')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('location.state')
     .required()
-    .trim()
-    .isAlphanumeric(),
+    .trim(),
   form.field('email')
     .required()
     .trim()
