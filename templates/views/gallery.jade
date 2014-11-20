@@ -16,10 +16,10 @@ block content
         each gallery in galleries
           .gallery_photo
             if gallery.heroImage.exists
-              img(src=gallery._.heroImage.fill(200,200), alt=gallery.name)
-              .gallery_photo-blur
-                .gallery_photo-metadata
-                  a(href='gallery/#{gallery.key}') #{gallery.name}
+              a(href='gallery/#{gallery.key}')
+                img(src=gallery._.heroImage.fill(200,200), alt=gallery.name)
+              a(href='gallery/#{gallery.key}').gallery_photo-blur
+                .gallery_photo-metadata #{gallery.name}
       else
         h3.text-muted There are no image galleries yet.
     .pure-u.pure-u-sm-1-12

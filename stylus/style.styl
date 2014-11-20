@@ -320,30 +320,31 @@ empty
   img
     width 250px
     height 250px
+  >a>img
     box-shadow 3px 6px 4px rgba(0, 0, 0, 0.24)
 
   &:hover
     .gallery_photo-blur
       display block
+      overflow hidden
+      text-align left
 
   @media (min-width: 768px)
     img
-      width 200px
       height 200px
+      width 200px
 
 .gallery_photo-blur
-  top 15px
+  background-color rgba(255,255,255,0.75)
   padding 10px
-  background-color rgba(255,255,255,0.5)
+  top 15px
   width 250px
-  height 250px
 
   @media (min-width: 768px)
     width 200px
-    height 200px
 
 .gallery_photo-metadata
-  font-size 20px
+  font-size 1.5rem
 
   hr
     margin 0 0
