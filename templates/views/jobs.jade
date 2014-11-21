@@ -31,7 +31,9 @@ block content
                 br
         else
           h3 No jobs Listed.
-      .col-sm-3.hidden-md
-        h3 Employers!
-        a(href="/jobs/new")
-          button.btn.btn-primary List Your Job Now!
+      .col-lg-2.hidden-md
+        .panel.panel-default
+          .panel-heading.jobs-panel
+            h3.panel-title Employers!
+          .panel-body.center-block
+            a.btn.btn-primary.btn-block(href="/jobs/new") List Your Job Now!

@@ -6345,6 +6345,10 @@ p {
 a:hover {
   text-decoration: none;
 }
+.panel-heading.jobs-panel {
+  background-color: #d3d2d2;
+  color: #fff;
+}
 /* button styles */
 .btn-rsvp {
   width: 140px;
