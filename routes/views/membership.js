@@ -7,6 +7,12 @@ exports = module.exports = function(req, res) {
   // locals.section is used to set the currently selected
   // item in the header navigation.
   locals.section = 'membership';
+  locals.signUpUrl = [
+    'https://oneshpe.shpe.org/wps/portal/national/kcxml/',
+    '04_Sj9SPykssy0xPLMnMz0vM0Y_QjzKLN48PDQHJgFg',
+    '-ofqRaCIhcJEgfW99X4_83FT9AP2C3NCIckdHRQAT8ETZ/',
+    'delta/base64xml/L3dJdyEvd0ZNQUFzQUMvNElVRS82XzdfVVU!'
+  ].join('');
 
   // Render the view
   view.render('membership');
