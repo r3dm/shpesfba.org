@@ -1,15 +1,18 @@
 extends ../layouts/default
 
 block intro
-  .container
+  .headline-min
+      .headline_container_left
+        .headline_container_right
+          .section.container
+
+block content
+  .container-fluid
     ul.nav.nav-pills
       li.active
         a.navigation(href="/jobs")
           span.glyphicon.glyphicon-chevron-left
           |  Back
-
-block content
-  .container-fluid
     .row
       .col-sm-8.col-sm-offset-2
         if job

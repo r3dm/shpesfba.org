@@ -1,6 +1,10 @@
 extends ../layouts/default
 
 block intro
+  .headline-min
+      .headline_container_left
+        .headline_container_right
+          .section.container
   .container
     h1 Job Listings
 
@@ -16,8 +20,8 @@ block content
                   a(href="/jobs/" + job.id) #{job.title}
                 p
                   strong
-                    a(href="#{job.companyUrl}") #{job.companyName} 
-                  | #{job.location.suburb}, #{job.location.state} 
+                    a(href="#{job.companyUrl}") #{job.companyName}
+                  | #{job.location.suburb}, #{job.location.state}
                   if job.relocationOffered
                     i (relocation offered)
                 a.email(href='mailto:' + job.email)

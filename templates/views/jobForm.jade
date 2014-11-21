@@ -1,10 +1,14 @@
 extends ../layouts/default
 
 block intro
-  .container
-    h1 Submit a new job post!
+  .headline-min
+      .headline_container_left
+        .headline_container_right
+          .section.container
 
 block content
+  .container
+    h1 Submit a new job post!
   if enquirySubmitted
     h3 Thanks for submitting your job.
     p We'll review your ad an post display it after approval.

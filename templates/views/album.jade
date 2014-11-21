@@ -1,14 +1,14 @@
 extends ../layouts/default
 
 block intro
-  .container
-    h1 #{gallery.name}
-
-block content
   .headline-min
     .headline_container_left
       .headline_container_right
         .section.container
+
+block content
+  .container
+    h1 #{gallery.name}
   .gallery_page-container
     .inner_page-bg
       ul.nav.nav-pills.col-sm-offset-1
