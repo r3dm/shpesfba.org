@@ -11,7 +11,7 @@ block intro
 block content
   .container-fluid
     .row
-      .col-sm-7.col-sm-offset-2.job-list
+      section.col-sm-7.col-sm-offset-2.job-list.col-lg-6.col-lg-offset-3
         if jobs
           each job in jobs
             if job.approved
@@ -21,15 +21,17 @@ block content
                 p
                   strong
                     a(href="#{job.companyUrl}") #{job.companyName}
+                    br
                   | #{job.location.suburb}, #{job.location.state}
                   if job.relocationOffered
                     i (relocation offered)
                 a.email(href='mailto:' + job.email)
                   span.glyphicon.glyphicon-envelope.font-lg
                   | #{job.email}
+                br
         else
-          | no jobs wut!
-      .col-sm-3
-        // TODO hide on mobile. Make sidebar more sidebar-y
+          h3 No jobs Listed.
+      .col-sm-3.hidden-md
+        h3 Employers!
         a(href="/jobs/new")
-          button.btn.btn-primary Submit your Job
+          button.btn.btn-primary List Your Job Now!
