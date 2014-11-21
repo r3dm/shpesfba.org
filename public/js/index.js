@@ -22,28 +22,22 @@ $(document).ready(function() {
     ]
   });
 
-  $('.datepicker').pickadate({
-    today: '',
-    format: 'yyyy-mm-dd',
-    formatSubmit: 'yyyy-mm-dd'
+  var $input = $('.datepicker').pickadate({
+    today: ''
   });
+  var picker = $input.pickadate('picker');
+  // wrap picker in case we're on any page other than the job form
+  if (picker) {
+    picker.on('render', function() {
+      $('#jobForm').bootstrapValidator('revalidateField', 'expirationDate');
+    });
+  }
 
   $('#jobForm').bootstrapValidator({
-    excluded: ':disabled',
     feedbackIcons: {
       valid: 'glyphicon glyphicon-ok',
       invalid: 'glyphicon glyphicon-remove',
       validating: 'glyphicon glyphicon-refresh'
-    },
-    fields: {
-      // expirationDate: {
-      //   validators: {
-      //     date: {
-      //       format: 'YYYY/MM/DD',
-      //       message: 'The value is not a valid date'
-      //     }
-      //   }
-      // }
     }
   });
 

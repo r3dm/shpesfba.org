@@ -20,10 +20,10 @@ module.exports = form(
     .required()
     .trim()
     .isUrl(),
-  form.field('location.city')
+  form.field('city')
     .required()
     .trim(),
-  form.field('location.state')
+  form.field('state')
     .required()
     .trim(),
   form.field('email')
