@@ -37,7 +37,9 @@ block content
               else
                 img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
               a(href='https://www.facebook.com/events/' + event.FBEventId)
-                button.btn.btn-rsvp RSVP
+                button.btn.btn-rsvp
+                  | Info
+                  span.glyphicon.glyphicon-chevron-right(style="vertical-align:-1px")
               br
               h3 #{event.FBEventName}
               = getDate(event.startTime)
