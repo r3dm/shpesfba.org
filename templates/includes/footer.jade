@@ -8,7 +8,7 @@ footer.site-footer.container-fluid(role='footer')
 
     .col-sm-3
       h3 Latest News
-      if events.length > 3
+      if events && events.length > 3
         - var n = 0
           while n < 4
             a(href='https://www.facebook.com/events/' + events[n].FBEventId) #{events[n].FBEventName}
