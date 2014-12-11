@@ -72,11 +72,16 @@ exports.flashMessages = function(req, res, next) {
     error: req.flash('error')
   };
 
-  // TODO: Use if else for readability
-  res.locals.messages =
-    _.any(flashMessages, function(msgs) {
+  // Checks to see if any messages exists
+  var any = _.any(flashMessages, function(msgs) {
     return msgs.length;
-  }) ? flashMessages : false;
+  });
+
+  if (any) {
+    res.locals.messages = flashMessages;
+  } else {
+    res.locals.messages = false;
+  }
 
   next();
 };
