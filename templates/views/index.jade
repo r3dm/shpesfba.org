@@ -14,33 +14,39 @@ block content
             |           Society of Hispanic Professional Engineers
   .section_bio.section
     .inner-container
-      .carousel-copy
-        for copy in copies
-          div
-            h2.section_title #{copy.title}
-            != copy.body
+      h2.section_title What is SHPE?
+      p
+        | The society of Hispanic Professional Engineers (SHPE) was founded in Los Angeles, California,
+        | in 1974 by a group of engineers employed by the city of Los Angeles. Their objective was to
+        | form a national organiztion of professional engineers to serve as role models in the Hispanic Community.
+      p
+        | The concept of Networking was the key basis for the organization. SHPE quickly established two
+        | student chapters to begin the network that would grow to encompass the nation as well as reach
+        | countries outside of the United States. Today, SHPE enjoys a strong but independent network of
+        | professionals and student chapters throughout the nation.
   .section_upcoming.section
     .inner-container
       h2.section_title Upcoming Events
       .carousel-upcoming
-        if events.length > 0
-          for event in events
-            if event.error
-            else
-              div
-                if event.coverPhoto.url
-                  div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
-                else
-                  img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-                a(href='https://www.facebook.com/events/' + event.FBEventId)
-                  button.btn.btn-rsvp RSVP
-                br
-                h3 #{event.FBEventName}
-                = getDate(event.startTime)
-                br
-                = getStartTime(event.startTime)
-                | -
-                = getEndTime(event.endTime)
+        for event in events
+          if event.error
+          else
+            div
+              if event.coverPhoto.url
+                div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
+              else
+                img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+              a(href='https://www.facebook.com/events/' + event.FBEventId)
+                button.btn.btn-rsvp
+                  | Info
+                  span.glyphicon.glyphicon-chevron-right(style="vertical-align:-1px")
+              br
+              h3 #{event.FBEventName}
+              = getDate(event.startTime)
+              br
+              = getStartTime(event.startTime)
+              | -
+              = getEndTime(event.endTime)
   .membership_section.section
     .inner-container
       h2.section_title Membership
