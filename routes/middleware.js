@@ -20,7 +20,6 @@ var _ = require('underscore');
 
 exports.initLocals = function(req, res, next) {
   var keystone = require('keystone'),
-    Event = keystone.list('Event'),
     moment = require('moment'),
     locals = res.locals;
 
@@ -35,13 +34,6 @@ exports.initLocals = function(req, res, next) {
     { label: 'Contact',     key: 'contact',     href: '/contact' }
    ];
 
-  Event.model.find()
-    .sort('-startTime')
-    .exec(function(err, events) {
-      locals.user = req.user;
-      locals.events = events;
-      next();
-    });
 
   locals.getStartTime = function(date) {
     return moment(date).format('h:mma');
@@ -52,6 +44,7 @@ exports.initLocals = function(req, res, next) {
   locals.getDate = function(date) {
     return moment(date).format('MMMM D, YYYY');
   };
+  next();
 };
 
 
