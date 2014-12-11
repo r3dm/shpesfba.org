@@ -8,12 +8,13 @@ footer.site-footer.container-fluid(role='footer')
 
     .col-sm-3
       h3 Latest News
-      - var n = 0
-        while n < 4
-          a(href='https://www.facebook.com/events/' + events[n].FBEventId) #{events[n].FBEventName}
-          unless (n === 3)
-            hr
-          - n++
+      if events.length > 3
+        - var n = 0
+          while n < 4
+            a(href='https://www.facebook.com/events/' + events[n].FBEventId) #{events[n].FBEventName}
+            unless (n === 3)
+              hr
+            - n++
 
     .col-sm-3
       h3 Contact Us

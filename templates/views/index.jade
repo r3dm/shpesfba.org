@@ -28,23 +28,24 @@ block content
     .inner-container
       h2.section_title Upcoming Events
       .carousel-upcoming
-        for event in events
-          if event.error
-          else
-            div
-              if event.coverPhoto.url
-                div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
-              else
-                img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-              a(href='https://www.facebook.com/events/' + event.FBEventId)
-                button.btn.btn-rsvp RSVP
-              br
-              h3 #{event.FBEventName}
-              = getDate(event.startTime)
-              br
-              = getStartTime(event.startTime)
-              | -
-              = getEndTime(event.endTime)
+        if events.length > 0
+          for event in events
+            if event.error
+            else
+              div
+                if event.coverPhoto.url
+                  div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
+                else
+                  img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
+                a(href='https://www.facebook.com/events/' + event.FBEventId)
+                  button.btn.btn-rsvp RSVP
+                br
+                h3 #{event.FBEventName}
+                = getDate(event.startTime)
+                br
+                = getStartTime(event.startTime)
+                | -
+                = getEndTime(event.endTime)
   .membership_section.section
     .inner-container
       h2.section_title Membership
