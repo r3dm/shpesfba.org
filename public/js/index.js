@@ -1,3 +1,4 @@
+/* global $ */
 /*
  * built by r3dm.com
  * Berkeley Martinez, robotie.com
@@ -22,9 +23,28 @@ $(document).ready(function() {
     ]
   });
 
+  $('.carousel-copy').slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    responsive: [
+      {
+        breakpoint: 568,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true
+        }
+      }
+    ]
+  });
+
   var $input = $('.datepicker').pickadate({
     today: ''
   });
+
   var picker = $input.pickadate('picker');
   // wrap picker in case we're on any page other than the job form
   if (picker) {
