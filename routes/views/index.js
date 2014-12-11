@@ -1,5 +1,4 @@
 var keystone = require('keystone'),
-    _Event = keystone.list('Event'),
     Copy = keystone.list('IndexCopy');
 
 exports = module.exports = function(req, res) {
@@ -10,21 +9,15 @@ exports = module.exports = function(req, res) {
   // item in the header navigation.
   locals.section = 'home';
 
-  var copyQuery = Copy.model.find();
+  // Find the body copy for this page.
+  Copy
+    .model
+    .find()
+    .exec(function(err, copies) {
+      // TODO: Handle error
 
-  _Event.model.find()
-    .sort('-startTime')
-    .exec(function(err, events) {
-      // TODO: handle error
-      locals.user = req.user;
-      locals.events = events;
-
-      copyQuery.exec(function(err, copies) {
-        // TODO: Handle error
-        // Render the view
-        locals.copies = copies;
-        view.render('index');
-      });
-
+      locals.copies = copies;
+      view.render('index');
     });
+
 };

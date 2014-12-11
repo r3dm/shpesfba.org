@@ -1,14 +1,7 @@
-/**
- * This file contains the common middleware used by your routes.
- *
- * Extend or replace these functions as your application requires.
- *
- * This structure is not enforced, and just a starting point. If
- * you have more middleware you may want to group it as separate
- * modules in your project's /lib directory.
- */
-
-var _ = require('underscore');
+var keystone = require('keystone'),
+    _ = require('underscore'),
+      moment = require('moment'),
+      _Event = keystone.list('Event'); //Events is a global, so _Events is used
 
 /**
   Initialises the standard view locals
@@ -17,22 +10,30 @@ var _ = require('underscore');
   the navigation in the header, you may wish to change this array
   or replace it with your own templates / logic.
 */
-
 exports.initLocals = function(req, res, next) {
-  var keystone = require('keystone'),
-    moment = require('moment'),
-    locals = res.locals;
+  var locals = res.locals;
 
-  locals.navLinks = [
-    { label: 'Home',        key: 'home',        href: '/' },
-    { label: 'Membership',  key: 'membership',  href: '/membership' },
-    // { label: 'Links',  key: 'links',  href: '/links' },
-    // { label: 'Calender',  key: 'calender',  href: '/calender' },
-    { label: 'Job Listings',  key: 'jobs',  href: '/jobs' },
-    // { label: 'Blog',        key: 'blog',        href: '/blog' },
-    { label: 'Photos',     key: 'gallery',     href: '/gallery' },
-    { label: 'Contact',     key: 'contact',     href: '/contact' }
-   ];
+  locals.navLinks = [{
+    label: 'Home',
+    key: 'home',
+    href: '/'
+  }, {
+    label: 'Membership',
+    key: 'membership',
+    href: '/membership'
+  }, {
+    label: 'Job Listings',
+    key: 'jobs',
+    href: '/jobs'
+  }, {
+    label: 'Photos',
+    key: 'gallery',
+    href: '/gallery'
+  }, {
+    label: 'Contact',
+    key: 'contact',
+    href: '/contact'
+  }];
 
 
   locals.getStartTime = function(date) {
@@ -44,7 +45,17 @@ exports.initLocals = function(req, res, next) {
   locals.getDate = function(date) {
     return moment(date).format('MMMM D, YYYY');
   };
-  next();
+
+  _Event
+    .model
+    .find()
+    .sort('-startTime')
+    .exec(function(err, events) {
+      // TODO: handle error
+      locals.user = req.user;
+      locals.events = events;
+      next();
+    });
 };
 
 
@@ -61,7 +72,11 @@ exports.flashMessages = function(req, res, next) {
     error: req.flash('error')
   };
 
-  res.locals.messages = _.any(flashMessages, function(msgs) { return msgs.length; }) ? flashMessages : false;
+  // TODO: Use if else for readability
+  res.locals.messages =
+    _.any(flashMessages, function(msgs) {
+    return msgs.length;
+  }) ? flashMessages : false;
 
   next();
 };
