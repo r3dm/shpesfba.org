@@ -10,192 +10,33 @@ block content
   h1 Membership Classification
   .membership_page-bg.container
     form.row(name="membership" action="#{signUpUrl}" method="get")
-      .membershipLevel.col-sm-10.col-sm-offset-1
-        .head
-          | Undergraduate Member
-          span $10.00 / year
-        div
-          .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#regularModal')
-              span &gt;
-              | Learn More
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-            #regularModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close(type='button', data-dismiss='modal')
-                      span(aria-hidden='true') ×
-                      span.sr-only Close
-                    h4#regularModalLabel.modal-title Undergaduate Member
-                  .modal-body
-                    p
-                      | Student membership is open to all engineering, math, physical, applied, and computer science majors.
-                      | All others are invited to become associate members. Graduate students have the option to join SHPE
-                      | either as a student or Professional Chapter. If you choose not to be affiliated with a chapter
-                      | on your campus, you will be considered an "At-Large Member," classified by your geographical region. Members "At-Large" receive the same benefits as those who belong to a chapter.
-                  .modal-footer
-                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
-          .col-sm-8.hidden-xs.col-sm-offset-2
-            p
-              | Student membership is open to all engineering, math, physical, applied, and computer science majors.
-              | All others are invited to become associate members. Graduate students have the option to join SHPE
-              | either as a student or Professional Chapter. If you choose not to be affiliated with a chapter
-              | on your campus, you will be considered an "At-Large Member," classified by your geographical region. Members "At-Large" receive the same benefits as those who belong to a chapter.
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-      .membershipLevel.col-sm-10.col-sm-offset-1
-        .head
-          | Regular/Professional Member
-          span $65.00 / year
-        div
-          .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#regularModal')
-              span &gt;
-              | Learn More
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-            #regularModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close(type='button', data-dismiss='modal')
-                      span(aria-hidden='true') ×
-                      span.sr-only Close
-                    h4#regularModalLabel.modal-title Regular/Professional Member
-                  .modal-body
-                    p
-                      | A Regular/Professional member shall be a person who at a minimum holds an engineer-in-training
-                      | certificate or a bachelor's degree in any discipline of engineering, engineering technology, mathematics,
-                      | physical science or a mathematically based science field. Six years of experience as an engineer or in a
-                      | mathematically based science field or engineering educator may be substituted for the bachelor's degree.
-                      | Regular/Professional members shall be entitled to cast one vote in elections of officers and all business
-                      | that the Board of Directors refers to the membership. Regular/Professional members may hold a Board position.
-                  .modal-footer
-                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
-          .col-sm-8.hidden-xs.col-sm-offset-2
-            p
-              | A Regular/Professional member shall be a person who at a minimum holds an engineer-in-training
-              | certificate or a bachelor's degree in any discipline of engineering, engineering technology, mathematics,
-              | physical science or a mathematically based science field. Six years of experience as an engineer or in a
-              | mathematically based science field or engineering educator may be substituted for the bachelor's degree.
-              | Regular/Professional members shall be entitled to cast one vote in elections of officers and all business
-              | that the Board of Directors refers to the membership. Regular/Professional members may hold a Board position.
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-
-      .membershipLevel.col-sm-10.col-sm-offset-1
-        .head
-          | Associate Member
-          span $55.00 / year
-        div
-          .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#associateModal')
-              span &gt;
-              | Learn More
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-            #associateModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close(type='button', data-dismiss='modal')
-                      span(aria-hidden='true') ×
-                      span.sr-only Close
-                    h4#associateModalLabel.modal-title Associate Member
-                  .modal-body
-                    p
-                      | An associate member shall be a person who believes and supports the purpose of this corporation. He/she shall not be entitled to
-                      | nominate, vote nor hold a position in the Board. Associated members shall be extended all privileges of a Regular/Professional member
-                      | less those exempted above.
-                  .modal-footer
-                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
-          .col-sm-8.hidden-xs.col-sm-offset-2
-            p
-              | An associate member shall be a person who believes and supports the purpose of this corporation. He/she shall not be entitled to
-              | nominate, vote nor hold a position in the Board. Associated members shall be extended all privileges of a Regular/Professional member
-              | less those exempted above.
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-
-      .membershipLevel.col-sm-10.col-sm-offset-1
-        .head
-          | Honorary Member
-          span Complimentary
-        div
-          .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#honoraryModal')
-              span &gt;
-              | Learn More
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-            #honoraryModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close(type='button', data-dismiss='modal')
-                      span(aria-hidden='true') ×
-                      span.sr-only Close
-                    h4#honoraryModalLabel.modal-title Honorary Member
-                  .modal-body
-                    p
-                      | Honorary members shall be individuals who have been awarded a membership by the corporation's Board of Directors. Honorary members
-                      | shall not be entitled to nominate, vote or hold a position on the Board.
-                      | They shall be persons who have accomplished an outstanding achievement in their engineering or scientific profession.
-                      | Persons who have participated beyond requirement for the advancement of Hispanic persons in the field of engineering or science.
-                  .modal-footer
-                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
-          .col-sm-8.hidden-xs.col-sm-offset-2
-            p
-              | Honorary members shall be individuals who have been awarded a membership by the corporation's Board of Directors. Honorary members
-              | shall not be entitled to nominate, vote or hold a position on the Board.
-              | They shall be persons who have accomplished an outstanding achievement in their engineering or scientific profession.
-              | Persons who have participated beyond requirement for the advancement of Hispanic persons in the field of engineering or science.
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-      .membershipLevel.col-sm-10.col-sm-offset-1
-        .head
-          | Lifetime Professional Member
-          span $1000.00
-        div
-          .visible-xs-block
-            button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#lifetimeModal')
-              span &gt;
-              | Learn More
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
-            #lifetimeModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    button.close(type='button', data-dismiss='modal')
-                      span(aria-hidden='true') ×
-                      span.sr-only Close
-                    h4#lifetimeModalLabel.modal-title Lifetime Professional Member
-                  .modal-body
-                    p
-                      | A Lifetime Professional member shall be a person who at a minimum holds an engineer-in-training certificate or a bachelor's degree
-                      | in any discipline of engineering, engineering technology, mathematics, physical science or a mathematically
-                      | based science or technical field. Six years of experience as an engineer or in a mathematically based science or technical field
-                      | or engineering educator may be substituted for the bachelor's degree. Membership dues for lifetime members will be waived in perpetuity.
-                  .modal-footer
-                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
-          .col-sm-8.hidden-xs.col-sm-offset-2
-            p
-              | A Lifetime Professional member shall be a person who at a minimum holds an engineer-in-training certificate or a bachelor's degree
-              | in any discipline of engineering, engineering technology, mathematics, physical science or a mathematically
-              | based science or technical field. Six years of experience as an engineer or in a mathematically based science or technical field
-              | or engineering educator may be substituted for the bachelor's degree. Membership dues for lifetime members will be waived in perpetuity.
-            button.btn.btn-primary.spanfix.btn-block
-              span &gt;
-              | Apply Now
+      for copy in copies
+        .membershipLevel.col-sm-10.col-sm-offset-1
+          .head
+            =copy.title
+            span #{copy.price}
+          div
+            .visible-xs-block
+              button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#regularModal')
+                span &gt;
+                | Learn More
+              button.btn.btn-primary.spanfix.btn-block
+                span &gt;
+                | Apply Now
+              #regularModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true') ×
+                        span.sr-only Close
+                      h4#regularModalLabel.modal-title Undergraduate Member
+                    .modal-body
+                      !=copy.body
+                    .modal-footer
+                      button.btn.btn-primary(type='button', data-dismiss='modal') Close
+            .col-sm-8.hidden-xs.col-sm-offset-2
+              !=copy.body
+              button.btn.btn-primary.spanfix.btn-block
+                span &gt;
+                | Apply Now

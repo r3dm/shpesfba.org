@@ -1,4 +1,5 @@
-var keystone = require('keystone');
+var keystone = require('keystone'),
+    Copy = keystone.list('MembershipCopy');
 
 exports = module.exports = function(req, res) {
   var view = new keystone.View(req, res),
@@ -14,6 +15,14 @@ exports = module.exports = function(req, res) {
     'delta/base64xml/L3dJdyEvd0ZNQUFzQUMvNElVRS82XzdfVVU!'
   ].join('');
 
-  // Render the view
-  view.render('membership');
+  Copy
+    .model
+    .find()
+    .exec(function(err, copies) {
+      // TODO: Handle err
+      // Render the view
+      locals.copies = copies;
+      view.render('membership');
+    });
+
 };
