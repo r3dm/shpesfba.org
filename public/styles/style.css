@@ -4017,7 +4017,7 @@ tbody.collapse.in {
     visibility: visible !important;
     height: auto !important;
     padding-bottom: 0;
-    overflow: visible;
+    overflow: visible !important;
   }
   .navbar-collapse.in {
     overflow-y: visible;
