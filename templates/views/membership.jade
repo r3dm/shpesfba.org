@@ -12,31 +12,31 @@ block content
     form.row(name="membership" action="#{signUpUrl}" method="get")
       for copy in copies
         .membershipLevel.col-sm-10.col-sm-offset-1
-          .head
-            =copy.title
-            span #{copy.price}
+          .head= copy.title
+            span= copy.price
           div
             .visible-xs-block
-              button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#regularModal')
+              button.btn.btn-primary.spanfix.btn-block(type='button', data-toggle='modal', data-target='#' + copy.title.replace(/[\W]/g, '_') +'Modal')
                 span &gt;
                 | Learn More
               button.btn.btn-primary.spanfix.btn-block
                 span &gt;
                 | Apply Now
-              #regularModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+              div(id= copy.title.replace(/[\W]/g, '_') + 'Modal', class='modal fade', tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
                 .modal-dialog
                   .modal-content
                     .modal-header
                       button.close(type='button', data-dismiss='modal')
                         span(aria-hidden='true') ×
                         span.sr-only Close
-                      h4#regularModalLabel.modal-title Undergraduate Member
+                      h4#regularModalLabel.modal-title
+                        = copy.title
                     .modal-body
-                      !=copy.body
+                      != copy.body
                     .modal-footer
                       button.btn.btn-primary(type='button', data-dismiss='modal') Close
             .col-sm-8.hidden-xs.col-sm-offset-2
-              !=copy.body
+              != copy.body
               button.btn.btn-primary.spanfix.btn-block
                 span &gt;
                 | Apply Now
