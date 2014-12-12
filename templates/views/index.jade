@@ -25,9 +25,11 @@ block content
       h2.section_title Upcoming Events
       .carousel-upcoming
         if events
+          - var currentTime = Date.now()
+          - var noEventsP = true
           for event in events
-            if event.error
-            else
+            if currentTime - event.startTime.getTime() < 605000000
+              - noEventsP = false
               div
                 if event.coverPhoto.url
                   div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
@@ -44,6 +46,9 @@ block content
                 = getStartTime(event.startTime)
                 | -
                 = getEndTime(event.endTime)
+          if noEventsP
+            h3 There are no upcoming events
+
   .membership_section.section
     .inner-container
       h2.section_title Membership
