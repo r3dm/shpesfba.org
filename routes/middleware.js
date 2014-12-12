@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
     _ = require('underscore'),
-      moment = require('moment'),
-      _Event = keystone.list('Event'); //Events is a global, so _Events is used
+    moment = require('moment'),
+    _Event = keystone.list('Event'); //Events is a global, so _Events is used
 
 /**
   Initialises the standard view locals
