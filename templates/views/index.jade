@@ -28,7 +28,7 @@ block content
           - var currentTime = Date.now()
           - var noEventsP = true
           for event in events
-            if currentTime - event.startTime.getTime() < 605000000
+            if event.startTime && currentTime - event.startTime.getTime() < 605000000
               - noEventsP = false
               div
                 if event.coverPhoto.url
@@ -46,7 +46,7 @@ block content
                 = getStartTime(event.startTime)
                 | -
                 = getEndTime(event.endTime)
-          if noEventsP
+          if noEventsp
             h3 There are no upcoming events
 
   .membership_section.section
