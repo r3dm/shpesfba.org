@@ -1,5 +1,5 @@
 require('dotenv').load();
-var _ = require('_'),
+var _ = require('underscore'),
     keystone = require('keystone');
 
 keystone.init({
