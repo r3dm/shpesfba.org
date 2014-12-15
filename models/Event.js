@@ -42,11 +42,15 @@ Event.add({
   error: { type: Types.Boolean }
 });
 
+/* This middleware (aka lifecycle callback) is run whenever an
+ * event is being saved. And event may trigger this when being first created in the
+ * Admin UI. OR when being resaved in the Admin UI (an update in the info).
+ */
 Event.schema.pre('save', function(next) {
   //TODO: Convert to use .bind(this);
   var myEvent = this;
   if (myEvent.fetchedFromFB) {
-    // let it save as normal. Admin must be updating the info
+    // let it save as normal. Someone must be updating the info from the AdminUI.
     next();
   } else {
     // this is the first time we save the model. Lets fetch data from Facebook
@@ -69,17 +73,10 @@ Event.schema.pre('save', function(next) {
         res.on('end', function() {
           body = JSON.parse(body);
           if (body.error) {
-
-            // TODO prevent completion of event save
-            console.log('graphMethodException :(', body.error);
-            myEvent.FBEventName = 'graphMethodException';
-            myEvent.error = true;
-            myEvent.fetchedFromFB = false;
-            myEvent.description =
-              'We\'ve encountered an error with the provided id.' +
-              'Double check that the event is public';
+            var err = new Error(JSON.stringify(body) +
+                                'Make sure the Facebook Event is set to "Public"');
+            next(err);
           } else {
-
             myEvent.FBEventName = body.name;
             myEvent.description = body.description;
             /* jshint ignore:start */
@@ -94,16 +91,14 @@ Event.schema.pre('save', function(next) {
 
             if (body.venue) {
               if (body.venue.name) {
-
                 myEvent.venueName = body.venue.name;
                 myEvent.venueCity =
                   myEvent.venueLat =
-                  myEvent.venueLong = null;
-                myEvent.venueStreet =
+                  myEvent.venueLong =
+                  myEvent.venueStreet =
                   myEvent.venueZip =
                   myEvent.venueState = null;
               } else {
-
                 myEvent.venueName = null;
                 myEvent.venueCity = body.venue.city;
                 myEvent.venueLat = body.venue.latitude;
