@@ -6493,6 +6493,7 @@ empty {
 .section {
   padding: 50px 0;
 }
+/* slick slider styles - Events section */
 .slick-slide {
   text-align: center;
   height: 300px;
@@ -6542,6 +6543,10 @@ empty {
     filter: none;
     opacity: 1;
   }
+}
+.no-upcoming {
+  text-align: center;
+  padding-top: 3em;
 }
 /** landing page membership section **/
 .membership_section {
