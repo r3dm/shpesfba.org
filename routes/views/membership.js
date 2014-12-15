@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
     Copy = keystone.list('MembershipCopy');
 
-exports = module.exports = function(req, res) {
+module.exports = function(req, res) {
   var view = new keystone.View(req, res),
       locals = res.locals;
 

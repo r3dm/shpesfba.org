@@ -3,7 +3,6 @@
   "camelcase": true,
   "curly": false,  /* custom */
   "eqeqeq": true,
-  "es3": true,
   "forin": true,
   "freeze": true,
   "immed": true,
@@ -50,7 +49,6 @@
   "sub": false,
   "supernew": false,
   "noyield": false,
-  "browser": true,  /* custom */
   "node": true,  /* custom */
   "onevar": true,  /* custom */
   "globals": {  /* custom */

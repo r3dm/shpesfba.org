@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
-  Job = keystone.list('Job');
+    Job = keystone.list('Job');
 
-exports = module.exports = function(req, res) {
+module.exports = function(req, res) {
   var view = new keystone.View(req, res),
       locals = res.locals;
 
@@ -15,29 +15,37 @@ exports = module.exports = function(req, res) {
       title: locals.formData.title,
       description: locals.formData.description,
       requirements: locals.formData.requirements,
+
       companyName: locals.formData.companyName,
       companyBlurb: locals.formData.companyBlurb,
       companyUrl: locals.formData.companyUrl,
-      location: { suburb: locals.formData.city,
-                  state: locals.formData.state},
+
+      location: {
+        suburb: locals.formData.city,
+        state: locals.formData.state
+      },
       expirationDate: locals.formData.expirationDate,
       relocationOffered: locals.formData.relocationOffered,
+
       email: locals.formData.email
-     }), updater = newJob.getUpdateHandler(req);
-
-    updater.process(req.body, {
-      flashErrors: true
-     }, function(err) {
-      if (err) {
-       locals.validationErrors = err.errors;
-      } else {
-       req.flash('success', 'Your job has been submitted. Allow 30 days for approval.');
-
-       return res.redirect('/jobs');
-      }
-      next();
      });
-   });
+
+    newJob
+      .getUpdateHandler(req)
+      .process(req.body, { flashErrors: true }, function(err) {
+        if (err) {
+          locals.validationErrors = err.errors;
+          next();
+        } else {
+          req.flash(
+            'success',
+            'Your job has been submitted. Allow 30 days for approval.'
+          );
+          return res.redirect('/jobs');
+        }
+      });
+
+  });
 
   view.render('jobForm', { section: 'jobs' });
  };

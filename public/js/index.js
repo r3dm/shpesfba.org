@@ -1,10 +1,13 @@
-/* global $ */
+/* global $, document */
 /*
  * built by r3dm.com
  * Berkeley Martinez, robotie.com
  * Lenore Messler, lenoremessler.com
  * Harry Moreno, harrymoreno.com
  */
+
+//TODO: Rename file to SHPE.js
+//TODO: Concat and Uglifiy all files.
 $(document).ready(function() {
 
   $('.carousel-upcoming').slick({
@@ -41,9 +44,7 @@ $(document).ready(function() {
     ]
   });
 
-  var $input = $('.datepicker').pickadate({
-    today: ''
-  });
+  var $input = $('.datepicker').pickadate({ today: '' });
 
   var picker = $input.pickadate('picker');
   // wrap picker in case we're on any page other than the job form
@@ -62,12 +63,11 @@ $(document).ready(function() {
   });
 
   $('#contactForm').bootstrapValidator({
+    fields: {},
     feedbackIcons: {
       valid: 'glyphicon glyphicon-ok',
       invalid: 'glyphicon glyphicon-remove',
       validating: 'glyphicon glyphicon-refresh'
-    },
-    fields: {
     }
   });
  });

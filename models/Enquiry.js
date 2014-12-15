@@ -5,7 +5,6 @@ var keystone = require('keystone'),
  * Enquiry Model
  * =============
  */
-
 var Enquiry = new keystone.List('Enquiry', {
   nocreate: true,
   noedit: true
@@ -42,7 +41,7 @@ Enquiry.add({
   },
   createdAt: {
     type: Date,
-    'default': Date.now
+    default: Date.now
   }
 });
 
@@ -60,7 +59,8 @@ Enquiry.schema.post('save', function() {
 Enquiry.schema.methods.sendNotificationEmail = function(callback) {
   var enqiury = this;
 
-  keystone.list('User')
+  keystone
+    .list('User')
     .model
     .find()
     .where('isAdmin', true)

@@ -1,21 +1,21 @@
 require('dotenv').load();
-var keystone = require('keystone');
+var _ = require('_'),
+    keystone = require('keystone');
 
 keystone.init({
+  name: 'shpe',
+  brand: 'shpe',
 
-  'name': 'shpe',
-  'brand': 'shpe',
-
-  'static': 'public',
-  'less': null,
-  'favicon': 'public/favicon.ico',
-  'views': 'templates/views',
+  static: 'public',
+  less: null,
+  favicon: 'public/favicon.ico',
+  views: 'templates/views',
   'view engine': 'jade',
 
-  'emails': 'templates/emails',
+  emails: 'templates/emails',
 
   'auto update': true,
-  'session': true,
+  session: true,
   'session store': 'mongo',
   'auth': true,
   'user model': 'User',
@@ -30,7 +30,7 @@ keystone['import']('models');
 // bundled templates and layout. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
 keystone.set('locals', {
-  _: require('underscore'),
+  _: _,
   env: keystone.get('env'),
   utils: keystone.utils,
   editable: keystone.content.editable
@@ -65,11 +65,11 @@ keystone.set('email locals', {
 keystone.set('email rules', [{
   find: '/images/',
   replace: (keystone.get('env') === 'production') ?
-    'http://www.your-server.com/images/' : 'http://localhost:3000/images/'
+    'http://www.sfbayareshpe.org/images/' : 'http://localhost:3000/images/'
 }, {
   find: '/keystone/',
   replace: (keystone.get('env') === 'production') ?
-    'http://www.your-server.com/keystone/' : 'http://localhost:3000/keystone/'
+    'http://www.sfbayareashpe.com/keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
 // Load your project's email test routes
@@ -84,7 +84,11 @@ keystone.set('nav', {
 });
 
 // Amazon s3 storage
-keystone.set('s3 config', { bucket: process.env.S3_BUCKET, key: process.env.S3_KEY, secret: process.env.S3_SECRET });
+keystone.set('s3 config', {
+  bucket: process.env.S3_BUCKET,
+  key: process.env.S3_KEY,
+  secret: process.env.S3_SECRET
+});
 
 // Start Keystone to connect to your database and initialise the web server
 keystone.start();

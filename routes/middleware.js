@@ -1,8 +1,13 @@
-var keystone = require('keystone'),
-    _ = require('underscore'),
+var _ = require('underscore'),
+    keystone = require('keystone'),
     moment = require('moment'),
-    _Event = keystone.list('Event'); //Events is a global, so _Events is used
+    Event = keystone.list('Event');
 
+module.exports = {
+  initLocals: initLocals,
+  flashMessages: flashMessages,
+  requireUser: requireUser
+};
 /**
   Initialises the standard view locals
 
@@ -10,7 +15,7 @@ var keystone = require('keystone'),
   the navigation in the header, you may wish to change this array
   or replace it with your own templates / logic.
 */
-exports.initLocals = function(req, res, next) {
+function initLocals(req, res, next) {
   var locals = res.locals;
 
   locals.navLinks = [{
@@ -46,7 +51,7 @@ exports.initLocals = function(req, res, next) {
     return moment(date).format('MMMM D, YYYY');
   };
 
-  _Event
+  Event
     .model
     .find()
     .sort('-startTime')
@@ -56,16 +61,15 @@ exports.initLocals = function(req, res, next) {
       locals.events = events;
       next();
     });
-};
+}
 
 
 /**
   Fetches and clears the flashMessages before a view is rendered
 */
+function flashMessages(req, res, next) {
 
-exports.flashMessages = function(req, res, next) {
-
-  var flashMessages = {
+  var messages = {
     info: req.flash('info'),
     success: req.flash('success'),
     warning: req.flash('warning'),
@@ -73,28 +77,28 @@ exports.flashMessages = function(req, res, next) {
   };
 
   // Checks to see if any messages exists
-  var any = _.any(flashMessages, function(msgs) {
+  var any = _.any(messages, function(msgs) {
     return msgs.length;
   });
 
   if (any) {
-    res.locals.messages = flashMessages;
+    res.locals.messages = messages;
   } else {
     res.locals.messages = false;
   }
 
   next();
-};
+}
 
 
 /**
   Prevents people from accessing protected pages when they're not signed in
  */
-exports.requireUser = function(req, res, next) {
+function requireUser(req, res, next) {
   if (!req.user) {
     req.flash('error', 'Please sign in to access this page.');
     res.redirect('/keystone/signin');
   } else {
     next();
   }
-};
+}

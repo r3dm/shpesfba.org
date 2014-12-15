@@ -3,15 +3,16 @@
  * empty database is used for the first time. You can use this
  * technique to insert data into any List you have defined.
  */
-
-exports.create = {
-  User: [{
-    'name.first': 'Admin',
-    'name.last': 'User',
-    email: 'info@r3dm.com',
-    password: 'dummypass', //replace this manually when you sign in
-    isAdmin: true
-  }]
+module.exports = {
+  create: {
+    User: [{
+      'name.first': 'Admin',
+      'name.last': 'User',
+      email: 'info@r3dm.com',
+      password: 'dummypass', //replace this manually when you sign in
+      isAdmin: true
+    }]
+  }
 };
 
 /**

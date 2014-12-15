@@ -1,15 +1,16 @@
 {
   "name": "shpesfba",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "authors": [
-    "Harry Moreno <morenoh149@gmail.com> Berkeley martinez",
-    "lenore messler"
+    "Harry Moreno <harry@r3dm.com>",
+    "Berkeley martinez <berkeley@r3dm.com",
+    "Lenore Messler"
   ],
-  "description": "website for shpesfba",
+  "description": "Website SHPE SFBay Area",
   "main": "keystone.js",
   "license": "copyright r3dm LLP 2014",
-  "homepage": "r3dm.com",
-  "private": true,
+  "homepage": "the.r3dm.com",
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",

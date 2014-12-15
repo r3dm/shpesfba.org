@@ -13,7 +13,7 @@ keystone.pre('render', middleware.flashMessages);
 // Import Route Controllers
 
 // Setup Route Bindings
-exports = module.exports = function(app) {
+module.exports = function(app) {
 
   // Views
   app.get('/', routes.views.index);
@@ -25,8 +25,10 @@ exports = module.exports = function(app) {
   app.get('/jobs/new', routes.views.jobForm);
   app.post('/jobs/new', routes.views.jobValidate, routes.views.jobForm);
   app.get('/jobs/:job', routes.views.job);
+
   app.post(
     '/contact-general',
     routes.emails.contactValidation,
-    routes.emails.contactGeneral);
+    routes.emails.contactGeneral
+  );
 };

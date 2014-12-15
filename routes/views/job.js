@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 
-exports = module.exports = function(req, res) {
+module.exports = function(req, res) {
 
   var view = new keystone.View(req, res),
       locals = res.locals;
@@ -9,7 +9,8 @@ exports = module.exports = function(req, res) {
   locals.section = 'jobs';
   locals.filters = {
     job: req.params.job
-   };
+  };
+
   console.log('id:', locals.filters.job);
 
   // Build query for job

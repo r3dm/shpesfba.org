@@ -24,7 +24,7 @@ module.exports = function(req, res, next) {
       console.log(err);
     } else {
       new keystone.Email('contactGeneral').send({
-        to: 'berkeley@robotie.com',
+        to: 'webmaster@sfbayareashpe.com',
         from: {
           name: contact.name.full,
           email: contact.email
@@ -36,7 +36,10 @@ module.exports = function(req, res, next) {
         if (err) { return next(err); }
         console.log(data);
 
-        req.flash('success', 'Your enquiry has been recieved. We will email a response.');
+        req.flash(
+          'success',
+          'Your enquiry has been recieved. We will email a response.'
+        );
         res.redirect('/');
       });
     }
