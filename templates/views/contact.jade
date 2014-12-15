@@ -14,12 +14,12 @@ block content
       each officer in officers
         .officer-square
           img(src=officer._.photo.fill(250,250), alt='photo of ' + officer.name.full)
-          h3 #{officer.name.full}
-          h4 #{officer.role}
-          p #{officer.bio}
           a(href='mailto:' + officer.email)
             span.glyphicon.glyphicon-envelope.font-lg
             | #{officer.email}
+          h3 #{officer.name.full}
+          h4 #{officer.role}
+          p #{officer.bio}
     else
       | no officers wut!
     // TODO remove this code once contact form in footer works
