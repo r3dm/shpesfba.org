@@ -1,0 +1,48 @@
+@require 'utils'
+/** gallery page styles **/
+.gallery_page-container
+  text-align center
+  z-index 1
+  background-color #FFF
+
+.gallery_photo
+  display inline-block
+  position relative
+  padding 15px
+
+  .gallery_photo-blur
+    position absolute
+    display none
+
+  img
+    width 250px
+    height 250px
+  >a>img
+    box-shadow 3px 6px 4px rgba(0, 0, 0, 0.24)
+
+  &:hover
+    .gallery_photo-blur
+      display block
+      overflow hidden
+      text-align left
+
+  @media (min-width: 768px)
+    img
+      height 200px
+      width 200px
+
+.gallery_photo-blur
+  background-color rgba(255,255,255,0.75)
+  padding 10px
+  top 15px
+  width 250px
+
+  @media (min-width: 768px)
+    width 200px
+
+.gallery_photo-metadata
+  font-size 1.5rem
+
+  hr
+    margin 0 0
+    border 1px solid $shpe-blue-dark

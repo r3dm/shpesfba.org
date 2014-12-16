@@ -1,0 +1,56 @@
+@require 'utils'
+/* slick slider styles - Events section */
+.slick-slide
+  text-align center
+  height 300px
+  font-size 14px
+  font-weight 300
+
+  div
+    height 150px
+    width 150px
+    border-radius 100px
+    margin 20px auto
+
+  h3
+    margin 0
+    color $shpe-blue-dark
+    font-size 18px
+
+  button
+    margin 10px
+
+.slick-slider
+  .slick-dots li button:before
+    font-size 10px
+
+  .slick-prev
+
+  .slick-next
+
+  .slick-prev, .slick-next
+    width 28px
+    height 30px
+    &:before
+      color: $brand-primary
+      font-size 30px
+
+.slick-slider .slick-active
+  animation fadeIn 1s
+
+@-webkit-keyframes fadeIn
+  0%
+    opacity 0
+    height 20px
+  100%
+    opacity 1
+@keyframes fadeIn
+  0%
+    opacity 0
+    height 20px
+  100%
+    opacity 1
+
+.no-upcoming
+  text-align: center
+  padding-top: 3em
