@@ -10,7 +10,17 @@ var keystone = require('keystone'),
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
 
-// Import Route Controllers
+keystone.set('404', function(req, res) {
+  res
+    .status(404)
+    .render('404');
+});
+
+keystone.set('500', function(err, req, res, next) { /* jshint ignore:line */
+  res
+    .status(500)
+    .render('500');
+});
 
 // Setup Route Bindings
 module.exports = function(app) {
@@ -31,4 +41,12 @@ module.exports = function(app) {
     routes.emails.contactValidation,
     routes.emails.contactGeneral
   );
+
+  app.get('/404', function(req, res) {
+    res.render('404');
+  });
+
+  app.get('/500', function(req, res) {
+    res.render('500');
+  });
 };
