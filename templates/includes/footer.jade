@@ -3,8 +3,8 @@ footer.site-footer.container-fluid(role='footer')
   // TODO figure out why placeholder text is getting clipped on the top in firefox
   .section.row
     .col-sm-4.col-sm-offset-1.footer-about
-      h3 About SHPE
-      p SHPE's vision is to be the leading social-technical organization whose primary function is to enhance and achieve the potential of Hispanics in engineering, math and science.
+      h3 #{about.title}
+      != about.body
       br
       a.pull-left(href="SFBA-SHPE-Chapter-Bylaws.pdf")
         .btn.btn-default Our Bylaws

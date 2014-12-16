@@ -1,7 +1,8 @@
 var _ = require('underscore'),
     keystone = require('keystone'),
     moment = require('moment'),
-    Event = keystone.list('Event');
+    Event = keystone.list('Event'),
+    Footer = keystone.list('FooterCopy');
 
 module.exports = {
   initLocals: initLocals,
@@ -55,12 +56,19 @@ function initLocals(req, res, next) {
     .model
     .find()
     .sort('-startTime')
-    .exec(function(err, events) {
-      if (err) { return next(err); }
+    .exec()
+    .then(function(events) {
       locals.user = req.user;
       locals.events = events;
+      return Footer
+        .model
+        .findById('548fb8b34aefd08a67026203')
+        .exec();
+    }, next)
+    .then(function(about) {
+      locals.about = about;
       next();
-    });
+    }, next);
 }
 
 
