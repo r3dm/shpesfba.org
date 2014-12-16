@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
     Copy = keystone.list('MembershipCopy');
 
-module.exports = function(req, res) {
+module.exports = function(req, res, next) {
   var view = new keystone.View(req, res),
       locals = res.locals;
 
@@ -19,10 +19,9 @@ module.exports = function(req, res) {
     .model
     .find()
     .exec(function(err, copies) {
-      // TODO: Handle err
+      if (err) { return next(err); }
       // Render the view
       locals.copies = copies;
       view.render('membership');
     });
-
 };

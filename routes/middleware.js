@@ -56,7 +56,7 @@ function initLocals(req, res, next) {
     .find()
     .sort('-startTime')
     .exec(function(err, events) {
-      // TODO: handle error
+      if (err) { return next(err); }
       locals.user = req.user;
       locals.events = events;
       next();
