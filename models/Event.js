@@ -73,8 +73,7 @@ Event.schema.pre('save', function(next) {
         res.on('end', function() {
           body = JSON.parse(body);
           if (body.error) {
-            var err = new Error(JSON.stringify(body) +
-                                'Make sure the Facebook Event is set to "Public"');
+            var err = new Error('There was an error saving your changes. Make sure the Facebook Event is set to "Public" and try again');
             next(err);
           } else {
             myEvent.FBEventName = body.name;
