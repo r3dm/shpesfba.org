@@ -6,7 +6,6 @@
  * Harry Moreno, harrymoreno.com
  */
 
-//TODO: Rename file to SHPE.js
 //TODO: Concat and Uglifiy all files.
 $(document).ready(function() {
 
