@@ -3,8 +3,9 @@ footer.site-footer.container-fluid(role='footer')
   // TODO figure out why placeholder text is getting clipped on the top in firefox
   .section.row
     .col-sm-4.col-sm-offset-1.footer-about
-      h3 #{about.title}
-      != about.body
+      if about
+        h3 #{about.title}
+        != about.body
       br
       a.pull-left(href="SFBA-SHPE-Chapter-Bylaws.pdf")
         .btn.btn-default Our Bylaws
