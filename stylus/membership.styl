@@ -1,0 +1,78 @@
+@require 'utils'
+/** landing page membership section **/
+.membership_section
+  min-height 200px
+
+.membership_button-center
+  text-align center
+
+.membership_button-secondPadding
+  @media (max-width: 767px)
+    margin-top 15px
+
+/** membership levels page **/
+.membershipLevel
+  background-color $shpe-gray
+  border-radius 10px
+  margin-bottom 25px
+  padding-left 0
+  padding-right 0
+
+  > div
+    padding 10px 40px
+
+  .head
+    background-color $shpe-blue
+    border-radius inherit
+    border-bottom-right-radius 0
+    border-bottom-left-radius 0
+    color white
+
+    span
+      float right
+
+    @media (max-width: 767px)
+      background-color transparent
+
+  .body
+    font-size 12px
+
+  button
+    margin-bottom 10px
+
+  li
+    padding-bottom 5px
+
+  @media (max-width: 767px)
+    text-align center
+    border-radius 0
+    min-height 200px
+    font-weight bold
+    .head
+      color $shpe-blue-dark
+    .head span
+      color $shpe-blue
+      float none
+      display block
+      padding 20px 0 0 0
+
+    &:nth-child(2n+1)
+      background-color $shpe-gray
+    &:nth-child(2n)
+      background-color transparent
+
+.inner_page-bg
+  background-image url(../images/shape-04.png)
+  background-repeat no-repeat
+  background-position 67% 100%
+
+  @media (min-width: 768px)
+    background-position 67% 100%
+
+  @media (min-width: 1024px)
+    background-position 40% 100%
+
+.modal-body
+  font-size 13px
+  font-weight 300
+  text-align justify

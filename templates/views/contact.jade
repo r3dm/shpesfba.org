@@ -14,38 +14,11 @@ block content
       each officer in officers
         .officer-square
           img(src=officer._.photo.fill(250,250), alt='photo of ' + officer.name.full)
-          h3 #{officer.name.full}
-          h4 #{officer.role}
-          p #{officer.bio}
           a(href='mailto:' + officer.email)
             span.glyphicon.glyphicon-envelope.font-lg
             | #{officer.email}
+          h3 #{officer.name.full}
+          h4 #{officer.role}
+          p #{officer.bio}
     else
       | no officers wut!
-    // TODO remove this code once contact form in footer works
-    // if enquirySubmitted
-    //   h3 Thanks for getting in touch.
-    // else
-    //   .row: .col-sm-8.col-md-6
-    //     form(method='post')
-    //       input(type='hidden', name='action', value='contact')
-    //       .form-group(class=validationErrors.name ? 'has-error' : null)
-    //         label Name
-    //         input(type='text', name='name.full', value=formData['name.full']).form-control
-    //       .form-group(class=validationErrors.email ? 'has-error' : null)
-    //         label Email
-    //         input(type='email', name='email', value=formData.email).form-control
-    //       .form-group
-    //         label Phone
-    //         input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
-    //       .form-group(class=validationErrors.enquiryType ? 'has-error' : null)
-    //         label What are you contacting us about?
-    //         select(name='enquiryType').form-control
-    //           option(value='') (select one)
-    //           each type in enquiryTypes
-    //             option(value=type.value, selected=formData.enquiryType == type.value)= type.label
-    //       .form-group(class=validationErrors.message ? 'has-error' : null)
-    //         label Message
-    //         textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
-    //       .form-actions
-    //         button(type='submit').btn.btn-primary Send

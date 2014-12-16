@@ -1,0 +1,75 @@
+@require 'utils'
+
+/* global styles */
+p
+  font-weight 300
+  font-size 14px
+  text-align justify
+
+a:hover
+  text-decoration none
+
+.panel-heading.jobs-panel
+  background-color $shpe-gray
+  color white
+
+/* button styles */
+.btn-rsvp
+  width 140px
+  height 25px
+  font-style italic
+  line-height 0
+  font-weight 300
+  border-radius 4px
+  color white
+  background-color $shpe-blue-action
+
+  &:hover
+    color white
+    background-color darken($brand-primary, 5%)
+
+.btn-primary
+  background-color $shpe-blue-action
+  color white
+  font-style italic
+  text-align center
+
+/// needed for putting the arrows on the buttons near the right of the button
+/// like: 'Apply Now      ->'
+.spanfix
+  span
+    float right
+
+/* headline styles */
+h1, h2
+  text-align center
+  line-height 1.5
+
+h1
+  font-size 1.5em
+  color $shpe-blue-dark
+
+  @media (min-width: 768px)
+    font-size 2em
+
+h2
+  font-size 1.4em
+
+  @media (min-width: 768px)
+    font-size 1.9em
+
+empty
+  min-width 0px
+  min-height 0px
+
+/* fonts */
+.font-lg
+  top 5px
+  right 5px
+
+  &:before
+    font-size 1.5em
+
+/* use for honey pot spam protection */
+.honeypot
+  display none

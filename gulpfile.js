@@ -4,12 +4,11 @@ var gulp = require('gulp'),
     style = require('gulp-stylus'),
     plumber = require('gulp-plumber'),
     // uncss = require('gulp-uncss'),
-    // watch = require('gulp-watch'),
     koutoSwiss = require('kouto-swiss');
 
 var started = false;
 var paths = {
-  stylus: './stylus/style.styl',
+  stylus: './stylus',
   css: './public/styles/',
   js: [
     '**/*.js',
@@ -38,17 +37,18 @@ gulp.task('serve', function(cb) {
 });
 
 gulp.task('style', function() {
-  return gulp.src(paths.stylus)
+  return gulp.src(paths.stylus + '/style.styl')
     .pipe(plumber())
     .pipe(style({
       use: koutoSwiss(),
-      'include css': true
+      'include css': true,
+      sourcemap: { inline: true }
     }))
     .pipe(gulp.dest(paths.css));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.stylus, ['style']);
+  gulp.watch(paths.stylus + '/*.styl', ['style']);
 });
 
 gulp.task('default', ['serve', 'style', 'watch']);

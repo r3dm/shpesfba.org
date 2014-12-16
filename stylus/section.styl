@@ -1,0 +1,38 @@
+@require 'utils'
+/* section styles */
+.inner-container
+  padding 0 40px
+  margin 0 auto
+
+  @media (min-width: 768px)
+    width: 690px
+
+  @media (min-width: 970px)
+    width: 910px
+
+  @media (min-width: 1280px)
+    width: 1024px
+
+.section:nth-child(2n + 3)
+  background-color $shpe-gray
+
+.section_title
+  color: $shpe-blue-dark
+
+.section_bio
+  min-height 265px
+
+.section_upcoming
+  min-height 450px
+  background-image url(../images/shape-03.png)
+  background-position 60% 0%
+  background-repeat no-repeat
+
+  @media (min-width: 768px)
+    background-position 40% 0%
+
+  @media (min-width: 1024px)
+    background-position 30% 0%
+
+.section
+  padding: 50px 0

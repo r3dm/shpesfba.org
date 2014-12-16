@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
     Copy = keystone.list('IndexCopy');
 
-exports = module.exports = function(req, res) {
+module.exports = function(req, res, next) {
   var view = new keystone.View(req, res),
       locals = res.locals;
 
@@ -14,8 +14,7 @@ exports = module.exports = function(req, res) {
     .model
     .find()
     .exec(function(err, copies) {
-      // TODO: Handle error
-
+      if (err) { return next(err); }
       locals.copies = copies;
       view.render('index');
     });
