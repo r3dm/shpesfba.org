@@ -17,6 +17,9 @@ block content
       .col-sm-9.col-sm-offset-1.job-form
         form.form-horizontal#jobForm(role='form' method='post')
           input(type='hidden', name='action', value='new')
+          .form-group.honeypot
+            label.honeypot Are you a robot?
+            input.honeypot(type='text' value='' name='honeypot' alt='if you fill this field out then your email will not be sent')
           .form-group
             label.col-sm-3.control-label Title
             .col-sm-8

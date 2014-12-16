@@ -26,6 +26,9 @@ footer.site-footer.container-fluid(role='footer')
           input.form-control(type='email' required name='email' placeholder='Email')
         .form-group
           textarea.form-control(required name='message' placeholder='Message' rows=4)
+        .form-group.honeypot
+          label.honeypot Are you a robot?
+          input.honeypot(type='text' value='' name='honeypot' alt='if you fill this field out then your email will not be sent')
 
         // TODO change disabled state color so it is legible
         button.btn.btn-default.spanfix(type='submit')

@@ -7,6 +7,8 @@ module.exports = function(req, res, next) {
       first = body.name.split(' ')[0],
       last = body.name.split(' ')[1] || '';
 
+  if (body.honeypot) { return next(new Error('Robot is trying to spam')); }
+
   var contact = new Enquiry.model({
     name: {
       first: first,

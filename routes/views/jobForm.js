@@ -11,6 +11,9 @@ module.exports = function(req, res) {
   locals.jobSubmitted = false;
 
   view.on('post', { action: 'new' }, function(next) {
+    if (locals.formData.honeypot) {
+      return next(new Error('Robot is trying to spam'));
+    }
     var newJob = new Job.model({
       title: locals.formData.title,
       description: locals.formData.description,
