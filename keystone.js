@@ -15,9 +15,12 @@ keystone.init({
   emails: 'templates/emails',
 
   'auto update': true,
+
   session: true,
   'session store': 'mongo',
-  'auth': true,
+
+  compress: true,
+  auth: true,
   'user model': 'User',
   'cookie secret':
     'y5g?X/e0X}UnGnBz/)ZnzRTziV=,pmh$9WOIS$[u$wiTEsb~,ng)]|ow%1[!_D:H'

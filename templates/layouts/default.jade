@@ -15,12 +15,12 @@ html
     link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
     if dev
       link(href="/styles/style.css", rel="stylesheet")
-      link(href="/styles/lib/slick.css", rel="stylesheet")
-      link(href="/styles/lib/blueimp-gallery.css", rel="stylesheet")
-      link(href="/styles/lib/bootstrap-image-gallery.css", rel="stylesheet")
-      link(href="/styles/lib/bootstrapValidator.css", rel="stylesheet")
+      link(href="/styles/slick.css", rel="stylesheet")
+      link(href="/styles/blueimp-gallery.css", rel="stylesheet")
+      link(href="/styles/bootstrap-image-gallery.css", rel="stylesheet")
+      link(href="/styles/bootstrapValidator.css", rel="stylesheet")
     else
-      link(href="/styles/shpe.css")
+      link(href="/styles/shpe.css", rel="stylesheet")
 
     //- Include template-specific stylesheets by extending the css block
     block css
