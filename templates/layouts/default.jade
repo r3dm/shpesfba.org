@@ -13,16 +13,14 @@ html
     meta(name='description', content='')
 
     link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-
-    link(href="/styles/style.css", rel="stylesheet")
-    link(href="/styles/slick.css", rel="stylesheet")
-    link(href="/styles/blueimp-gallery.min.css", rel="stylesheet")
-    link(href="/styles/bootstrap-image-gallery.min.css", rel="stylesheet")
-    link(href="/styles/bootstrapValidator.min.css", rel="stylesheet")
-
-    //- This file provides the default styling for the KeystoneJS Content Editor
-    if user && user.canAccessKeystone
-      link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+    if dev
+      link(href="/styles/style.css", rel="stylesheet")
+      link(href="/styles/lib/slick.css", rel="stylesheet")
+      link(href="/styles/lib/blueimp-gallery.css", rel="stylesheet")
+      link(href="/styles/lib/bootstrap-image-gallery.css", rel="stylesheet")
+      link(href="/styles/lib/bootstrapValidator.css", rel="stylesheet")
+    else
+      link(href="/styles/shpe.css")
 
     //- Include template-specific stylesheets by extending the css block
     block css
@@ -79,22 +77,20 @@ html
       include ../includes/footer.jade
 
     //- JAVASCRIPT
-    script(src='/js/lib/jquery/jquery-2.1.1.min.js')
-
-    //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
-    //- which generate links to edit content for users who can access Keystone
-    if user && user.canAccessKeystone
-      script(src='/keystone/js/content/editor.js')
-
     //- Add scripts that are globally required by your site here.
-    script(src='/js/lib/bootstrap/bootstrap.min.js')
-    script(src='/js/lib/pickadate/picker.js')
-    script(src='/js/lib/pickadate/picker.date.js')
-    script(src='/js/shpe.js')
-    script(src='/js/slick.js')
-    script(src='/js/jquery.blueimp-gallery.min.js')
-    script(src='/js/bootstrap-image-gallery.min.js')
-    script(src='/js/bootstrapValidator.min.js')
+    if dev
+      script(src='/js/lib/jquery/jquery-2.1.1.js')
+      script(src='/js/lib/bootstrap/bootstrap.js')
+      script(src='/js/lib/pickadate/picker.js')
+      script(src='/js/lib/pickadate/picker.date.js')
+      script(src='/js/shpe-main.js')
+      script(src='/js/lib/slick.js')
+      script(src='/js/lib/blueimp/blueimp-gallery.js')
+      script(src='/js/lib/blueimp/jquery.blueimp-gallery.js')
+      script(src='/js/lib/bootstrap/bootstrap-image-gallery.js')
+      script(src='/js/lib/bootstrap/bootstrapValidator.js')
+    else
+      script(src='/js/shpe.js')
 
     //- Include template-specific javascript files by extending the js block
     block js

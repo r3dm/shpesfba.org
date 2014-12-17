@@ -31,6 +31,7 @@ keystone['import']('models');
 // for each request) should be added to ./routes/middleware.js
 keystone.set('locals', {
   _: _,
+  dev: keystone.get('env') === 'development',
   env: keystone.get('env'),
   utils: keystone.utils,
   editable: keystone.content.editable
