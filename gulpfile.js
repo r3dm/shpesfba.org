@@ -1,4 +1,5 @@
 'use strict';
+process.env.DEBUG = process.env.DEBUG || 'shpe:*';
 var gulp = require('gulp'),
 
     // # utils

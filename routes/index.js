@@ -1,4 +1,5 @@
-var keystone = require('keystone'),
+var debug = require('debug')('shpe:routes:index'),
+    keystone = require('keystone'),
     middleware = require('./middleware'),
     importRoutes = keystone.importer(__dirname),
     routes = {
@@ -17,6 +18,7 @@ keystone.set('404', function(req, res) {
 });
 
 keystone.set('500', function(err, req, res, next) { /* jshint ignore:line */
+  debug('Server Error', err);
   res
     .status(500)
     .render('500');

@@ -35,7 +35,7 @@ block content
                   div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
                 else
                   img(alt='google stock image', src='https://gp4.googleusercontent.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAACvxA/QeQAPGF6G68/s48-c-k-no/photo.jpg')
-                a(href='https://www.facebook.com/events/' + event.FBEventId)
+                a(target='_blank' href='https://www.facebook.com/events/' + event.FBEventId)
                   button.btn.btn-rsvp
                     | Info
                     span.glyphicon.glyphicon-chevron-right(style="vertical-align:-1px")
