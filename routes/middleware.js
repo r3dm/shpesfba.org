@@ -36,9 +36,9 @@ function initLocals(req, res, next) {
     key: 'gallery',
     href: '/gallery'
   }, {
-    label: 'Contact',
-    key: 'contact',
-    href: '/contact'
+    label: 'Executive Board',
+    key: 'board',
+    href: '/executive-board'
   }];
 
 

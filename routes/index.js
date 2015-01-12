@@ -29,7 +29,7 @@ module.exports = function(app) {
   app.get('/', routes.views.index);
   app.get('/gallery', routes.views.gallery);
   app.get('/gallery/:album', routes.views.album);
-  app.all('/contact', routes.views.contact);
+  app.all('/executive-board', routes.views.contact);
   app.all('/membership', routes.views.membership);
   app.get('/jobs', routes.views.jobs);
   app.get('/jobs/new', routes.views.jobForm);

@@ -6,7 +6,7 @@ module.exports = function(req, res) {
       locals = res.locals;
 
   // Set locals
-  locals.section = 'contact';
+  locals.section = 'executiveBoard';
 
   // Build query for officers
   var officersQuery = keystone
