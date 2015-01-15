@@ -32,6 +32,7 @@ module.exports = function(app) {
   app.get('/gallery', routes.views.gallery);
   app.get('/gallery/:album', routes.views.album);
   app.all('/executive-board', routes.views.contact);
+  app.all('/chapter-history', routes.views.history);
   app.all('/membership', routes.views.membership);
   app.get('/jobs', routes.views.jobs);
   app.get('/jobs/new', routes.views.jobForm);

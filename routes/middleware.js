@@ -39,8 +39,11 @@ function initLocals(req, res, next) {
     label: 'Executive Board',
     key: 'board',
     href: '/executive-board'
+  }, {
+    label: 'Chapter History',
+    key: 'history',
+    href: '/chapter-history'
   }];
-
 
   locals.getStartTime = function(date) {
     return moment(date).format('h:mma');
@@ -71,7 +74,6 @@ function initLocals(req, res, next) {
     }, next);
 }
 
-
 /**
   Fetches and clears the flashMessages before a view is rendered
 */
@@ -97,7 +99,6 @@ function flashMessages(req, res, next) {
 
   next();
 }
-
 
 /**
   Prevents people from accessing protected pages when they're not signed in
