@@ -4016,7 +4016,7 @@ tbody.collapse.in {
     visibility: visible !important;
     height: auto !important;
     padding-bottom: 0;
-    overflow: visible;
+    overflow: visible !important;
   }
   .navbar-collapse.in {
     overflow-y: visible;
@@ -6749,6 +6749,9 @@ footer input.form-control {
     margin: 0 auto;
     display: block;
   }
+}
+footer .buffer {
+  height: 2vh;
 }
 .footer-about p {
   font-size: 1.5rem;
