@@ -1,4 +1,4 @@
-[ ![Codeship Status for bigr3dm/shpeSFBA](https://codeship.io/projects/1f64acd0-1bad-0132-b497-4a19bf040eb5/status)](https://codeship.io/projects/34983)
+[ ![Codeship Status for bigr3dm/shpeSFBA](https://codeship.io/projects/616a4cc0-7eaa-0132-51e7-5a708499e289/status?branch=master)](https://codeship.io/projects/57042)
 
 copyright (c) 2014-2015 The R3DM, LLC. http://the.r3dm.com
 
