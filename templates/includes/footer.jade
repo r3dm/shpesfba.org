@@ -7,8 +7,11 @@ footer.site-footer.container-fluid(role='footer')
         h3 #{about.title}
         != about.body
       br
-      a.pull-left(href="SFBA-SHPE-Chapter-Bylaws.pdf")
-        .btn.btn-default Our Bylaws
+      .btn-group-vertical
+        a(href="SFBA-SHPE-Chapter-Bylaws.pdf" role='button').btn.btn-default.footer-btn_style Our Bylaws
+        a(target='_blank' href='http://www.shpe.org/' role='button').btn.btn-default.footer-btn_style SHPE Inc
+        a(target='_blank' href='http://www.shpefoundation.org/' role='button').btn.btn-default.footer-btn_style SHPE Foundation
+        a(target='_blank' href='http://www.facebook.com/groups/120819351271743' role='button').btn.btn-default.footer-btn_style Join us on Facebook
     .col-sm-3
       h3 Latest News
       if events && events.length > 3
@@ -32,11 +35,11 @@ footer.site-footer.container-fluid(role='footer')
           input.honeypot(type='text' value='' name='honeypot' alt='if you fill this field out then your email will not be sent')
 
         // TODO change disabled state color so it is legible
-        button.btn.btn-default.spanfix(type='submit')
+        button.btn.btn-default.footer-btn.spanfix(type='submit')
           span &gt;
           | Send
   .row
-    .col-sm-4.col-sm-offset-1
+    .col-sm-10.col-sm-offset-1
       span Made with love by
       a(target='_blank' href='http://the.r3dm.com')  The R3DM &#0169;
       span  using

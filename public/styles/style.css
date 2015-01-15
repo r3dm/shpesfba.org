@@ -6729,15 +6729,22 @@ footer a:hover {
   text-decoration: none;
   color: #fff;
 }
-footer .btn-default {
+footer .footer-btn {
   width: 105px;
   height: 25px;
   color: #fff;
   background-color: #464646;
   float: right;
   font-style: italic;
-  text-align: left;
   line-height: 13px;
+  text-align: left;
+}
+footer .footer-btn_style {
+  color: #fff;
+  background-color: #464646;
+  font-style: italic;
+  line-height: 13px;
+  text-align: left;
 }
 footer input.form-control {
   height: 25px;
