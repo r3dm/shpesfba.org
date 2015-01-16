@@ -4016,7 +4016,7 @@ tbody.collapse.in {
     visibility: visible !important;
     height: auto !important;
     padding-bottom: 0;
-    overflow: visible;
+    overflow: visible !important;
   }
   .navbar-collapse.in {
     overflow-y: visible;
@@ -6729,15 +6729,22 @@ footer a:hover {
   text-decoration: none;
   color: #fff;
 }
-footer .btn-default {
+footer .footer-btn {
   width: 105px;
   height: 25px;
   color: #fff;
   background-color: #464646;
   float: right;
   font-style: italic;
-  text-align: left;
   line-height: 13px;
+  text-align: left;
+}
+footer .footer-btn_style {
+  color: #fff;
+  background-color: #464646;
+  font-style: italic;
+  line-height: 13px;
+  text-align: left;
 }
 footer input.form-control {
   height: 25px;
@@ -6750,6 +6757,9 @@ footer input.form-control {
     display: block;
   }
 }
+footer .buffer {
+  height: 2vh;
+}
 .footer-about p {
   font-size: 1.5rem;
 }
@@ -6761,7 +6771,7 @@ footer input.form-control {
 }
 @media (min-width: 768px) {
   .navbar .container-fluid {
-    width: 765px;
+    width: 920px;
     float: none;
     margin: 0 auto;
   }

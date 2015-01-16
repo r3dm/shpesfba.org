@@ -9,7 +9,7 @@ block intro
 block content
   h1 Membership Classification
   .membership_page-bg.container
-    form.row(name="membership" action="#{signUpUrl}" method="get")
+    form.row(name="membership" action="#{signUpUrl}" method="get" target='_blank')
       for copy in copies
         .membershipLevel.col-sm-10.col-sm-offset-1
           .head= copy.title

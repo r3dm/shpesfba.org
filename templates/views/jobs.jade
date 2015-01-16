@@ -20,7 +20,7 @@ block content
                   a(href="/jobs/" + job.id) #{job.title}
                 p
                   strong
-                    a(href="#{job.companyUrl}") #{job.companyName}
+                    a(target='_blank' href="#{job.companyUrl}") #{job.companyName}
                     br
                   | #{job.location.suburb}, #{job.location.state}
                   if job.relocationOffered

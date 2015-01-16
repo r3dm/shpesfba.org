@@ -35,7 +35,7 @@ block content
                   div(alt='event photo', style='background: url(#{event.coverPhoto.url}); background-position: center; background-size: cover; ')
                 else
                   img(alt='shpe logo', src='https://s3-us-west-1.amazonaws.com/shpesf/new_shpe_logo_color.jpg')
-                a(href='https://www.facebook.com/events/' + event.FBEventId)
+                a(target='_blank' href='https://www.facebook.com/events/' + event.FBEventId)
                   button.btn.btn-rsvp
                     | Info
                     span.glyphicon.glyphicon-chevron-right(style="vertical-align:-1px")

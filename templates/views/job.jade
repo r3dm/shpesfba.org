@@ -21,12 +21,12 @@ block content
               h3 #{job.title}
               p
                 strong
-                  a(href="#{job.companyUrl}") #{job.companyName} 
-                | #{job.location.suburb}, #{job.location.state} 
+                  a(target='_blank' href="#{job.companyUrl}") #{job.companyName}
+                | #{job.location.suburb}, #{job.location.state}
                 if job.relocationOffered
                   i (relocation offered)
                 br
-                | Expires: 
+                | Expires:
                 = getDate(job.expirationDate)
               h4 Job Description
               p #{job.description}

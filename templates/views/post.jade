@@ -10,11 +10,11 @@ block content
       else
         header
           h1= data.post.title
-          h5 Posted 
+          h5 Posted
             if data.post.publishedDate
-              | on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
+              | on #{data.post._.publishedDate.format('MMMM Do, YYYY')}
             if data.post.categories && data.post.categories.length
-              | in 
+              | in
               each cat, cat_i in data.post.categories
                 a(href='/blog/' + cat.key)= cat.name
                 if cat_i < data.post.categories.length - 1
