@@ -5,7 +5,8 @@ var debug = require('debug')('shpe:routes:index'),
     routes = {
       views: importRoutes('./views'),
       emails: importRoutes('./emails')
-    };
+    },
+    sm = require('sitemap');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -24,6 +25,20 @@ keystone.set('500', function(err, req, res, next) { /* jshint ignore:line */
     .render('500');
 });
 
+// Sitemap
+var sitemap = sm.createSitemap({
+  hostname: 'http://shpesfba.org/',
+  cacheTime: 600000,
+  urls: [
+    { url: '/', changefreq: 'weekly', priority: '1.0' },
+    { url: '/gallery', changefreq: 'weekly', priority: '1.0' },
+    { url: '/executive-board', changefreq: 'monthly', priority: '0.5' },
+    { url: '/chapter-history', changefreq: 'monthly', priority: '0.5' },
+    { url: '/membership', changefreq: 'monthly', priority: '0.5' },
+    { url: '/jobs', changefreq: 'weekly', priority: '0.5' }
+  ]
+});
+
 // Setup Route Bindings
 module.exports = function(app) {
 
@@ -38,6 +53,13 @@ module.exports = function(app) {
   app.get('/jobs/new', routes.views.jobForm);
   app.post('/jobs/new', routes.views.jobValidate, routes.views.jobForm);
   app.get('/jobs/:job', routes.views.job);
+
+  app.get('/sitemap.xml', function(req, res) {
+    sitemap.toXML( function(xml) {
+      res.header('Content-Type', 'application/xml');
+      res.send(xml);
+    });
+  });
 
   app.post(
     '/contact-general',
