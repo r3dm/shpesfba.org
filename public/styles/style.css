@@ -6803,6 +6803,7 @@ footer .buffer {
   }
 }
 .officer-container {
+  max-width: 1200px;
   text-align: center;
 }
 .job-post {
