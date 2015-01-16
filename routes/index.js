@@ -27,7 +27,7 @@ keystone.set('500', function(err, req, res, next) { /* jshint ignore:line */
 
 // Sitemap
 var sitemap = sm.createSitemap({
-  hostname: 'http://shpesfba.org/',
+  hostname: 'http://shpesfba.org',
   cacheTime: 600000,
   urls: [
     { url: '/', changefreq: 'weekly', priority: '1.0' },
