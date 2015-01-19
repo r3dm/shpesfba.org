@@ -14,7 +14,6 @@ input.form-control, textarea.form-control
 @import "../bower_components/bootstrap-stylus/stylus/bootstrap.styl"
 @import "../bower_components/pickadate/lib/compressed/themes/classic.css"
 @import "../bower_components/pickadate/lib/compressed/themes/classic.date.css"
-@import "../public/styles/blueimp-gallery.css"
 @import 'global'
 @import 'headline'
 @import 'section'
@@ -26,6 +25,9 @@ input.form-control, textarea.form-control
 @import 'contact'
 @import 'job'
 @import 'errPage'
+
+// styles in 'gallery' override this but concatenation damages the precedence
+@import "../public/styles/blueimp-gallery.css"
 
 /* flash styles */
 .alert
