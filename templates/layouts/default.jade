@@ -49,7 +49,8 @@ html
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href="/")
-            img(src="images/nav_logo.png")
+            // hardcoded to support arbitrarily nested pages i.e. /gallery/:name
+            img(src="http://shpesfba.org/images/nav_logo.png")
         .collapse.navbar-collapse#navbar-collapsable
           ul.navbar-nav.nav
             each link in navLinks
