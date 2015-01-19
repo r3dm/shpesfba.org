@@ -66,7 +66,6 @@ gulp.task('js:concat', function() {
     './public/js/lib/pickadate/picker.date.js',
     './public/js/shpe-main.js',
     './public/js/lib/slick.js',
-    './public/js/lib/blueimp/blueimp-gallery.js',
     './public/js/lib/blueimp/jquery.blueimp-gallery.js',
     './public/js/lib/bootstrap/bootstrap-image-gallery.js',
     './public/js/lib/bootstrap/bootstrapValidator.js'
