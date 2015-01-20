@@ -1,5 +1,12 @@
 extends ../layouts/default
 
+block css
+  style(type='text/css')
+    | .body {
+    |   -webkit-perspective: 1000px;
+    |   perspective: 1000px;
+    | }
+
 // displays above the flash messages
 block intro
 
