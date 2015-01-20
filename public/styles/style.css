@@ -1,25 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,300");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,300");
-input.form-control::-webkit-input-placeholder,
-textarea.form-control::-webkit-input-placeholder {
-  color: #6a6868;
-  font-style: italic;
-}
-input.form-control:-moz-placeholder,
-textarea.form-control:-moz-placeholder {
-  color: #6a6868;
-  font-style: italic;
-}
-input.form-control::-moz-placeholder,
-textarea.form-control::-moz-placeholder {
-  color: #6a6868;
-  font-style: italic;
-}
-input.form-control:-ms-input-placeholder,
-textarea.form-control:-ms-input-placeholder {
-  color: #6a6868;
-  font-style: italic;
-}
 /*
  * Bootstrap v3.3.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
