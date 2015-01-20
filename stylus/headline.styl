@@ -5,13 +5,20 @@
   overflow hidden
 
   div
-    height 250px
+    height 100%
 
   @media (min-width: 768px)
      height 390px
 
-    div
-      height 390px
+.headline-parallax
+  @extend .headline
+  overflow-x hidden
+  overflow-y hidden
+
+  div
+    height 120%
+    position relative
+    top -20%
 
 .headline_container_left
   background-image url(../images/shape-01.png)
@@ -20,6 +27,11 @@
 .headline_container_right
   background-image url(../images/shape-02.png)
   background-position 50% 75%
+
+.headline_container-parallax
+  background-image url(../images/shape-01.png), url(../images/shape-02.png)
+  background-position 40% 0%, 50% 75%
+  background-size auto 120%
 
 .headline-min
   background-color: $shpe-blue
@@ -30,9 +42,17 @@
     height 100px
 
 .headline_text
+  color white
   font-weight: 300
   padding-top: 80px
-  color white
 
   @media (max-width: 767px)
     padding-top 0
+
+.headline_text-parallax
+  @extends .headline_text
+  margin 0
+  padding-top: 240px
+
+  @media (max-width: 767px)
+    padding-top 130px

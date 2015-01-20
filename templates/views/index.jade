@@ -4,14 +4,12 @@ extends ../layouts/default
 block intro
 
 block content
-  .headline
-    .headline_container_left
-      .headline_container_right
-        .section.inner-container
-          h1.headline_text
-            | San Francisco Bay Area
-            br
-            |           Society of Hispanic Professional Engineers
+  .headline-parallax
+    .headline_container-parallax(data-type='background' data-speed='15')
+      h1.headline_text-parallax
+        | San Francisco Bay Area
+        br
+        |           Society of Hispanic Professional Engineers
   .section_bio.section
     .inner-container
       .carousel-copy

@@ -1,12 +1,10 @@
-/* global $, document */
+/* global $, document, window */
 /*
  * built by r3dm.com
  * Berkeley Martinez, robotie.com
  * Lenore Messler, lenoremessler.com
  * Harry Moreno, harrymoreno.com
  */
-
-//TODO: Concat and Uglifiy all files.
 $(document).ready(function() {
 
   $('.carousel-upcoming').slick({
@@ -69,4 +67,25 @@ $(document).ready(function() {
       validating: 'glyphicon glyphicon-refresh'
     }
   });
- });
+
+  // parallax
+  $('div[data-type="background"').each(function() {
+    var $bg = $(this);
+    var $window = $(window);
+
+    $window.scroll(function() {
+      var scrollPosition = $window.scrollTop();
+      var yPosition = (scrollPosition / $bg.data('speed'));
+      var zPosition = -(scrollPosition / $bg.data('speed') + 5);
+
+      //$bg.css({ backgroundPosition: '50% ' + yPossition + 'px' });
+      $bg.css({
+        transform: [
+          'translate3d(0, ',
+          yPosition + 'px, ',
+          zPosition + 'px)'
+        ].join('')
+      });
+    });
+  });
+});
