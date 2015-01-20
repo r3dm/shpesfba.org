@@ -19,7 +19,8 @@ var paths = {
   css: './public/styles/',
   js: [
     '**/*.js',
-    '!node_modules'
+    '!node_modules',
+    '!public'
   ],
   jade: './templates/**/*.jade'
 };
