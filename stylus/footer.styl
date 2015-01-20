@@ -45,6 +45,11 @@ footer
     height 25px
     margin-bottom 10px
 
+  input.form-control, textarea.form-control
+    +placeholder()
+      font-style bold
+      color $shpe-gray-dark
+
   @media (max-width: 767px)
     .footer_form-container
       width 300px
