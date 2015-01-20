@@ -69,7 +69,7 @@ $(document).ready(function() {
   });
 
   // parallax
-  $('div[data-type="background"').each(function() {
+  $('div[data-type="background"]').each(function() {
     var $bg = $(this);
     var $window = $(window);
 
