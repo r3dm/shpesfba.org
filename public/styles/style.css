@@ -6764,20 +6764,25 @@ footer input.form-control {
   height: 25px;
   margin-bottom: 10px;
 }
+footer input.form-control::-webkit-input-placeholder,
+footer textarea.form-control::-webkit-input-placeholder {
+  font-style: italic;
+  color: #6a6868;
+}
+footer input.form-control:-moz-placeholder,
+footer textarea.form-control:-moz-placeholder {
+  font-style: italic;
+  color: #6a6868;
+}
 footer input.form-control::-moz-placeholder,
 footer textarea.form-control::-moz-placeholder {
-  color: #999;
-  -ms-filter: none;
-  filter: none;
-  opacity: 1;
+  font-style: italic;
+  color: #6a6868;
 }
 footer input.form-control:-ms-input-placeholder,
 footer textarea.form-control:-ms-input-placeholder {
-  color: #999;
-}
-footer input.form-control::-webkit-input-placeholder,
-footer textarea.form-control::-webkit-input-placeholder {
-  color: #999;
+  font-style: italic;
+  color: #6a6868;
 }
 @media (max-width: 767px) {
   footer .footer_form-container {
