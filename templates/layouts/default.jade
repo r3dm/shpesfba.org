@@ -53,8 +53,9 @@ html
             img(src="http://shpesfba.org/images/nav_logo.png")
         .collapse.navbar-collapse#navbar-collapsable
           ul.navbar-nav.nav
-            each link in navLinks
-              li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+            if navLinks
+              each link in navLinks
+                li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 
     //- BODY
     #body
