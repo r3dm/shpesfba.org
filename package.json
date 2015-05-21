@@ -13,7 +13,7 @@
     "debug": "^2.1.1",
     "dotenv": "0.4.0",
     "express-form": "^0.12.4",
-    "keystone": "git://github.com/r3dm/keystone.git#shpe-branch",
+    "keystone": "^0.3.10",
     "kouto-swiss": "^0.11.6",
     "moment": "^2.8.4",
     "sitemap": "^0.7.4",
