@@ -69,11 +69,11 @@ keystone.set('email locals', {
 keystone.set('email rules', [{
   find: '/images/',
   replace: (keystone.get('env') === 'production') ?
-    'http://www.sfbayareshpe.org/images/' : 'http://localhost:3000/images/'
+    'http://www.shpesfba.org/images/' : 'http://localhost:3000/images/'
 }, {
   find: '/keystone/',
   replace: (keystone.get('env') === 'production') ?
-    'http://www.sfbayareashpe.com/keystone/' : 'http://localhost:3000/keystone/'
+    'http://www.shpesfba.org/keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
 // Load your project's email test routes

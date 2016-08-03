@@ -26,12 +26,12 @@ module.exports = function(req, res, next) {
       console.log(err);
     } else {
       new keystone.Email('contactGeneral').send({
-        to: 'webmaster@sfbayareashpe.com',
+        to: 'webmaster@shpesfba.org',
         from: {
           name: contact.name.full,
           email: contact.email
         },
-        subject: 'New Message for a vistor at sfbayareashpe.org',
+        subject: 'New Message for a vistor at shpesfba.org',
         message: body.message,
         enquiry: contact
       }, function(err, data) {
